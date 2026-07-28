@@ -1,0 +1,2766 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="刑事訴訟法の伝聞法則を、要証事実、反対尋問、供述過程、自己負罪拒否、刑訴法322条1項まで具体例と分岐図で理解する司法試験・予備試験向け教材。">
+  <link rel="canonical" href="https://mokemoke5312064.github.io/shiho-study/materials/hearsay-yosho-jijitsu/">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="og:site_name" content="司法試験・予備試験 学習ログ">
+  <meta property="og:title" content="伝聞法則を、要証事実から322条までつなぐ">
+  <meta property="og:description" content="同じ発言が伝聞にも非伝聞にもなる理由を、要証事実・反対尋問・供述過程・刑訴法322条まで一つの判断構造で整理します。">
+  <meta property="og:url" content="https://mokemoke5312064.github.io/shiho-study/materials/hearsay-yosho-jijitsu/">
+  <meta property="og:image" content="https://mokemoke5312064.github.io/shiho-study/assets/og/hearsay-yosho-jijitsu.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="伝聞法則を、要証事実から322条までつなぐ">
+  <meta property="article:published_time" content="2026-07-28">
+  <meta property="article:modified_time" content="2026-07-28">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="伝聞法則を、要証事実から322条までつなぐ">
+  <meta name="twitter:description" content="同じ発言が伝聞にも非伝聞にもなる理由を、要証事実・反対尋問・供述過程・刑訴法322条まで整理。">
+  <meta name="twitter:image" content="https://mokemoke5312064.github.io/shiho-study/assets/og/hearsay-yosho-jijitsu.png">
+  <meta name="twitter:image:alt" content="伝聞法則を、要証事実から322条までつなぐ">
+  <title>伝聞法則・要証事実・刑訴法322条を図解｜司法試験・予備試験</title>
+  <style>
+    :root {
+      --ink: #17233c;
+      --muted: #5d6980;
+      --paper: #f7f4ed;
+      --card: #fffefa;
+      --line: #d9d5ca;
+      --navy: #173a62;
+      --blue: #2f6f9f;
+      --blue-soft: #eaf3f8;
+      --red: #a63f45;
+      --red-soft: #fff0ef;
+      --green: #2f7255;
+      --green-soft: #eaf6ef;
+      --amber: #9a6520;
+      --amber-soft: #fff6df;
+      --focus: #f4b942;
+      --shadow: 0 18px 50px rgba(25, 37, 56, 0.09);
+      --radius: 20px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 8% 5%, rgba(47, 111, 159, 0.10), transparent 26rem),
+        linear-gradient(180deg, #f8f6f0 0%, var(--paper) 100%);
+      font-family:
+        "Yu Gothic UI", "Yu Gothic", "Hiragino Kaku Gothic ProN",
+        "Noto Sans JP", system-ui, sans-serif;
+      line-height: 1.8;
+    }
+
+    a {
+      color: #135e91;
+      text-underline-offset: 0.2em;
+    }
+
+    button,
+    a {
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    button:focus-visible,
+    a:focus-visible {
+      outline: 3px solid var(--focus);
+      outline-offset: 3px;
+    }
+
+    .skip-link {
+      position: fixed;
+      z-index: 100;
+      top: 0.5rem;
+      left: 0.5rem;
+      padding: 0.6rem 0.9rem;
+      color: #fff;
+      background: var(--navy);
+      border-radius: 0.5rem;
+      transform: translateY(-150%);
+      transition: transform 0.2s ease;
+    }
+
+    .skip-link:focus {
+      transform: translateY(0);
+    }
+
+    .page {
+      width: min(1120px, calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      margin: 24px auto 34px;
+      padding: clamp(28px, 6vw, 64px);
+      color: #fff;
+      background:
+        linear-gradient(135deg, rgba(255,255,255,0.09), transparent 45%),
+        var(--navy);
+      border-radius: 28px;
+      box-shadow: var(--shadow);
+    }
+
+    .hero::after {
+      content: "320";
+      position: absolute;
+      right: -0.02em;
+      bottom: -0.34em;
+      color: rgba(255,255,255,0.06);
+      font: 800 clamp(10rem, 28vw, 21rem)/1 Georgia, serif;
+      pointer-events: none;
+    }
+
+    .eyebrow {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.55rem;
+      align-items: center;
+      margin: 0 0 1rem;
+      color: #cfe6f5;
+      font-size: 0.86rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      min-height: 1.9rem;
+      padding: 0.18rem 0.7rem;
+      color: #fff;
+      background: rgba(255,255,255,0.13);
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: 999px;
+      letter-spacing: 0.02em;
+    }
+
+    h1,
+    h2,
+    h3 {
+      line-height: 1.35;
+      letter-spacing: 0.015em;
+    }
+
+    h1 {
+      position: relative;
+      z-index: 1;
+      max-width: 860px;
+      margin: 0;
+      font-size: clamp(2rem, 5.8vw, 4.25rem);
+    }
+
+    .hero-lead {
+      position: relative;
+      z-index: 1;
+      max-width: 800px;
+      margin: 1.35rem 0 0;
+      color: #edf6fb;
+      font-size: clamp(1rem, 2.2vw, 1.23rem);
+    }
+
+    .hero-answer {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 1rem;
+      align-items: start;
+      max-width: 900px;
+      margin-top: 2rem;
+      padding: 1.1rem 1.25rem;
+      background: rgba(255,255,255,0.11);
+      border: 1px solid rgba(255,255,255,0.22);
+      border-radius: 16px;
+      backdrop-filter: blur(8px);
+    }
+
+    .hero-answer .mark {
+      display: grid;
+      width: 2.25rem;
+      height: 2.25rem;
+      place-items: center;
+      color: var(--navy);
+      background: #fff;
+      border-radius: 50%;
+      font-weight: 900;
+    }
+
+    .hero-answer strong {
+      color: #fff;
+      font-size: 1.13em;
+    }
+
+    .toc {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.55rem;
+      margin: 0 0 36px;
+      padding: 0;
+      list-style: none;
+    }
+
+    .toc a {
+      display: block;
+      padding: 0.48rem 0.82rem;
+      color: var(--ink);
+      background: rgba(255,255,255,0.75);
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 700;
+    }
+
+    .toc a:hover {
+      background: #fff;
+      border-color: #aebaca;
+    }
+
+    section {
+      margin: 0 0 34px;
+      scroll-margin-top: 1.2rem;
+    }
+
+    .panel {
+      padding: clamp(22px, 4vw, 38px);
+      background: rgba(255, 254, 250, 0.94);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: 0 10px 30px rgba(25,37,56,0.045);
+    }
+
+    .section-kicker {
+      margin: 0 0 0.2rem;
+      color: var(--blue);
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    h2 {
+      margin: 0 0 1.2rem;
+      font-size: clamp(1.45rem, 3vw, 2.15rem);
+    }
+
+    h3 {
+      margin: 0 0 0.55rem;
+      font-size: 1.08rem;
+    }
+
+    p {
+      margin: 0.65rem 0;
+    }
+
+    .definition {
+      margin: 1.2rem 0;
+      padding: 1.35rem;
+      background: var(--blue-soft);
+      border-left: 5px solid var(--blue);
+      border-radius: 0 14px 14px 0;
+      font-size: clamp(1.06rem, 2.1vw, 1.25rem);
+    }
+
+    .definition strong {
+      color: var(--navy);
+    }
+
+    .chain {
+      display: grid;
+      grid-template-columns: 1fr auto 1.25fr auto 1fr;
+      gap: 0.65rem;
+      align-items: stretch;
+      margin: 1.6rem 0 0;
+    }
+
+    .chain-card {
+      display: grid;
+      align-content: center;
+      min-height: 136px;
+      padding: 1rem;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 15px;
+      text-align: center;
+    }
+
+    .chain-card.target {
+      color: #fff;
+      background: var(--navy);
+      border-color: var(--navy);
+      transform: translateY(-5px);
+      box-shadow: 0 12px 24px rgba(23,58,98,0.16);
+    }
+
+    .chain-card small {
+      display: block;
+      margin-bottom: 0.25rem;
+      color: var(--muted);
+      font-weight: 700;
+    }
+
+    .chain-card.target small {
+      color: #d5e7f2;
+    }
+
+    .arrow {
+      display: grid;
+      place-items: center;
+      color: var(--blue);
+      font-size: 1.7rem;
+      font-weight: 900;
+    }
+
+    .note {
+      margin-top: 1.15rem;
+      padding: 0.95rem 1.1rem;
+      color: #51411f;
+      background: var(--amber-soft);
+      border: 1px solid #ead5a5;
+      border-radius: 12px;
+    }
+
+    .note strong {
+      color: #76501b;
+    }
+
+    .example-shell {
+      display: grid;
+      grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+      gap: 1.1rem;
+      margin-top: 1.2rem;
+    }
+
+    .evidence-box,
+    .result-box {
+      padding: clamp(18px, 3vw, 28px);
+      border-radius: 17px;
+    }
+
+    .evidence-box {
+      color: #fff;
+      background: #263853;
+    }
+
+    .evidence-box .label,
+    .result-box .label {
+      display: inline-block;
+      margin-bottom: 0.8rem;
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .evidence-box .label {
+      color: #bcd7e9;
+    }
+
+    .quote {
+      margin: 0.75rem 0;
+      padding: 1rem;
+      background: rgba(255,255,255,0.09);
+      border-left: 4px solid #8bc3e6;
+      border-radius: 0 10px 10px 0;
+      font-weight: 700;
+    }
+
+    .target-tabs {
+      display: grid;
+      gap: 0.65rem;
+      margin-top: 1rem;
+    }
+
+    .target-button {
+      width: 100%;
+      padding: 0.78rem 0.9rem;
+      color: #e9f3f9;
+      background: transparent;
+      border: 1px solid rgba(255,255,255,0.28);
+      border-radius: 11px;
+      cursor: pointer;
+      font: inherit;
+      text-align: left;
+      transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+    }
+
+    .target-button:hover {
+      background: rgba(255,255,255,0.08);
+      transform: translateX(2px);
+    }
+
+    .target-button[aria-selected="true"] {
+      color: #17233c;
+      background: #fff;
+      border-color: #fff;
+      font-weight: 800;
+    }
+
+    .result-box {
+      background: var(--red-soft);
+      border: 1px solid #efc2c2;
+      transition: background 0.25s ease, border-color 0.25s ease;
+    }
+
+    .result-box.non-hearsay {
+      background: var(--green-soft);
+      border-color: #b8dcc7;
+    }
+
+    .result-box .label {
+      color: var(--muted);
+    }
+
+    .verdict {
+      display: flex;
+      gap: 0.7rem;
+      align-items: center;
+      margin-bottom: 0.7rem;
+      color: var(--red);
+      font-size: clamp(1.35rem, 3vw, 1.9rem);
+      font-weight: 900;
+    }
+
+    .non-hearsay .verdict {
+      color: var(--green);
+    }
+
+    .verdict-dot {
+      width: 0.8rem;
+      height: 0.8rem;
+      background: currentColor;
+      border-radius: 50%;
+      box-shadow: 0 0 0 5px rgba(166,63,69,0.10);
+    }
+
+    .non-hearsay .verdict-dot {
+      box-shadow: 0 0 0 5px rgba(47,114,85,0.11);
+    }
+
+    .logic-row {
+      display: grid;
+      grid-template-columns: 8.5rem 1fr;
+      gap: 0.7rem;
+      padding: 0.7rem 0;
+      border-top: 1px dashed rgba(23,35,60,0.17);
+    }
+
+    .logic-row:first-of-type {
+      margin-top: 0.7rem;
+    }
+
+    .logic-row dt {
+      color: var(--muted);
+      font-weight: 800;
+    }
+
+    .logic-row dd {
+      margin: 0;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1rem;
+    }
+
+    .fact-card {
+      padding: 1.15rem;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 15px;
+    }
+
+    .fact-card .num {
+      display: inline-grid;
+      width: 2rem;
+      height: 2rem;
+      margin-bottom: 0.7rem;
+      place-items: center;
+      color: #fff;
+      background: var(--blue);
+      border-radius: 0.6rem;
+      font-weight: 900;
+    }
+
+    .fact-card p {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .fact-card .sample {
+      margin-top: 0.75rem;
+      padding: 0.65rem 0.75rem;
+      color: var(--ink);
+      background: #f5f7f8;
+      border-radius: 9px;
+      font-size: 0.91rem;
+    }
+
+    .steps {
+      display: grid;
+      gap: 0;
+      margin-top: 1rem;
+      counter-reset: step;
+    }
+
+    .step {
+      position: relative;
+      display: grid;
+      grid-template-columns: 3.2rem 1fr;
+      gap: 0.9rem;
+      padding-bottom: 1.2rem;
+      counter-increment: step;
+    }
+
+    .step::before {
+      content: counter(step);
+      position: relative;
+      z-index: 1;
+      display: grid;
+      width: 2.6rem;
+      height: 2.6rem;
+      place-items: center;
+      color: #fff;
+      background: var(--navy);
+      border-radius: 50%;
+      font-weight: 900;
+    }
+
+    .step:not(:last-child)::after {
+      content: "";
+      position: absolute;
+      top: 2.5rem;
+      bottom: -0.1rem;
+      left: 1.27rem;
+      width: 2px;
+      background: #cbd4dd;
+    }
+
+    .step h3 {
+      margin-top: 0.15rem;
+    }
+
+    .test-box {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 0.9rem;
+      align-items: start;
+      margin-top: 1rem;
+      padding: 1.05rem;
+      background: var(--amber-soft);
+      border: 1px solid #ead5a5;
+      border-radius: 14px;
+    }
+
+    .test-box .icon {
+      display: grid;
+      width: 2.2rem;
+      height: 2.2rem;
+      place-items: center;
+      color: #fff;
+      background: var(--amber);
+      border-radius: 50%;
+      font-weight: 900;
+    }
+
+    .comparison {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1rem;
+      margin-top: 1.15rem;
+    }
+
+    .compare-card {
+      overflow: hidden;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+    }
+
+    .compare-card header {
+      padding: 0.8rem 1rem;
+      color: #fff;
+      background: var(--red);
+      font-weight: 900;
+    }
+
+    .compare-card.non header {
+      background: var(--green);
+    }
+
+    .compare-card .body {
+      padding: 1rem;
+    }
+
+    .compare-card .question {
+      margin-bottom: 0.7rem;
+      padding: 0.7rem;
+      background: #f5f6f7;
+      border-radius: 10px;
+      font-weight: 800;
+    }
+
+    .warning {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 1rem;
+      padding: 1.1rem;
+      background: #fff5f3;
+      border: 1px solid #edc2bc;
+      border-radius: 14px;
+    }
+
+    .warning-symbol {
+      display: grid;
+      width: 2.4rem;
+      height: 2.4rem;
+      place-items: center;
+      color: #fff;
+      background: var(--red);
+      border-radius: 0.7rem;
+      font-weight: 900;
+    }
+
+    .answer-tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.55rem;
+      margin: 1rem 0;
+    }
+
+    .answer-tab {
+      padding: 0.6rem 0.85rem;
+      color: var(--navy);
+      background: #fff;
+      border: 1px solid #9cb3c8;
+      border-radius: 999px;
+      cursor: pointer;
+      font: inherit;
+      font-weight: 800;
+    }
+
+    .answer-tab[aria-selected="true"] {
+      color: #fff;
+      background: var(--navy);
+      border-color: var(--navy);
+    }
+
+    .template {
+      margin: 0;
+      padding: 1.25rem;
+      color: #edf6ff;
+      background: #18263a;
+      border-radius: 14px;
+      font-family: "BIZ UDPGothic", "Yu Gothic UI", sans-serif;
+      line-height: 1.95;
+      white-space: pre-wrap;
+    }
+
+    .template mark {
+      padding: 0.05em 0.25em;
+      color: #fff1bf;
+      background: rgba(244,185,66,0.16);
+      border-radius: 0.25rem;
+    }
+
+    .mistakes {
+      display: grid;
+      gap: 0.65rem;
+      padding: 0;
+      list-style: none;
+    }
+
+    .mistakes li {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 0.8rem;
+      align-items: start;
+      padding: 0.85rem 1rem;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+    }
+
+    .mistakes .x {
+      color: var(--red);
+      font-weight: 900;
+    }
+
+    .quiz-list {
+      display: grid;
+      gap: 1rem;
+    }
+
+    .quiz-item {
+      padding: 1.15rem;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 15px;
+    }
+
+    .quiz-item .q {
+      font-weight: 800;
+    }
+
+    .quiz-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.55rem;
+      margin-top: 0.85rem;
+    }
+
+    .quiz-button {
+      padding: 0.55rem 0.8rem;
+      color: var(--ink);
+      background: #f6f7f8;
+      border: 1px solid #b9c2cc;
+      border-radius: 10px;
+      cursor: pointer;
+      font: inherit;
+      font-weight: 800;
+    }
+
+    .quiz-button:hover {
+      background: #fff;
+    }
+
+    .quiz-feedback {
+      min-height: 1.8rem;
+      margin-top: 0.7rem;
+      padding: 0.65rem 0.75rem;
+      color: var(--muted);
+      background: #f5f6f7;
+      border-radius: 9px;
+    }
+
+    .quiz-feedback.correct {
+      color: #225d43;
+      background: var(--green-soft);
+    }
+
+    .quiz-feedback.incorrect {
+      color: #8b3036;
+      background: var(--red-soft);
+    }
+
+    .sources {
+      display: grid;
+      gap: 0.8rem;
+      margin: 0;
+      padding-left: 1.25rem;
+    }
+
+    .sources li {
+      padding-left: 0.25rem;
+    }
+
+    .source-meta {
+      display: block;
+      color: var(--muted);
+      font-size: 0.88rem;
+    }
+
+    .bottom-line {
+      margin: 34px 0 52px;
+      padding: 1.35rem;
+      color: #fff;
+      background: var(--navy);
+      border-radius: 18px;
+      text-align: center;
+      box-shadow: var(--shadow);
+    }
+
+    .bottom-line strong {
+      color: #fff1bf;
+    }
+
+    .small {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .site-bar {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      align-items: center;
+      width: min(1120px, calc(100% - 32px));
+      margin: 14px auto 0;
+      color: var(--muted);
+      font-size: 0.84rem;
+    }
+
+    .site-bar a {
+      color: var(--navy);
+      font-weight: 800;
+      text-decoration: none;
+    }
+
+    .site-bar a:hover {
+      text-decoration: underline;
+      text-decoration-thickness: 2px;
+    }
+
+    .publication-box {
+      margin-top: 2rem;
+      padding: 1.35rem;
+      border: 1px solid #bfd3df;
+      border-radius: 18px;
+      background: var(--blue-soft);
+    }
+
+    .publication-box h2 {
+      margin-top: 0;
+    }
+
+    .share-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      align-items: center;
+      margin-top: 1rem;
+    }
+
+    .share-button,
+    .back-button {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 44px;
+      padding: 0.7rem 1rem;
+      border-radius: 11px;
+      font: inherit;
+      font-weight: 800;
+      cursor: pointer;
+    }
+
+    .share-button {
+      color: #fff;
+      border: 1px solid #0f1419;
+      background: #0f1419;
+    }
+
+    .back-button {
+      color: var(--navy);
+      border: 1px solid #9db9ca;
+      background: #fff;
+      text-decoration: none;
+    }
+
+    .share-button:hover,
+    .back-button:hover {
+      transform: translateY(-1px);
+    }
+
+    .key-conclusion {
+      margin: 1.1rem 0;
+      padding: 1.1rem 1.2rem;
+      color: #173f30;
+      background: var(--green-soft);
+      border: 1px solid #b8dcc7;
+      border-left: 5px solid var(--green);
+      border-radius: 0 14px 14px 0;
+      font-size: 1.04rem;
+    }
+
+    .key-conclusion strong {
+      color: #20563f;
+    }
+
+    .route-grid,
+    .branch-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1rem;
+      margin-top: 1.15rem;
+    }
+
+    .route-card,
+    .branch-card {
+      padding: 1.15rem;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 15px;
+    }
+
+    .route-card.live,
+    .branch-card.safe {
+      border-top: 5px solid var(--green);
+    }
+
+    .route-card.record,
+    .branch-card.caution {
+      border-top: 5px solid var(--red);
+    }
+
+    .status-tag {
+      display: inline-block;
+      margin-bottom: 0.6rem;
+      padding: 0.12rem 0.55rem;
+      color: #fff;
+      background: var(--navy);
+      border-radius: 999px;
+      font-size: 0.78rem;
+      font-weight: 800;
+    }
+
+    .mini-flow {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr auto 1fr;
+      gap: 0.55rem;
+      align-items: center;
+      margin: 1.25rem 0;
+    }
+
+    .flow-cell {
+      display: grid;
+      min-height: 92px;
+      padding: 0.8rem;
+      place-items: center;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 13px;
+      text-align: center;
+      font-weight: 800;
+    }
+
+    .flow-cell.highlight {
+      color: #fff;
+      background: var(--navy);
+      border-color: var(--navy);
+    }
+
+    .flow-arrow {
+      color: var(--blue);
+      font-weight: 900;
+    }
+
+    .failure-track {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 0.7rem;
+      margin: 1.25rem 0;
+    }
+
+    .failure-step {
+      position: relative;
+      padding: 1rem 0.8rem;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      text-align: center;
+    }
+
+    .failure-step:not(:last-child)::after {
+      content: "→";
+      position: absolute;
+      z-index: 2;
+      top: 50%;
+      right: -0.62rem;
+      color: var(--blue);
+      font-weight: 900;
+      transform: translateY(-50%);
+    }
+
+    .failure-step .keyword {
+      display: block;
+      color: var(--navy);
+      font-size: 1.06rem;
+      font-weight: 900;
+    }
+
+    .failure-step .plain {
+      display: block;
+      margin: 0.25rem 0;
+      color: var(--blue);
+      font-weight: 800;
+    }
+
+    .failure-step .risk {
+      display: block;
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+
+    .failure-step.sincerity {
+      background: var(--amber-soft);
+      border-color: #ead5a5;
+    }
+
+    .memory-line {
+      margin: 1rem 0;
+      padding: 0.9rem 1rem;
+      color: #fff;
+      background: #263853;
+      border-radius: 12px;
+      text-align: center;
+      font-size: clamp(1rem, 2.2vw, 1.2rem);
+      font-weight: 900;
+      letter-spacing: 0.04em;
+    }
+
+    .term-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 0.8rem;
+      margin: 1.1rem 0;
+    }
+
+    .term-card {
+      padding: 1rem;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-top: 4px solid var(--blue);
+      border-radius: 13px;
+    }
+
+    .term-card strong {
+      display: block;
+      color: var(--navy);
+      font-size: 1.05rem;
+    }
+
+    .term-card .memorize {
+      display: block;
+      margin: 0.25rem 0;
+      color: var(--blue);
+      font-weight: 900;
+    }
+
+    .term-card small {
+      color: var(--muted);
+    }
+
+    .statute-map {
+      display: grid;
+      gap: 0.8rem;
+      margin-top: 1.2rem;
+    }
+
+    .gate {
+      display: grid;
+      grid-template-columns: 7rem 1fr;
+      gap: 0.8rem;
+      align-items: stretch;
+    }
+
+    .gate-label {
+      display: grid;
+      padding: 0.75rem;
+      place-items: center;
+      color: #fff;
+      background: var(--navy);
+      border-radius: 12px;
+      text-align: center;
+      font-weight: 900;
+    }
+
+    .gate-body {
+      padding: 0.9rem 1rem;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+    }
+
+    .gate-body ul {
+      margin: 0;
+      padding-left: 1.25rem;
+    }
+
+    .gate-join {
+      padding-left: 7.8rem;
+      color: var(--blue);
+      font-weight: 900;
+    }
+
+    .statement-tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.55rem;
+      margin: 1rem 0;
+    }
+
+    .statement-tab {
+      padding: 0.6rem 0.85rem;
+      color: var(--navy);
+      background: #fff;
+      border: 1px solid #9cb3c8;
+      border-radius: 999px;
+      cursor: pointer;
+      font: inherit;
+      font-weight: 800;
+    }
+
+    .statement-tab[aria-selected="true"] {
+      color: #fff;
+      background: var(--navy);
+      border-color: var(--navy);
+    }
+
+    .statement-result {
+      min-height: 176px;
+      padding: 1.1rem;
+      background: var(--blue-soft);
+      border: 1px solid #bfd7e6;
+      border-radius: 14px;
+    }
+
+    .statement-result h3 {
+      color: var(--navy);
+    }
+
+    .statement-result .formula {
+      padding: 0.65rem 0.75rem;
+      color: #fff;
+      background: var(--navy);
+      border-radius: 9px;
+      font-weight: 900;
+    }
+
+    .yes-no {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1rem;
+    }
+
+    .yes-no th,
+    .yes-no td {
+      padding: 0.75rem;
+      border: 1px solid var(--line);
+      vertical-align: top;
+      text-align: left;
+    }
+
+    .yes-no th {
+      color: #fff;
+      background: var(--navy);
+    }
+
+    .yes-no tr:nth-child(even) td {
+      background: #f7f8f9;
+    }
+
+    .misconception {
+      margin: 1.4rem 0;
+      padding: 1.2rem;
+      background: #fff5f3;
+      border: 1px solid #edc2bc;
+      border-left: 5px solid var(--red);
+      border-radius: 0 14px 14px 0;
+    }
+
+    .misconception h3 {
+      color: #87323a;
+    }
+
+    .statement-stack {
+      display: grid;
+      gap: 0.75rem;
+      margin: 1.2rem 0;
+    }
+
+    .speech-level {
+      display: grid;
+      grid-template-columns: 9.5rem 1fr;
+      gap: 0.9rem;
+      align-items: stretch;
+      padding: 0.9rem;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+    }
+
+    .speech-level .level-name {
+      display: grid;
+      padding: 0.7rem;
+      place-items: center;
+      color: #fff;
+      background: var(--green);
+      border-radius: 10px;
+      text-align: center;
+      font-weight: 900;
+    }
+
+    .speech-level.embedded .level-name {
+      color: #47320d;
+      background: #f4c76b;
+    }
+
+    .speech-level .claim {
+      margin: 0.25rem 0;
+      color: var(--navy);
+      font-weight: 900;
+    }
+
+    .speech-level .check {
+      margin: 0.35rem 0 0;
+      color: var(--muted);
+      font-size: 0.91rem;
+    }
+
+    .speech-tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.55rem;
+      margin: 1rem 0;
+    }
+
+    .speech-tab {
+      padding: 0.65rem 0.9rem;
+      color: var(--navy);
+      background: #fff;
+      border: 1px solid #9cb3c8;
+      border-radius: 999px;
+      cursor: pointer;
+      font: inherit;
+      font-weight: 800;
+    }
+
+    .speech-tab[aria-selected="true"] {
+      color: #fff;
+      background: var(--navy);
+      border-color: var(--navy);
+    }
+
+    .speech-result {
+      padding: 1.15rem;
+      background: var(--green-soft);
+      border: 1px solid #b8dcc7;
+      border-radius: 14px;
+      transition: background 0.2s ease, border-color 0.2s ease;
+    }
+
+    .speech-result.hearsay {
+      background: var(--red-soft);
+      border-color: #efc2c2;
+    }
+
+    .speech-result .result-verdict {
+      margin: 0 0 0.7rem;
+      color: var(--green);
+      font-size: 1.35rem;
+      font-weight: 900;
+    }
+
+    .speech-result.hearsay .result-verdict {
+      color: var(--red);
+    }
+
+    .inspect-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .inspect-card {
+      padding: 1rem;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 13px;
+    }
+
+    .inspect-card strong {
+      display: block;
+      color: var(--navy);
+    }
+
+    .proof-weight {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1rem;
+      margin: 1.2rem 0;
+    }
+
+    .proof-weight article {
+      padding: 1.05rem;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+    }
+
+    .proof-weight article:first-child {
+      border-top: 5px solid var(--blue);
+    }
+
+    .proof-weight article:last-child {
+      border-top: 5px solid var(--green);
+    }
+
+    .purpose-equation {
+      display: grid;
+      grid-template-columns: 1fr auto 1.15fr auto 1fr;
+      gap: 0.6rem;
+      align-items: stretch;
+      margin: 1.25rem 0;
+    }
+
+    .purpose-node {
+      display: grid;
+      min-height: 118px;
+      padding: 0.9rem;
+      place-items: center;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      text-align: center;
+    }
+
+    .purpose-node strong {
+      display: block;
+      color: var(--navy);
+      font-size: 1.05rem;
+    }
+
+    .purpose-node.route {
+      color: #fff;
+      background: var(--navy);
+      border-color: var(--navy);
+    }
+
+    .purpose-node.route strong {
+      color: #fff1bf;
+    }
+
+    .purpose-equals {
+      display: grid;
+      place-items: center;
+      color: var(--blue);
+      font-size: 1.5rem;
+      font-weight: 900;
+    }
+
+    @media (max-width: 800px) {
+      .chain {
+        grid-template-columns: 1fr;
+      }
+
+      .arrow {
+        transform: rotate(90deg);
+      }
+
+      .chain-card.target {
+        transform: none;
+      }
+
+      .example-shell,
+      .comparison,
+      .route-grid,
+      .branch-grid,
+      .inspect-grid,
+      .proof-weight {
+        grid-template-columns: 1fr;
+      }
+
+      .purpose-equation {
+        grid-template-columns: 1fr;
+      }
+
+      .purpose-equals {
+        transform: rotate(90deg);
+      }
+
+      .failure-track {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .failure-step:not(:last-child)::after {
+        content: none;
+      }
+
+      .term-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 640px) {
+      .page {
+        width: min(100% - 20px, 1120px);
+      }
+
+      .site-bar {
+        width: min(100% - 20px, 1120px);
+      }
+
+      .hero {
+        margin-top: 10px;
+        border-radius: 20px;
+      }
+
+      .hero-answer {
+        grid-template-columns: 1fr;
+      }
+
+      .cards {
+        grid-template-columns: 1fr;
+      }
+
+      .logic-row {
+        grid-template-columns: 1fr;
+        gap: 0.1rem;
+      }
+
+      .logic-row dt {
+        color: var(--blue);
+      }
+
+      .mini-flow {
+        grid-template-columns: 1fr;
+      }
+
+      .flow-arrow {
+        transform: rotate(90deg);
+        text-align: center;
+      }
+
+      .failure-track,
+      .term-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .gate {
+        grid-template-columns: 1fr;
+      }
+
+      .gate-join {
+        padding-left: 0;
+        text-align: center;
+      }
+
+      .yes-no {
+        font-size: 0.9rem;
+      }
+
+      .speech-level {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        scroll-behavior: auto !important;
+        transition: none !important;
+      }
+    }
+
+    @media print {
+      @page {
+        size: A4;
+        margin: 13mm;
+      }
+
+      body {
+        color: #000;
+        background: #fff;
+        font-size: 10.5pt;
+      }
+
+      .page {
+        width: 100%;
+      }
+
+      .hero {
+        margin-top: 0;
+        color: #000;
+        background: #fff;
+        border: 2px solid #223b58;
+        box-shadow: none;
+      }
+
+      .hero::after,
+      .site-bar,
+      .toc,
+      .target-tabs,
+      .answer-tabs,
+      .statement-tabs,
+      .speech-tabs,
+      .quiz-actions,
+      .share-actions {
+        display: none !important;
+      }
+
+      .hero-lead,
+      .hero-answer,
+      .hero-answer strong,
+      .eyebrow {
+        color: #000;
+      }
+
+      .hero-answer {
+        border: 1px solid #aaa;
+      }
+
+      .hero-answer .mark {
+        border: 1px solid #333;
+      }
+
+      .panel,
+      .bottom-line {
+        color: #000;
+        background: #fff;
+        box-shadow: none;
+        break-inside: avoid;
+      }
+
+      .bottom-line strong {
+        color: #000;
+      }
+
+      .evidence-box,
+      .template {
+        color: #000;
+        background: #f1f1f1;
+        border: 1px solid #777;
+      }
+
+      .evidence-box .label,
+      .template mark {
+        color: #000;
+      }
+
+      a {
+        color: #000;
+        text-decoration: none;
+      }
+
+      a[href^="http"]::after {
+        content: " (" attr(href) ")";
+        font-size: 7pt;
+        overflow-wrap: anywhere;
+      }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">本文へ移動</a>
+
+  <div class="site-bar">
+    <a href="../../">← 学習ログ一覧</a>
+    <span>公開教材 m-0001｜更新 2026-07-28</span>
+  </div>
+
+  <header class="hero page">
+    <p class="eyebrow">
+      <span class="badge">刑事訴訟法</span>
+      <span class="badge">伝聞法則</span>
+      <span>司法試験・予備試験｜論文重要度 A</span>
+    </p>
+    <h1>伝聞法則を、<br>要証事実から322条までつなぐ</h1>
+    <p class="hero-lead">
+      「反対尋問できれば終わりか」「供述過程の四語は何を指すか」
+      「署名・押印があれば調書は使えるのか」を、一つの判断構造にまとめます。
+    </p>
+    <div class="hero-answer">
+      <span class="mark" aria-hidden="true">答</span>
+      <div>
+        <strong>供述内容の真実を使うなら伝聞。もっとも、法廷で話せる可能性と、以前の供述書面の証拠能力は別問題です。</strong>
+        被告人供述は、法廷供述なら311条、以前の書面なら322条というように、使おうとする証拠ごとに関門を確認します。
+      </div>
+    </div>
+  </header>
+
+  <nav class="page" aria-label="ページ内目次">
+    <ul class="toc">
+      <li><a href="#definition">1. 定義</a></li>
+      <li><a href="#relative">2. 二つの「嘘」を分ける</a></li>
+      <li><a href="#types">3. 何が要証事実になるか</a></li>
+      <li><a href="#method">4. 判断手順</a></li>
+      <li><a href="#purpose">5. 矢印と到達点</a></li>
+      <li><a href="#answer">6. 答案化</a></li>
+      <li><a href="#cross">7. 反対尋問との関係</a></li>
+      <li><a href="#reliability">8. 供述過程の暗記</a></li>
+      <li><a href="#privilege">9. 自己負罪拒否</a></li>
+      <li><a href="#statement322">10. 322条1項</a></li>
+      <li><a href="#quiz">11. 確認問題</a></li>
+    </ul>
+  </nav>
+
+  <main id="main" class="page">
+    <section id="definition" class="panel">
+      <p class="section-kicker">Core definition</p>
+      <h2>1. 「最終的に証明したいこと」とは限らない</h2>
+
+      <p class="definition">
+        伝聞判断でいう要証事実は、<strong>当該供述証拠から、まず何を認定しようとしているのか</strong>という
+        「直近の証明対象」です。
+      </p>
+
+      <p>
+        殺人事件の最終的な争点は「甲がVを殺したか」でも、個々の証拠は、
+        「甲に動機があった」「甲が凶器を所持していた」「甲が犯行を告白した」など、
+        途中の事実を証明するために使われることがあります。
+        その途中の事実も、当該証拠との関係では要証事実になり得ます。
+      </p>
+
+      <div class="chain" aria-label="証拠から公訴事実までの推論関係">
+        <div class="chain-card">
+          <div>
+            <small>材料</small>
+            <strong>個々の証拠</strong><br>
+            証言・供述調書・メモ
+          </div>
+        </div>
+        <div class="arrow" aria-hidden="true">→</div>
+        <div class="chain-card target">
+          <div>
+            <small>ここを具体化する</small>
+            <strong>要証事実</strong><br>
+            この証拠で直ちに示したい事実
+          </div>
+        </div>
+        <div class="arrow" aria-hidden="true">→</div>
+        <div class="chain-card">
+          <div>
+            <small>最終判断</small>
+            <strong>公訴事実・争点</strong><br>
+            犯人性、故意、共謀など
+          </div>
+        </div>
+      </div>
+
+      <div class="note">
+        <strong>「直接」の意味に注意：</strong>
+        ここでいう「直接」は、「直接証拠だけが要証事実を持つ」という意味ではありません。
+        間接事実を立証する証拠にも、その証拠の直近の証明対象があります。
+      </div>
+    </section>
+
+    <section id="relative" class="panel">
+      <p class="section-kicker">Interactive comparison</p>
+      <h2>2. 同じ発言でも、要証事実を変えると結論が変わる</h2>
+      <p>
+        下の二つのボタンを切り替えてください。証拠は同じです。
+        変わるのは「何を証明したいか」だけです。
+      </p>
+
+      <div class="example-shell">
+        <div class="evidence-box">
+          <span class="label">Evidence｜公判証言</span>
+          <p>
+            Aは、公園でVと男が言い争い、その直後に男がVを殴るのを目撃しました。
+            Aは公判で、次のように証言しています。
+          </p>
+          <p class="quote">「Vはその男に、『甲、貸した金を早く返せ』と言いました」</p>
+          <p><strong>要証事実を選ぶ</strong></p>
+          <div class="target-tabs" role="tablist" aria-label="要証事実を選択">
+            <button
+              class="target-button"
+              type="button"
+              role="tab"
+              aria-selected="true"
+              data-target="debt"
+            >
+              A｜甲がVから金を借りていた事実
+            </button>
+            <button
+              class="target-button"
+              type="button"
+              role="tab"
+              aria-selected="false"
+              data-target="called"
+            >
+              B｜犯人がVから「甲」と呼ばれた事実
+            </button>
+          </div>
+        </div>
+
+        <div id="relative-result" class="result-box" role="tabpanel" aria-live="polite">
+          <span class="label">Analysis｜判定</span>
+          <div class="verdict">
+            <span class="verdict-dot" aria-hidden="true"></span>
+            <span id="verdict-text">伝聞証拠に当たる</span>
+          </div>
+          <dl>
+            <div class="logic-row">
+              <dt>要証事実</dt>
+              <dd id="target-text">甲が現実にVから金を借りていたこと</dd>
+            </div>
+            <div class="logic-row">
+              <dt>必要な推論</dt>
+              <dd id="inference-text">Vの「貸した金」という発言内容が真実でなければ、借金の存在は証明できません。</dd>
+            </div>
+            <div class="logic-row">
+              <dt>吟味すべき人</dt>
+              <dd id="declarant-text">借金を知覚・記憶して述べたVの供述過程を、反対尋問等で吟味する必要があります。</dd>
+            </div>
+            <div class="logic-row">
+              <dt>結論</dt>
+              <dd id="reason-text">供述内容の真実性を必要とするため、伝聞です。</dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+
+      <div class="note">
+        この例は、法務省が公表した司法試験短答式問題の素材を、関係が見えやすいよう簡略化したものです。
+        ポイントは、「借金が本当にあるか」と「甲と呼ぶ発言が実際にあったか」を分けることです。
+      </div>
+
+      <h3 style="margin-top: 1.8rem;">核心：「発言があった」という証言も、嘘かもしれないのでは？</h3>
+
+      <div class="misconception">
+        <h3>その疑問は正しいです。ただし、問題になる人が違います</h3>
+        <p>
+          Wが公判で「被告人は『Bは泥棒だ』と言った」と証言しても、
+          Wが聞き間違えたり、記憶違いをしたり、嘘をついたりする可能性はあります。
+          だから<strong>Wを尋問する必要があります</strong>。
+          この例では、Wがいま法廷で証言しているので、Wに反対尋問できます。
+        </p>
+      </div>
+
+      <div class="statement-stack" aria-label="公判証言に含まれる二層の供述">
+        <article class="speech-level">
+          <div class="level-name">第1層<br>Wの公判供述</div>
+          <div>
+            <p class="claim">Wの主張：「被告人が、その言葉を発した」</p>
+            <p>
+              発言の有無について、見間違い・聞き違い・記憶違い・嘘が問題になります。
+            </p>
+            <p class="check"><strong>吟味方法：</strong>Wは法廷にいるので、Wを反対尋問できる。</p>
+          </div>
+        </article>
+
+        <article class="speech-level embedded">
+          <div class="level-name">第2層<br>被告人の発言</div>
+          <div>
+            <p class="claim">被告人の主張：「Bは泥棒だ」</p>
+            <p>
+              この内容が真実か、つまりBが本当に泥棒かという問題です。
+            </p>
+            <p class="check"><strong>吟味の要否：</strong>何を証明するためにこの発言を使うかで変わる。</p>
+          </div>
+        </article>
+      </div>
+
+      <p><strong>この証言を、何の証明に使いますか。</strong></p>
+      <div class="speech-tabs" role="tablist" aria-label="泥棒発言の証明目的を選択">
+        <button class="speech-tab" type="button" role="tab" aria-selected="true" data-speech-use="utterance">
+          被告人が発言したこと
+        </button>
+        <button class="speech-tab" type="button" role="tab" aria-selected="false" data-speech-use="truth">
+          Bが本当に泥棒であること
+        </button>
+      </div>
+
+      <div id="speech-result" class="speech-result" role="tabpanel" aria-live="polite">
+        <p class="result-verdict">非伝聞</p>
+        <div class="inspect-grid">
+          <div class="inspect-card">
+            <strong>要証事実</strong>
+            被告人が公衆の面前で「Bは泥棒だ」と発言したこと
+          </div>
+          <div class="inspect-card">
+            <strong>誰の正確さが必要か</strong>
+            発言を聞いたWの公判供述。Wは法廷で反対尋問できる
+          </div>
+          <div class="inspect-card">
+            <strong>不要なもの</strong>
+            被告人の発言内容、すなわち「Bが泥棒であること」の真実
+          </div>
+          <div class="inspect-card">
+            <strong>なお残る問題</strong>
+            Wを信用できるかという証明力の問題
+          </div>
+        </div>
+      </div>
+
+      <div class="proof-weight">
+        <article>
+          <h3>伝聞該当性・証拠能力</h3>
+          <p>
+            「反対尋問できない公判外供述の真実を使っていないか」という入口の問題です。
+            <strong>非伝聞＝320条1項によって入口で排除されない</strong>というだけです。
+          </p>
+        </article>
+        <article>
+          <h3>信用性・証明力</h3>
+          <p>
+            「Wの話を本当に信用してよいか」という重みの問題です。
+            非伝聞でも、反対尋問の結果、聞き間違い・記憶違い・嘘が判明すれば、裁判所は信用しません。
+          </p>
+        </article>
+      </div>
+
+      <div class="key-conclusion">
+        <strong>「尋問の必要があるのでは？」への答えは、はい、あります。</strong>
+        ただし、発言の有無を証明する場面で尋問すべきなのは、発言を聞いたWです。
+        この設例はWの<strong>公判証言</strong>なので、その尋問が現に行われています。
+      </div>
+
+      <div class="inspect-grid">
+        <article class="inspect-card">
+          <strong>Wが法廷で証言する場合</strong>
+          「被告人が発言した」というWの供述を法廷で吟味できます。
+          発言の存在を証明する用途なら非伝聞です。
+        </article>
+        <article class="inspect-card">
+          <strong>Wの警察官調書だけを出す場合</strong>
+          「被告人が発言した」というWの公判外供述の真実を使うのに、Wを法廷で尋問していません。
+          この場合は、発言の存在を証明する用途でもWの供述について伝聞性が問題になります。
+        </article>
+      </div>
+    </section>
+
+    <section id="types" class="panel">
+      <p class="section-kicker">Possible targets</p>
+      <h2>3. 要証事実になり得る具体的なもの</h2>
+      <p>
+        要証事実は、公訴事実そのものに限定されません。
+        個々の証拠を何に使うかに応じ、次のような事実が候補になります。
+      </p>
+
+      <div class="cards">
+        <article class="fact-card">
+          <span class="num">1</span>
+          <h3>犯罪事実・主要な争点</h3>
+          <p>実行行為、犯人性、故意、共謀など、犯罪の成立に直結する事実です。</p>
+          <p class="sample">例：「甲がV方に放火した」「甲と乙の間に共謀が成立した」</p>
+        </article>
+
+        <article class="fact-card">
+          <span class="num">2</span>
+          <h3>間接事実</h3>
+          <p>最終的な犯罪事実を推認させる、動機・機会・知識・所持などの事実です。</p>
+          <p class="sample">例：「甲が犯行前から凶器を所持していた」「Bが危険を告知されていた」</p>
+        </article>
+
+        <article class="fact-card">
+          <span class="num">3</span>
+          <h3>補助事実</h3>
+          <p>証人の知覚能力、記憶、偏見、供述の信用性などを判断するための事実です。</p>
+          <p class="sample">例：「証人が以前は反対内容を述べていた」※刑訴法328条等の別途検討が必要</p>
+        </article>
+
+        <article class="fact-card">
+          <span class="num">4</span>
+          <h3>発言・通知がなされた事実自体</h3>
+          <p>言葉を発したこと自体が犯罪行為や警告・通知になる場合です。</p>
+          <p class="sample">例：「公然と『Bは泥棒だ』と言った」「Bが故障の警告を受けた」</p>
+        </article>
+      </div>
+
+      <div class="note">
+        <strong>試験での言い換え：</strong>
+        「この証拠から、裁判所にまず認定してほしい事実は何か」と考えると、要証事実を見つけやすくなります。
+      </div>
+    </section>
+
+    <section id="method" class="panel">
+      <p class="section-kicker">Decision method</p>
+      <h2>4. 伝聞該当性を判断する5段階</h2>
+
+      <div class="steps">
+        <div class="step">
+          <div>
+            <h3>問題となる供述を抜き出す</h3>
+            <p>誰が、いつ、どの言葉・記載・動作で、何を表現したのかを特定します。</p>
+          </div>
+        </div>
+        <div class="step">
+          <div>
+            <h3>原供述者を特定する</h3>
+            <p>知覚・記憶・表現・叙述の過程を吟味すべき人は誰かを確認します。証人が他人の発言を再現する場合、その「他人」が原供述者です。</p>
+          </div>
+        </div>
+        <div class="step">
+          <div>
+            <h3>要証事実を具体的な一文にする</h3>
+            <p>「犯人性」だけで止めず、「甲がVを刺した」「甲が犯行前にナイフを持っていた」のように書きます。</p>
+          </div>
+        </div>
+        <div class="step">
+          <div>
+            <h3>供述内容が真実である必要があるかを問う</h3>
+            <p>その事実を認定するために、原供述の内容どおりの事実が実際に存在しなければならないかを確認します。</p>
+          </div>
+        </div>
+        <div class="step">
+          <div>
+            <h3>伝聞・非伝聞を分け、その次へ進む</h3>
+            <p>真実性が必要なら伝聞です。刑訴法320条1項から321条以下の伝聞例外へ進みます。不要なら非伝聞ですが、関連性や成立の真正等は別に確認します。</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="test-box">
+        <span class="icon" aria-hidden="true">仮</span>
+        <div>
+          <h3>「内容がうそでも役に立つか」テスト</h3>
+          <p>
+            原供述の内容が仮に誤っていても、発言がなされた事実だけで要証事実の立証に役立つなら、
+            内容の真実性は不要で、非伝聞となる方向です。
+            反対に、内容が誤っていれば証明力が失われるなら、伝聞となる方向です。
+          </p>
+          <p class="small">※これは思考補助です。最終的には、具体的な証拠の使い方と推論過程を示してください。</p>
+        </div>
+      </div>
+
+      <div class="comparison">
+        <article class="compare-card">
+          <header>内容の真実性が必要 → 伝聞</header>
+          <div class="body">
+            <p class="question">証言：「娘が『被告人が放火するのを見た』と言っていた」</p>
+            <p><strong>要証事実：</strong>被告人が放火したこと</p>
+            <p>
+              娘の発言内容が正しくなければ、被告人の放火は証明できません。
+              娘の知覚・記憶・表現を吟味する必要があります。
+            </p>
+          </div>
+        </article>
+
+        <article class="compare-card non">
+          <header>発言自体が対象 → 非伝聞</header>
+          <div class="body">
+            <p class="question">証言：「被告人は公衆の面前で『Bは泥棒だ』と言った」</p>
+            <p><strong>要証事実：</strong>被告人がその言葉を公然と発したこと</p>
+            <p>
+              Bが本当に泥棒かは不要です。言葉を発した行為自体が名誉毀損の構成要件との関係で問題になります。
+            </p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="purpose" class="panel">
+      <p class="section-kicker">Purpose vs. target fact</p>
+      <h2>5. 立証趣旨は「矢印」、要証事実は「到達点」</h2>
+
+      <div class="key-conclusion">
+        <strong>両者は、無関係な別概念ではありません。</strong>
+        立証趣旨を具体化した先に、要証事実があります。
+        教材によっては「立証趣旨（要証事実）」のように、ほぼ同じ意味で使うこともあります。
+      </div>
+
+      <div class="purpose-equation" aria-label="証拠、立証趣旨、要証事実の関係">
+        <div class="purpose-node">
+          <div>
+            <strong>証拠</strong>
+            Wの公判証言
+          </div>
+        </div>
+        <div class="purpose-equals" aria-hidden="true">→</div>
+        <div class="purpose-node route">
+          <div>
+            <strong>立証趣旨＝使い方・矢印</strong>
+            この証拠から、右の事実を証明する
+          </div>
+        </div>
+        <div class="purpose-equals" aria-hidden="true">→</div>
+        <div class="purpose-node">
+          <div>
+            <strong>要証事実＝到達点</strong>
+            具体的に証明しようとする事実
+          </div>
+        </div>
+      </div>
+
+      <h3>同じ証言でも、矢印の向きが変われば到達点も変わる</h3>
+      <div class="branch-grid">
+        <article class="branch-card safe">
+          <span class="status-tag">立証趣旨 A</span>
+          <h3>公然と発言した行為を証明する</h3>
+          <p>
+            <strong>要証事実：</strong>被告人が公衆の面前で「Bは泥棒だ」と発言したこと。
+            Wの公判供述を信用できるかは吟味しますが、「Bが本当に泥棒か」は使わないため非伝聞です。
+          </p>
+        </article>
+        <article class="branch-card caution">
+          <span class="status-tag">立証趣旨 B</span>
+          <h3>Bが窃盗をした事実を証明する</h3>
+          <p>
+            <strong>要証事実：</strong>Bが現実に窃盗をしたこと。
+            被告人の「Bは泥棒だ」という公判外供述が正しいことを使うため、伝聞です。
+          </p>
+        </article>
+      </div>
+
+      <div class="warning" style="margin-top: 1.2rem;">
+        <span class="warning-symbol" aria-hidden="true">!</span>
+        <div>
+          <h3>「立証趣旨だけを見るな」の正確な意味</h3>
+          <p>
+            立証趣旨を無視する、という意味ではありません。
+            「犯行状況」「被害再現状況」のような抽象的な見出しをそのまま要証事実にせず、
+            <strong>証拠から何を、どの推論で認定するのか</strong>まで具体化する、という意味です。
+          </p>
+        </div>
+      </div>
+
+      <h3 style="margin-top: 1.5rem;">抽象的な立証趣旨は、もう一段ほどく</h3>
+      <p>
+        例えば、実況見分調書の立証趣旨が「被害再現状況」とされていても、次の二つは別です。
+      </p>
+      <div class="branch-grid">
+        <article class="branch-card safe">
+          <span class="status-tag">内容の真実は不要</span>
+          <h3>再現時に、その動作ができたことを使う</h3>
+          <p>
+            写真・動画から「再現者が、その場で扉を開けられた」という身体的動作を認定するだけなら、
+            「事件もこのとおりだった」という主張の真実を使っていません。
+          </p>
+        </article>
+        <article class="branch-card caution">
+          <span class="status-tag">内容の真実が必要</span>
+          <h3>実際の事件も、再現どおりだったことを使う</h3>
+          <p>
+            「被害者が示したとおりに犯行が行われた」と認定するなら、再現行為に含まれる
+            「事件はこのとおりだった」という供述的内容の真実を使うため、伝聞性が問題になります。
+          </p>
+        </article>
+      </div>
+
+      <div class="note">
+        <strong>答案上の安全策：</strong>
+        「検察官の立証趣旨は○○である。これを具体化すると、要証事実は△△である。
+        この認定には原供述内容の真実性が必要である／不要である」と、矢印を言葉にします。
+      </div>
+    </section>
+
+    <section id="answer" class="panel">
+      <p class="section-kicker">Exam writing</p>
+      <h2>6. そのまま使える答案の骨格</h2>
+      <p>伝聞と非伝聞で、答案の接続先が変わります。</p>
+
+      <div class="answer-tabs" role="tablist" aria-label="答案例の切替">
+        <button class="answer-tab" type="button" role="tab" aria-selected="true" data-answer="hearsay">
+          伝聞となる場合
+        </button>
+        <button class="answer-tab" type="button" role="tab" aria-selected="false" data-answer="non">
+          非伝聞となる場合
+        </button>
+      </div>
+
+      <div id="answer-template" class="template" role="tabpanel" aria-live="polite">本件供述の要証事実は、<mark>甲がV方に放火したこと</mark>である。
+この事実を立証するためには、原供述者Pの「甲が放火するのを見た」との供述内容が真実であることを必要とする。
+そして、Pの知覚・記憶・表現・叙述の正確性は、公判廷での反対尋問等によって吟味されていない。
+したがって、本件供述は伝聞証拠に当たり、刑訴法320条1項により原則として証拠能力を欠く。
+そこで、<mark>321条以下の伝聞例外</mark>に該当するかを検討する。</div>
+
+      <h3 style="margin-top: 1.6rem;">よくある失点</h3>
+      <ul class="mistakes">
+        <li>
+          <span class="x">×</span>
+          <span>要証事実を「甲の有罪」「犯人性」「共謀」とだけ書き、証拠との推論関係を示さない。</span>
+        </li>
+        <li>
+          <span class="x">×</span>
+          <span>誰の供述過程を吟味できないのかを示さず、「公判外供述だから伝聞」とだけ書く。</span>
+        </li>
+        <li>
+          <span class="x">×</span>
+          <span>検察官の立証趣旨をそのまま要証事実とし、実質的な証拠の使い方を検討しない。</span>
+        </li>
+        <li>
+          <span class="x">×</span>
+          <span>非伝聞と判断しただけで、当然に証拠として使えるとする。関連性や成立の真正などは残ります。</span>
+        </li>
+      </ul>
+    </section>
+
+    <section id="cross" class="panel">
+      <p class="section-kicker">Cross-examination</p>
+      <h2>7. 「反対尋問できるなら問題なし」ではない</h2>
+
+      <div class="key-conclusion">
+        <strong>結論：</strong>
+        原供述者が法廷で話せる状態にあるだけでは、以前の供述書面の伝聞性は消えません。
+        <strong>法廷で新たにされた供述</strong>と、<strong>以前にされた公判廷外供述</strong>は、別の証拠だからです。
+      </div>
+
+      <div class="route-grid">
+        <article class="route-card live">
+          <span class="status-tag">いま法廷で話した内容</span>
+          <h3>法廷供述を証拠にする</h3>
+          <p>
+            その供述自体について相手方が質問して吟味できるので、通常は「公判廷外供述を内容とする証拠」ではありません。
+            もっとも、供述の信用性は別に評価されます。
+          </p>
+        </article>
+        <article class="route-card record">
+          <span class="status-tag">以前の供述を記録した書面</span>
+          <h3>供述調書そのものを証拠にする</h3>
+          <p>
+            原供述者が現在法廷にいても、書面は過去の供述を内容とする別証拠です。
+            その書面には、322条などの伝聞例外・326条の同意等の根拠が必要です。
+          </p>
+        </article>
+      </div>
+
+      <p class="small">
+        原供述者が法廷で、以前の内容を現在の自分の供述として明確に述べ、その点について質問を受けたなら、
+        その<strong>法廷供述</strong>を証拠として用いることはできます。
+        ただし、これは過去の書面が自動的に非伝聞へ変わるという意味ではありません。
+      </p>
+
+      <h3 style="margin-top: 1.5rem;">被告人なら「法廷で質問すればよい」とは限らない</h3>
+      <div class="mini-flow" aria-label="被告人質問と供述調書の関係">
+        <div class="flow-cell">
+          被告人が<br>任意に供述する
+        </div>
+        <div class="flow-arrow" aria-hidden="true">→</div>
+        <div class="flow-cell highlight">
+          その法廷供述を<br>証拠として評価
+        </div>
+        <div class="flow-arrow" aria-hidden="true">／</div>
+        <div class="flow-cell">
+          以前の調書を使うなら<br>別途322条等
+        </div>
+      </div>
+
+      <p>
+        被告人には、終始沈黙し、個々の質問への供述を拒む権利があります（刑訴法311条1項、憲法38条1項）。
+        被告人が任意に供述する場合には検察官も質問できますが、証人のように供述を強制して
+        「以前の供述を必ず反対尋問で再現する」ことはできません。
+        したがって、被告人が否認・黙秘すれば、「法廷で聞けば済む」という前提自体が崩れます。
+      </p>
+
+      <div class="note">
+        <strong>用語も分けて暗記：</strong>
+        被告人本人が文章を作ったものが「供述書」。検察官などが被告人の話を記録したものが
+        「供述録取書」（実務上、検察官調書など）です。法廷では通常「被告人尋問」ではなく
+        <strong>被告人質問</strong>と呼びます。
+      </div>
+    </section>
+
+    <section id="reliability" class="panel">
+      <p class="section-kicker">Testimonial risks</p>
+      <h2>8. 知覚・記憶・表現・叙述を、一言で覚える</h2>
+
+      <div class="memory-line">
+        見る → 覚える → 言葉にする → 伝える ＋ 嘘を混ぜない
+      </div>
+
+      <div class="failure-track" aria-label="供述過程と典型的な誤り">
+        <article class="failure-step">
+          <span class="keyword">知覚</span>
+          <span class="plain">取り込む</span>
+          <span class="risk">見間違い・聞き違い</span>
+        </article>
+        <article class="failure-step">
+          <span class="keyword">記憶</span>
+          <span class="plain">保存する</span>
+          <span class="risk">忘れる・記憶が変わる</span>
+        </article>
+        <article class="failure-step">
+          <span class="keyword">表現</span>
+          <span class="plain">言葉に変える</span>
+          <span class="risk">言葉選びがずれる</span>
+        </article>
+        <article class="failure-step">
+          <span class="keyword">叙述</span>
+          <span class="plain">相手に伝える</span>
+          <span class="risk">言い落とす・言い違う</span>
+        </article>
+        <article class="failure-step sincerity">
+          <span class="keyword">誠実性</span>
+          <span class="plain">故意に曲げない</span>
+          <span class="risk">意図的な嘘</span>
+        </article>
+      </div>
+
+      <div class="key-conclusion">
+        <strong>誠実性は不要ではありません。</strong>
+        文献によっては、故意の虚偽を「叙述」の問題に含めたり、
+        四過程とは別に「真摯性・誠実性」として挙げたりします。
+        区切り方が違うだけで、嘘をつく危険を無視しているわけではありません。
+      </div>
+
+      <p>
+        試験では、引用する論証が「知覚・記憶・表現・叙述」としているなら、その四語は崩さずに使い、
+        理由づけで「各過程に誤りや虚偽が入り得る」と書けば十分です。
+        表現と叙述の境界を細かく論じるより、<strong>どの原供述者の、どの供述過程を反対尋問できないのか</strong>を示す方が重要です。
+      </p>
+    </section>
+
+    <section id="privilege" class="panel">
+      <p class="section-kicker">Privilege against self-incrimination</p>
+      <h2>9. 自己負罪拒否の四語は「頭の中の答え」</h2>
+
+      <div class="definition">
+        自己負罪拒否の中心を一言でいえば、
+        <strong>自分を刑事責任に近づける「頭の中の答え」を、強制的に語らせないこと</strong>です。
+      </div>
+
+      <div class="term-grid" aria-label="知識・記憶・認識・判断の暗記用キーワード">
+        <article class="term-card">
+          <strong>知識</strong>
+          <span class="memorize">知っている</span>
+          <small>頭に持っている情報</small>
+        </article>
+        <article class="term-card">
+          <strong>記憶</strong>
+          <span class="memorize">覚えている</span>
+          <small>過去の体験の保存・想起</small>
+        </article>
+        <article class="term-card">
+          <strong>認識</strong>
+          <span class="memorize">分かっていた</span>
+          <small>当時、状況をどう捉えたか</small>
+        </article>
+        <article class="term-card">
+          <strong>判断</strong>
+          <span class="memorize">そう考えた</span>
+          <small>情報から出した結論・評価</small>
+        </article>
+      </div>
+
+      <div class="memory-line">
+        知る・覚える・気づく・決める
+      </div>
+
+      <p>
+        四語には重なりがあります。暗記上は、
+        「何を知っているか」「何を覚えているか」「当時どう分かっていたか」「そこからどう考えたか」
+        と置き換えれば足ります。
+      </p>
+
+      <div class="note">
+        <strong>境界：</strong>
+        自己負罪拒否は、本人の精神内容を供述として強制開示させる場面が中心です。
+        指紋・血液・身体的特徴などの客観的・物理的資料の採取が当然に同じ権利で拒める、という意味ではありません。
+        それらは令状や強制処分法定主義など、別の規律を検討します。
+      </div>
+    </section>
+
+    <section id="statement322" class="panel">
+      <p class="section-kicker">Code of Criminal Procedure 322(1)</p>
+      <h2>10. 322条1項は「書面 → 内容」の二段階で読む</h2>
+
+      <div class="warning">
+        <span class="warning-symbol" aria-hidden="true">!</span>
+        <div>
+          <h3>署名・押印は、万能の通行証ではない</h3>
+          <p>
+            「署名または押印がある」ことは、一定の供述録取書についての形式的な関門にすぎません。
+            その後に、供述内容に応じた実質的な関門があります。
+          </p>
+        </div>
+      </div>
+
+      <div class="statute-map" aria-label="刑訴法322条1項の判断構造">
+        <div class="gate">
+          <div class="gate-label">第1関門<br>書面の種類</div>
+          <div class="gate-body">
+            <ul>
+              <li><strong>被告人が自分で作成した供述書</strong>：条文上、署名・押印は必須とされていません。ただし、被告人が作成したことの立証は必要です。</li>
+              <li><strong>他人が被告人の供述を録取した書面</strong>：被告人の<strong>署名または押印</strong>のどちらかが必要です。</li>
+            </ul>
+          </div>
+        </div>
+        <div class="gate-join" aria-hidden="true">↓　この関門を通った書面について</div>
+        <div class="gate">
+          <div class="gate-label">第2関門<br>供述の内容</div>
+          <div class="gate-body">
+            <ul>
+              <li><strong>被告人に不利益な事実の承認</strong>を含む → 本文の要件を満たすが、さらに任意性の疑いがないことが必要。</li>
+              <li><strong>それ以外の供述</strong> → 特に信用すべき情況の下でされたことが必要。</li>
+            </ul>
+          </div>
+        </div>
+        <div class="gate-join" aria-hidden="true">↓</div>
+        <div class="gate">
+          <div class="gate-label">なお残る<br>一般要件</div>
+          <div class="gate-body">
+            関連性、成立の真正、違法収集証拠排除なども別途問題になります。
+            322条1項だけで「問答無用」に証拠になるわけではありません。
+          </div>
+        </div>
+      </div>
+
+      <h3 style="margin-top: 1.6rem;">内容を選ぶと、必要条件が切り替わります</h3>
+      <div class="statement-tabs" role="tablist" aria-label="322条1項の供述内容による分岐">
+        <button class="statement-tab" type="button" role="tab" aria-selected="true" data-statement="adverse">
+          不利益な事実の承認
+        </button>
+        <button class="statement-tab" type="button" role="tab" aria-selected="false" data-statement="favorable">
+          それ以外の供述
+        </button>
+      </div>
+      <div id="statement-result" class="statement-result" role="tabpanel" aria-live="polite">
+        <h3>不利益な事実の承認</h3>
+        <p class="formula">形式要件 ＋ 不利益承認 ＋ 任意性に疑いなし</p>
+        <p>
+          「犯行を全部認める自白」より広く、犯行現場にいた、凶器を持っていたなど、
+          被告人に不利な一部事実を認める供述も含みます。
+          特信情況があっても、任意性に疑いがあれば、ただし書により証拠にできません。
+        </p>
+      </div>
+
+      <h3 style="margin-top: 1.6rem;">質問への直接回答</h3>
+      <table class="yes-no">
+        <thead>
+          <tr>
+            <th>疑問</th>
+            <th>答え</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>署名・押印があり、不利益内容でなければ自動的に使えるか</td>
+            <td><strong>いいえ。むしろ「特に信用すべき情況」が必要です。</strong>署名・押印だけでは足りません。</td>
+          </tr>
+          <tr>
+            <td>署名・押印がなければ、全内容が永久に使えないか</td>
+            <td>
+              <strong>いいえ。</strong>本人作成の供述書には、条文上その形式要件はありません。
+              他人作成の供述録取書なら322条1項の書面ルートは使えませんが、
+              法廷での任意の供述、原供述を聞いた者の公判供述と324条1項、
+              326条の同意、内容の真実性を使わない用法などは別に検討します。
+            </td>
+          </tr>
+          <tr>
+            <td>特信情況があれば、不利益供述でも任意性は不要か</td>
+            <td>
+              <strong>いいえ。</strong>ただし書は「不利益な事実の承認を内容とする書面」全体にかかります。
+              特信情況の枝を選んでも、任意性の関門を迂回できません。
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3 style="margin-top: 1.6rem;">任意性と特信情況は、守るものが違う</h3>
+      <div class="comparison">
+        <article class="compare-card">
+          <header>任意性</header>
+          <div class="body">
+            <p class="question">自由な意思で述べたか</p>
+            <p>
+              強制・拷問・脅迫などによる虚偽の危険と、黙秘権・手続の公正を守る関門です。
+              不利益承認について、疑いがあれば排除します。
+            </p>
+          </div>
+        </article>
+        <article class="compare-card non">
+          <header>特に信用すべき情況</header>
+          <div class="body">
+            <p class="question">反対尋問の代わりになる外部的な信用保障があるか</p>
+            <p>
+              供述時の客観的情況から、作為や虚偽が入りにくかったといえるかを見ます。
+              単に内容がもっともらしい、署名がある、他の証拠と合う、というだけでは足りません。
+            </p>
+          </div>
+        </article>
+      </div>
+
+      <p>
+        なぜ「それ以外の供述」の枝に独立した任意性要件が書かれていないのか。
+        319条と322条1項ただし書が直接防ごうとするのは、強制された自白・不利益承認を
+        被告人に不利に用いることだからです。これに対し、否認やアリバイなどの自己に有利な公判外供述は、
+        被告人が一方的に作った話を反対尋問なしで持ち込む危険があるため、本文後段の厳しい特信情況で選別します。
+      </p>
+
+      <div class="key-conclusion">
+        <strong>「任意性はないが、特信情況がある不利益供述」という合格ルートはありません。</strong>
+        不利益承認なら、特信情況の有無にかかわらず任意性が必要です。
+        不利益でない供述では、ただし書の任意性要件は直接かかりませんが、
+        強制された事情は通常、特信情況を否定する方向に働きます。
+      </div>
+
+      <h3>特信情況のイメージ例</h3>
+      <p class="small">以下は理解用の例です。個々の事情を総合して判断され、どれか一つで自動的に認められるものではありません。</p>
+      <div class="branch-grid">
+        <article class="branch-card safe">
+          <h3>事件化する前の、日常的・同時的な記録</h3>
+          <p>
+            捜査や裁判を予想していない時期に、日課としてその日の行動を記録していたなど、
+            後から有利な話を作る動機が乏しく、記憶も新鮮な情況。
+          </p>
+        </article>
+        <article class="branch-card safe">
+          <h3>自然な相手への、自然な時機の発言</h3>
+          <p>
+            利害の薄い相手に、出来事の直後、訴訟対策ではない自然な文脈で述べたなど、
+            供述時の外部的情況から作為が入りにくい場合。
+          </p>
+        </article>
+      </div>
+
+      <div class="warning" style="margin-top: 1rem;">
+        <span class="warning-symbol" aria-hidden="true">×</span>
+        <div>
+          <h3>典型的に足りないもの</h3>
+          <p>
+            逮捕後に「私はやっていない」と書いて署名した、弁護人が作った否認書面に署名した、
+            内容が客観証拠と一部一致する、といった事情だけで特信情況になるわけではありません。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="quiz" class="panel">
+      <p class="section-kicker">Quick check</p>
+      <h2>11. 5問だけ確認</h2>
+
+      <div class="quiz-list">
+        <article class="quiz-item" data-correct="hearsay">
+          <p class="q">
+            Q1　Wは公判で「Pが『甲がVを刺すのを見た』と言った」と証言した。
+            要証事実は「甲がVを刺したこと」である。
+          </p>
+          <div class="quiz-actions">
+            <button class="quiz-button" type="button" data-choice="hearsay">伝聞</button>
+            <button class="quiz-button" type="button" data-choice="non">非伝聞</button>
+          </div>
+          <div class="quiz-feedback" aria-live="polite">選択してください。</div>
+        </article>
+
+        <article class="quiz-item" data-correct="non">
+          <p class="q">
+            Q2　Wは公判で「甲が公衆の面前でBに『Bは泥棒だ』と言った」と証言した。
+            要証事実は「甲がその言葉を公然と発したこと」である。
+          </p>
+          <div class="quiz-actions">
+            <button class="quiz-button" type="button" data-choice="hearsay">伝聞</button>
+            <button class="quiz-button" type="button" data-choice="non">非伝聞</button>
+          </div>
+          <div class="quiz-feedback" aria-live="polite">選択してください。</div>
+        </article>
+
+        <article class="quiz-item" data-correct="non">
+          <p class="q">
+            Q3　Wは公判で「AがBに『その車はブレーキが故障している』と警告した」と証言した。
+            要証事実は「Bが故障の可能性を警告されていたこと」である。
+          </p>
+          <div class="quiz-actions">
+            <button class="quiz-button" type="button" data-choice="hearsay">伝聞</button>
+            <button class="quiz-button" type="button" data-choice="non">非伝聞</button>
+          </div>
+          <div class="quiz-feedback" aria-live="polite">選択してください。</div>
+        </article>
+
+        <article class="quiz-item" data-correct="no">
+          <p class="q">
+            Q4　被告人が法廷に出頭している以上、以前の検察官調書は、被告人に質問できるため当然に伝聞証拠ではなくなる。
+          </p>
+          <div class="quiz-actions">
+            <button class="quiz-button" type="button" data-choice="yes">正しい</button>
+            <button class="quiz-button" type="button" data-choice="no">誤り</button>
+          </div>
+          <div class="quiz-feedback" aria-live="polite">選択してください。</div>
+        </article>
+
+        <article class="quiz-item" data-correct="no322">
+          <p class="q">
+            Q5　検察官が録取した被告人の供述調書に被告人の署名があり、内容が被告人に有利なら、322条1項により当然に証拠にできる。
+          </p>
+          <div class="quiz-actions">
+            <button class="quiz-button" type="button" data-choice="yes322">正しい</button>
+            <button class="quiz-button" type="button" data-choice="no322">誤り</button>
+          </div>
+          <div class="quiz-feedback" aria-live="polite">選択してください。</div>
+        </article>
+      </div>
+    </section>
+
+    <section id="sources" class="panel">
+      <p class="section-kicker">Primary sources</p>
+      <h2>根拠資料</h2>
+      <ol class="sources">
+        <li>
+          <a href="https://laws.e-gov.go.jp/law/323AC0000000131" target="_blank" rel="noopener noreferrer">
+            e-Gov法令検索「刑事訴訟法」311条、319条、320条、322条、324条、326条
+          </a>
+          <span class="source-meta">被告人の黙秘・供述拒否、任意性、伝聞法則、被告人供述書面、伝聞供述、同意書面の各規定。</span>
+        </li>
+        <li>
+          <a href="https://laws.e-gov.go.jp/law/321CONSTITUTION" target="_blank" rel="noopener noreferrer">
+            e-Gov法令検索「日本国憲法」37条2項、38条
+          </a>
+          <span class="source-meta">証人審問の機会と、自己に不利益な供述を強要されない権利等を規定。</span>
+        </li>
+        <li>
+          <a href="https://www.courts.go.jp/saikosai/vc-files/saikosai/shihoukensyujyo/shinproceedingskeijisaiban.pdf" target="_blank" rel="noopener noreferrer">
+            司法研修所刑事裁判教官室「新プロシーディングス刑事裁判」（令和8年2月）57頁
+          </a>
+          <span class="source-meta">立証趣旨を「証拠と証明すべき事実との関係」と説明し、その具体的明示が防御と裁判所の証拠採否に必要であることを示す。</span>
+        </li>
+        <li>
+          <a href="https://www.moj.go.jp/content/001408693.pdf" target="_blank" rel="noopener noreferrer">
+            法務省「令和5年司法試験の採点実感（刑事系科目第1問）」
+          </a>
+          <span class="source-meta">立証趣旨を機械的に要証事実とせず、具体的事実と実質的な証拠の用途を分析する必要性を指摘。</span>
+        </li>
+        <li>
+          <a href="https://www.courts.go.jp/assets/hanrei/hanrei-pdf-90092.pdf" target="_blank" rel="noopener noreferrer">
+            大阪高裁平成31年（う）第159号判決
+          </a>
+          <span class="source-meta">伝聞法則の趣旨として、知覚・記憶・表現・叙述の各過程に誤りや虚偽が入り込むおそれと、原供述者尋問による点検の必要を説明。</span>
+        </li>
+        <li>
+          <a href="https://www.moj.go.jp/content/001288126.pdf" target="_blank" rel="noopener noreferrer">
+            法務省法務総合研究所資料「供述証拠の信用性判断」
+          </a>
+          <span class="source-meta">四過程の誤りに加え、人が故意に虚偽供述をする危険も明示。</span>
+        </li>
+        <li>
+          <a href="https://www.moj.go.jp/content/001348204.pdf" target="_blank" rel="noopener noreferrer">
+            法務省「令和3年司法試験短答式試験問題集［刑法・刑事訴訟法］」第23問
+          </a>
+          <span class="source-meta">「甲、貸した金を早く返せ」という同一発言を、異なる要証事実との関係で検討する問題。</span>
+        </li>
+        <li>
+          <a href="https://www.courts.go.jp/assets/hanrei/hanrei-pdf-21060.pdf" target="_blank" rel="noopener noreferrer">
+            裁判例「被告人が作成した供述書」の署名・押印
+          </a>
+          <span class="source-meta">被告人が自ら作成した供述書には署名・押印を要しないとし、自筆メモを322条1項の書面として扱った裁判例。</span>
+        </li>
+        <li>
+          <a href="https://www.courts.go.jp/assets/hanrei/hanrei-pdf-23923.pdf" target="_blank" rel="noopener noreferrer">
+            裁判例「署名・押印のない供述録取書」
+          </a>
+          <span class="source-meta">司法警察員作成の供述調書に被告人の署名・押印がなく、322条1項の証拠能力を否定した事例。同意があっても326条上相当でないと判断。</span>
+        </li>
+        <li>
+          <a href="https://www.courts.go.jp/assets/hanrei/hanrei-pdf-60731.pdf" target="_blank" rel="noopener noreferrer">
+            最高裁判例「不利益な事実の承認と322条1項」
+          </a>
+          <span class="source-meta">不利益承認を内容とする被告人供述調書は、任意性が認められれば、特信情況を別に要求せず証拠にできる旨を判示。</span>
+        </li>
+      </ol>
+      <p class="small">
+        法令・公的資料は2026年7月25日に確認しました。本教材は学習用です。個別事件への法的助言ではありません。
+      </p>
+    </section>
+
+    <section class="publication-box" aria-labelledby="publication-policy">
+      <h2 id="publication-policy">公開・再利用について</h2>
+      <p>
+        このページは個人の学習履歴を、同じ疑問を持つ受験生にも参考になる範囲で公開したものです。
+        <strong>著作権・再利用条件：</strong>URLの共有は歓迎します。本文、図表、デザインの転載、改変、再配布は許諾していません。
+        リンク先の法令、裁判例、公的資料には、それぞれの提供元の条件が適用されます。
+      </p>
+      <div class="share-actions">
+        <button class="share-button" id="x-share" type="button">Xで共有画面を開く</button>
+        <a class="back-button" href="../../">教材一覧へ戻る</a>
+      </div>
+      <p class="small">
+        共有ボタンは教材名と公開URLをXの投稿画面へ入力します。内容を確認し、最後の「ポストする」はご自身で押してください。
+      </p>
+    </section>
+
+    <div class="bottom-line">
+      <strong>最後の暗記：</strong>
+      非伝聞とは「嘘の危険がない」ことではなく、「反対尋問を経ない公判外供述の真実を、要証事実の認定に使わない」こと。
+      立証趣旨は証拠の使い方という矢印、要証事実はその到達点。
+      供述過程は「見る・覚える・言葉にする・伝える＋嘘を混ぜない」。
+      322条1項は「適式な書面の後、不利益承認なら任意性、それ以外なら特信情況」です。
+    </div>
+  </main>
+
+  <script>
+    (() => {
+      "use strict";
+
+      const shareButton = document.querySelector("#x-share");
+      if (shareButton) {
+        shareButton.addEventListener("click", () => {
+          const shareUrl = new URL("https://twitter.com/intent/tweet");
+          shareUrl.searchParams.set("text", "【刑事訴訟法】伝聞法則を、要証事実から322条までつなぐ");
+          shareUrl.searchParams.set("url", "https://mokemoke5312064.github.io/shiho-study/materials/hearsay-yosho-jijitsu/");
+          shareUrl.searchParams.set("hashtags", "司法試験,予備試験,刑事訴訟法");
+          window.open(shareUrl.toString(), "_blank", "noopener,noreferrer");
+        });
+      }
+
+      const relativeData = {
+        debt: {
+          className: "",
+          verdict: "伝聞証拠に当たる",
+          target: "甲が現実にVから金を借りていたこと",
+          inference: "Vの「貸した金」という発言内容が真実でなければ、借金の存在は証明できません。",
+          declarant: "借金を知覚・記憶して述べたVの供述過程を、反対尋問等で吟味する必要があります。",
+          reason: "供述内容の真実性を必要とするため、伝聞です。"
+        },
+        called: {
+          className: "non-hearsay",
+          verdict: "非伝聞証拠",
+          target: "犯人が、犯行直前にVから「甲」と呼ばれたこと",
+          inference: "現実に借金があったか、男の本名が甲かは不要です。Vがその場で男を「甲」と呼んだ事実自体を使います。",
+          declarant: "AはVの発言を現場で直接聞き、公判でその発言の存在について尋問を受けます。",
+          reason: "発言内容の真実性ではなく、発言がなされた事実を用いるため、非伝聞です。"
+        }
+      };
+
+      const relativeResult = document.querySelector("#relative-result");
+      const relativeButtons = document.querySelectorAll(".target-button");
+
+      const renderRelative = (key) => {
+        const data = relativeData[key];
+        relativeResult.className = `result-box ${data.className}`.trim();
+        document.querySelector("#verdict-text").textContent = data.verdict;
+        document.querySelector("#target-text").textContent = data.target;
+        document.querySelector("#inference-text").textContent = data.inference;
+        document.querySelector("#declarant-text").textContent = data.declarant;
+        document.querySelector("#reason-text").textContent = data.reason;
+
+        relativeButtons.forEach((button) => {
+          button.setAttribute("aria-selected", String(button.dataset.target === key));
+        });
+      };
+
+      relativeButtons.forEach((button) => {
+        button.addEventListener("click", () => renderRelative(button.dataset.target));
+      });
+
+      const speechUseData = {
+        utterance: {
+          className: "speech-result",
+          verdict: "非伝聞",
+          target: "被告人が公衆の面前で「Bは泥棒だ」と発言したこと",
+          person: "発言を聞いたWの公判供述。Wは法廷で反対尋問できる",
+          unnecessary: "被告人の発言内容、すなわち「Bが泥棒であること」の真実",
+          remaining: "Wを信用できるかという証明力の問題"
+        },
+        truth: {
+          className: "speech-result hearsay",
+          verdict: "伝聞",
+          target: "Bが現実に窃盗をしたこと",
+          person: "「Bは泥棒だ」と述べた被告人の、公判外供述の正確さ",
+          unnecessary: "発言があったという事実だけでは、Bの窃盗を証明できない",
+          remaining: "刑訴法320条1項を経て、伝聞例外等を検討する"
+        }
+      };
+
+      const speechTabs = document.querySelectorAll(".speech-tab");
+      const speechResult = document.querySelector("#speech-result");
+
+      const renderSpeechUse = (key) => {
+        const data = speechUseData[key];
+        speechResult.className = data.className;
+        speechResult.innerHTML = `
+          <p class="result-verdict">${data.verdict}</p>
+          <div class="inspect-grid">
+            <div class="inspect-card">
+              <strong>要証事実</strong>
+              ${data.target}
+            </div>
+            <div class="inspect-card">
+              <strong>誰の正確さが必要か</strong>
+              ${data.person}
+            </div>
+            <div class="inspect-card">
+              <strong>使わないもの／足りないもの</strong>
+              ${data.unnecessary}
+            </div>
+            <div class="inspect-card">
+              <strong>なお残る問題</strong>
+              ${data.remaining}
+            </div>
+          </div>
+        `;
+        speechTabs.forEach((button) => {
+          button.setAttribute("aria-selected", String(button.dataset.speechUse === key));
+        });
+      };
+
+      speechTabs.forEach((button) => {
+        button.addEventListener("click", () => renderSpeechUse(button.dataset.speechUse));
+      });
+
+      const answerData = {
+        hearsay: `本件供述の要証事実は、<mark>甲がV方に放火したこと</mark>である。
+この事実を立証するためには、原供述者Pの「甲が放火するのを見た」との供述内容が真実であることを必要とする。
+そして、Pの知覚・記憶・表現・叙述の正確性は、公判廷での反対尋問等によって吟味されていない。
+したがって、本件供述は伝聞証拠に当たり、刑訴法320条1項により原則として証拠能力を欠く。
+そこで、<mark>321条以下の伝聞例外</mark>に該当するかを検討する。`,
+        non: `本件供述の要証事実は、<mark>甲が公然と「Bは泥棒だ」と発言したこと自体</mark>である。
+この事実の立証には、Bが現実に泥棒であること、すなわち発言内容の真実性を必要としない。
+Wは甲の発言を直接聞き、その発言がなされた事実について公判廷で供述している。
+したがって、本件供述は伝聞証拠に当たらない。
+もっとも、<mark>当該発言との関連性やWの証言の信用性</mark>は、別途検討される。`
+      };
+
+      const answerTabs = document.querySelectorAll(".answer-tab");
+      const answerTemplate = document.querySelector("#answer-template");
+
+      answerTabs.forEach((button) => {
+        button.addEventListener("click", () => {
+          answerTabs.forEach((tab) => {
+            tab.setAttribute("aria-selected", String(tab === button));
+          });
+          answerTemplate.innerHTML = answerData[button.dataset.answer];
+        });
+      });
+
+      const statementData = {
+        adverse: {
+          title: "不利益な事実の承認",
+          formula: "形式要件 ＋ 不利益承認 ＋ 任意性に疑いなし",
+          body: "「犯行を全部認める自白」より広く、犯行現場にいた、凶器を持っていたなど、被告人に不利な一部事実を認める供述も含みます。特信情況があっても、任意性に疑いがあれば、ただし書により証拠にできません。"
+        },
+        favorable: {
+          title: "それ以外の供述",
+          formula: "形式要件 ＋ 特に信用すべき情況",
+          body: "典型は、否認・アリバイなど被告人に有利な供述です。署名・押印や内容のもっともらしさだけでは足りず、供述した時点の外部的情況から、作為や虚偽が入りにくいという信用保障が必要です。"
+        }
+      };
+
+      const statementTabs = document.querySelectorAll(".statement-tab");
+      const statementResult = document.querySelector("#statement-result");
+
+      statementTabs.forEach((button) => {
+        button.addEventListener("click", () => {
+          const data = statementData[button.dataset.statement];
+          statementTabs.forEach((tab) => {
+            tab.setAttribute("aria-selected", String(tab === button));
+          });
+          statementResult.innerHTML = `
+            <h3>${data.title}</h3>
+            <p class="formula">${data.formula}</p>
+            <p>${data.body}</p>
+          `;
+        });
+      });
+
+      const feedbackText = {
+        hearsay: {
+          correct: "正解です。要証事実の認定に、原供述の内容どおりの事実が必要です。",
+          incorrect: "違います。内容が真実でなければ要証事実を認定できないので、伝聞です。"
+        },
+        non: {
+          correct: "正解です。発言・警告がなされた事実を使い、内容の真実性は必要としません。",
+          incorrect: "違います。ここでの要証事実には、発言内容が真実であることまでは必要ありません。"
+        },
+        no: {
+          correct: "正解です。法廷での新たな供述と、以前の供述調書は別の証拠です。調書には322条等の根拠が必要です。",
+          incorrect: "違います。被告人が法廷にいることだけで、以前の調書の伝聞性は消えません。"
+        },
+        no322: {
+          correct: "正解です。有利な供述には、署名だけでなく「特に信用すべき情況」が必要です。",
+          incorrect: "違います。署名は内容の真実まで保証しません。有利な供述には特信情況が必要です。"
+        }
+      };
+
+      document.querySelectorAll(".quiz-item").forEach((item) => {
+        const correct = item.dataset.correct;
+        const feedback = item.querySelector(".quiz-feedback");
+        item.querySelectorAll(".quiz-button").forEach((button) => {
+          button.addEventListener("click", () => {
+            const isCorrect = button.dataset.choice === correct;
+            feedback.className = `quiz-feedback ${isCorrect ? "correct" : "incorrect"}`;
+            feedback.textContent = feedbackText[correct][isCorrect ? "correct" : "incorrect"];
+          });
+        });
+      });
+    })();
+  </script>
+</body>
+</html>

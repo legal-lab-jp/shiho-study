@@ -1,0 +1,364 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="法律知識ゼロから司法予備試験・司法試験を学ぶ過程で、実際につまずいた疑問を整理した個人学習ログです。">
+  <link rel="canonical" href="https://mokemoke5312064.github.io/shiho-study/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="og:site_name" content="司法試験・予備試験 学習ログ">
+  <meta property="og:title" content="司法試験・予備試験 学習ログ">
+  <meta property="og:description" content="法律知識ゼロから学ぶ過程で、実際につまずいた疑問を一つずつ整理しています。">
+  <meta property="og:url" content="https://mokemoke5312064.github.io/shiho-study/">
+  <meta property="og:image" content="https://mokemoke5312064.github.io/shiho-study/assets/og/hearsay-yosho-jijitsu.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="伝聞法則を、要証事実から322条までつなぐ">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="司法試験・予備試験 学習ログ">
+  <meta name="twitter:description" content="法律知識ゼロから学ぶ過程で、実際につまずいた疑問を一つずつ整理しています。">
+  <meta name="twitter:image" content="https://mokemoke5312064.github.io/shiho-study/assets/og/hearsay-yosho-jijitsu.png">
+  <meta name="twitter:image:alt" content="伝聞法則を、要証事実から322条までつなぐ">
+  <title>司法試験・予備試験 学習ログ</title>
+  <style>
+    :root {
+      --ink: #17233c;
+      --muted: #637086;
+      --paper: #f5f2ea;
+      --card: #fffefb;
+      --navy: #173a62;
+      --blue: #2f6f9f;
+      --blue-soft: #eaf3f8;
+      --line: #d9d5ca;
+      --focus: #f4b942;
+      --shadow: 0 18px 50px rgba(23, 35, 60, .09);
+      --radius: 22px;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 10% 0%, rgba(47, 111, 159, .12), transparent 32rem),
+        var(--paper);
+      font-family: "Yu Gothic", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+      line-height: 1.8;
+    }
+
+    a { color: var(--navy); }
+    a:hover { text-decoration-thickness: 2px; }
+    a:focus-visible, button:focus-visible {
+      outline: 3px solid var(--focus);
+      outline-offset: 4px;
+    }
+
+    .skip {
+      position: fixed;
+      top: 10px;
+      left: 10px;
+      z-index: 10;
+      padding: .6rem 1rem;
+      color: #fff;
+      background: var(--navy);
+      transform: translateY(-150%);
+    }
+
+    .skip:focus { transform: translateY(0); }
+
+    .wrap {
+      width: min(1120px, calc(100% - 32px));
+      margin-inline: auto;
+    }
+
+    .hero { padding: clamp(56px, 9vw, 112px) 0 54px; }
+
+    .eyebrow {
+      margin: 0 0 1rem;
+      color: var(--blue);
+      font-size: .84rem;
+      font-weight: 800;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      max-width: 900px;
+      margin: 0;
+      font-family: "Yu Mincho", "Hiragino Mincho ProN", serif;
+      font-size: clamp(2.15rem, 6vw, 4.7rem);
+      line-height: 1.18;
+      letter-spacing: -.035em;
+    }
+
+    .lead {
+      max-width: 760px;
+      margin: 1.6rem 0 0;
+      color: var(--muted);
+      font-size: clamp(1rem, 2vw, 1.16rem);
+    }
+
+    .principle {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 1rem;
+      align-items: start;
+      max-width: 780px;
+      margin-top: 2rem;
+      padding: 1.2rem 1.35rem;
+      border: 1px solid #bfd3df;
+      border-radius: 16px;
+      background: rgba(255, 255, 255, .66);
+    }
+
+    .principle strong {
+      display: grid;
+      place-items: center;
+      min-width: 3.5rem;
+      min-height: 3.5rem;
+      color: #fff;
+      border-radius: 50%;
+      background: var(--navy);
+      font-size: .78rem;
+    }
+
+    .principle p { margin: 0; }
+
+    main { padding-bottom: 80px; }
+
+    .section-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      align-items: end;
+      margin-bottom: 1.35rem;
+    }
+
+    h2 {
+      margin: 0;
+      font-family: "Yu Mincho", "Hiragino Mincho ProN", serif;
+      font-size: clamp(1.55rem, 3vw, 2.15rem);
+    }
+
+    .count { color: var(--muted); font-size: .92rem; }
+
+    .filters {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .65rem;
+      margin: 0 0 1.4rem;
+      padding: 0;
+      list-style: none;
+    }
+
+    .filter {
+      padding: .48rem .85rem;
+      border: 1px solid #b9c3cf;
+      border-radius: 999px;
+      color: var(--ink);
+      background: transparent;
+      font: inherit;
+      font-size: .88rem;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .filter[aria-pressed="true"] {
+      color: #fff;
+      border-color: var(--navy);
+      background: var(--navy);
+    }
+
+    .materials {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 310px), 1fr));
+      gap: 1.25rem;
+    }
+
+    .card {
+      display: flex;
+      flex-direction: column;
+      min-height: 100%;
+      padding: clamp(1.25rem, 3vw, 1.65rem);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--card);
+      box-shadow: var(--shadow);
+    }
+
+    .card[hidden] { display: none; }
+
+    .meta, .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .45rem;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .meta li, .tags li {
+      padding: .22rem .6rem;
+      border-radius: 999px;
+      background: var(--blue-soft);
+      color: #234f70;
+      font-size: .78rem;
+      font-weight: 700;
+    }
+
+    .card h3 {
+      margin: 1rem 0 .55rem;
+      font-size: 1.3rem;
+      line-height: 1.45;
+    }
+
+    .card p { margin: 0 0 1.1rem; color: var(--muted); }
+    .card .tags { margin-top: auto; }
+
+    .open {
+      display: inline-flex;
+      justify-content: center;
+      margin-top: 1.25rem;
+      padding: .72rem 1rem;
+      border-radius: 12px;
+      color: #fff;
+      background: var(--navy);
+      font-weight: 800;
+      text-decoration: none;
+    }
+
+    .note {
+      margin-top: 2.5rem;
+      padding: 1.3rem 1.5rem;
+      border-left: 4px solid var(--blue);
+      background: rgba(255, 255, 255, .58);
+    }
+
+    .note h2 { font-size: 1.25rem; }
+    .note p { margin: .55rem 0 0; color: var(--muted); }
+
+    footer {
+      padding: 28px 0 44px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: .84rem;
+    }
+
+    @media (max-width: 560px) {
+      .wrap { width: min(100% - 22px, 1120px); }
+      .principle { grid-template-columns: 1fr; }
+      .principle strong { width: 3.5rem; }
+      .section-head { display: block; }
+      .count { margin-top: .4rem; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#materials">教材一覧へ移動</a>
+
+  <header class="hero">
+    <div class="wrap">
+      <p class="eyebrow">Personal study archive</p>
+      <h1>司法試験・予備試験<br>学習ログ</h1>
+      <p class="lead">
+        法律知識ゼロから学ぶ過程で、実際につまずいた疑問を一つずつ整理しています。
+        第一の目的は、自分が「どこで迷い、どう理解したか」を残すこと。
+        同じところで立ち止まった方にも、参考になる範囲で公開します。
+      </p>
+      <div class="principle">
+        <strong>方針</strong>
+        <p>
+          分類を先に完成させません。各教材のURLは固定し、科目・試験形式・学習目的は後から変更できるタグとして管理します。
+        </p>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap" id="materials">
+    <div class="section-head">
+      <h2>公開中の教材</h2>
+      <div class="count" id="result-count" aria-live="polite">1件</div>
+    </div>
+
+    <ul class="filters" aria-label="教材の絞り込み">
+      <li><button class="filter" type="button" data-filter="all" aria-pressed="true">すべて</button></li>
+      <li><button class="filter" type="button" data-filter="刑事訴訟法" aria-pressed="false">刑事訴訟法</button></li>
+      <li><button class="filter" type="button" data-filter="論文" aria-pressed="false">論文</button></li>
+      <li><button class="filter" type="button" data-filter="理解" aria-pressed="false">理解</button></li>
+      <li><button class="filter" type="button" data-filter="暗記" aria-pressed="false">暗記</button></li>
+    </ul>
+
+    <div class="materials">
+      <article class="card" data-categories="刑事訴訟法 論文 理解 暗記">
+        <ul class="meta">
+          <li>刑事訴訟法</li>
+          <li>論文</li>
+          <li>更新 2026-07-28</li>
+        </ul>
+        <h3>伝聞法則を、要証事実から322条までつなぐ</h3>
+        <p>
+          「同じ発言なのに、なぜ伝聞にも非伝聞にもなるのか」から、反対尋問、供述過程、被告人供述書までを一つの判断構造で整理します。
+        </p>
+        <ul class="tags" aria-label="学習タグ">
+          <li>伝聞</li>
+          <li>要証事実</li>
+          <li>反対尋問</li>
+          <li>刑訴法322条</li>
+        </ul>
+        <a class="open" href="materials/hearsay-yosho-jijitsu/">教材を開く</a>
+      </article>
+    </div>
+
+    <section class="note" aria-labelledby="site-note">
+      <h2 id="site-note">このサイトについて</h2>
+      <p>
+        各ページは個人の学習記録であり、個別事件への法的助言ではありません。
+        法令・公的資料の確認日は各教材に記載し、
+        <a href="https://laws.e-gov.go.jp/law/323AC0000000131" target="_blank" rel="noopener noreferrer">e-Gov法令検索「刑事訴訟法」</a>
+        などの公的資料へリンクします。
+        <strong>著作権・再利用条件：</strong>リンクの共有は歓迎しますが、本文・図表の転載、改変、再配布は許諾していません。
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <span>司法試験・予備試験 学習ログ</span>
+      <span>｜公開開始 2026-07-28</span>
+    </div>
+  </footer>
+
+  <script>
+    (() => {
+      "use strict";
+      const buttons = [...document.querySelectorAll(".filter")];
+      const cards = [...document.querySelectorAll(".card")];
+      const count = document.querySelector("#result-count");
+
+      buttons.forEach((button) => {
+        button.addEventListener("click", () => {
+          const selected = button.dataset.filter;
+          let visible = 0;
+          buttons.forEach((item) => {
+            item.setAttribute("aria-pressed", String(item === button));
+          });
+          cards.forEach((card) => {
+            const show = selected === "all" || card.dataset.categories.split(" ").includes(selected);
+            card.hidden = !show;
+            if (show) visible += 1;
+          });
+          count.textContent = `${visible}件`;
+        });
+      });
+    })();
+  </script>
+</body>
+</html>

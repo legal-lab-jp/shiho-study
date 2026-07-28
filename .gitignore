@@ -1,0 +1,10 @@
+Thumbs.db
+Desktop.ini
+.DS_Store
+*.tmp
+*.log
+.env
+.env.*
+secrets/
+drafts/
+private/
