@@ -6,7 +6,7 @@
 
 ## 公開サイト
 
-<https://mokemoke5312064.github.io/shiho-study/>
+<https://legal-lab-jp.github.io/shiho-study/>
 
 ## 管理方針
 
