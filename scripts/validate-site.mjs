@@ -91,24 +91,26 @@ if (!fs.existsSync(catalogPath)) {
 
     if (item.status === "published") {
       const expected = path.join(root, item.url, "index.html");
-      if (!fs.existsSync(expected)) fail(`catalog: ${item.url} に公開HTMLがありません`);
+      if (!fs.existsSync(expected)) {
+        fail(`catalog: ${item.url} に公開HTMLがありません`);
+      } else {
+        const material = fs.readFileSync(expected, "utf8");
+        if (!material.includes("法令・公的資料は")) {
+          fail(`${item.id}: 法令・公的資料の確認日がありません`);
+        }
+        if (!material.includes("個別事件への法的助言ではありません")) {
+          fail(`${item.id}: 学習用・非法律助言の表示がありません`);
+        }
+        if (!material.includes("再利用")) {
+          fail(`${item.id}: 再利用方針がありません`);
+        }
+        if (!fs.readFileSync(path.join(root, "index.html"), "utf8").includes(item.url)) {
+          fail(`${item.id}: 一覧ページにURLが登録されていません`);
+        }
+      }
     }
   }
   notices.push(`catalog: ${catalog.filter((item) => item.status === "published").length}件を確認`);
-}
-
-const materialPath = path.join(root, "materials", "hearsay-yosho-jijitsu", "index.html");
-if (fs.existsSync(materialPath)) {
-  const material = fs.readFileSync(materialPath, "utf8");
-  if (!material.includes("法令・公的資料は2026年7月25日に確認")) {
-    fail("m-0001: 法令・公的資料の確認日がありません");
-  }
-  if (!material.includes("個別事件への法的助言ではありません")) {
-    fail("m-0001: 学習用・非法律助言の表示がありません");
-  }
-  if (!material.includes("再利用")) {
-    fail("m-0001: 再利用方針がありません");
-  }
 }
 
 if (failures.length) {

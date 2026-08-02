@@ -1,0 +1,545 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="民事訴訟法の弁論主義を、三つのテーゼ、主要事実、間接事実、証拠方法、証拠資料、主張責任、証明責任の関係から簡潔に整理する司法試験・予備試験向け教材。">
+  <link rel="canonical" href="https://legal-lab-jp.github.io/shiho-study/materials/benron-shugi-three-theorems/">
+  <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="司法試験・予備試験 学習ログ">
+  <meta property="og:title" content="弁論主義を、三つのテーゼで整理する">
+  <meta property="og:description" content="事実、主張、証拠方法、証拠資料を分け、三つのテーゼが必要な理由まで一枚で整理します。">
+  <meta property="og:url" content="https://legal-lab-jp.github.io/shiho-study/materials/benron-shugi-three-theorems/">
+  <meta property="og:image" content="https://legal-lab-jp.github.io/shiho-study/assets/og/benron-shugi-three-theorems.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="弁論主義を、三つのテーゼで整理する">
+  <meta name="twitter:description" content="主要事実と証拠の役割を分け、弁論主義の三つのテーゼを答案につなげます。">
+  <meta name="twitter:image" content="https://legal-lab-jp.github.io/shiho-study/assets/og/benron-shugi-three-theorems.png">
+  <title>弁論主義の三つのテーゼを整理｜司法試験・予備試験</title>
+  <style>
+    :root {
+      --ink: #162434;
+      --muted: #526171;
+      --navy: #16395f;
+      --blue: #276b96;
+      --pale: #edf5f8;
+      --cream: #fffaf0;
+      --paper: #fffefb;
+      --line: #d5dee5;
+      --accent: #d58b27;
+      --shadow: 0 18px 48px rgba(19, 45, 67, .1);
+      color-scheme: light;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 90% 0, rgba(39, 107, 150, .12), transparent 28rem),
+        #f5f7f8;
+      font-family: "Yu Gothic", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+      line-height: 1.85;
+    }
+
+    a { color: #145f8d; }
+    a:hover { text-decoration-thickness: 2px; }
+    a:focus-visible, summary:focus-visible {
+      outline: 3px solid #f3b84a;
+      outline-offset: 4px;
+    }
+
+    .skip {
+      position: fixed;
+      left: 1rem;
+      top: -5rem;
+      z-index: 20;
+      padding: .7rem 1rem;
+      color: #fff;
+      background: var(--navy);
+      border-radius: .5rem;
+    }
+    .skip:focus { top: 1rem; }
+
+    .topbar {
+      color: #d9e8ef;
+      background: var(--navy);
+    }
+
+    .topbar-inner, .page {
+      width: min(1060px, calc(100% - 2rem));
+      margin: 0 auto;
+    }
+
+    .topbar-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: .8rem 0;
+      font-size: .9rem;
+    }
+
+    .topbar a { color: #fff; }
+
+    .hero {
+      padding: 4.8rem 0 3.2rem;
+      background: linear-gradient(145deg, #102b49, #1d557b);
+      color: #fff;
+    }
+
+    .hero-inner {
+      width: min(1060px, calc(100% - 2rem));
+      margin: 0 auto;
+    }
+
+    .eyebrow {
+      margin: 0 0 .75rem;
+      color: #c5dbe7;
+      font-size: .8rem;
+      font-weight: 700;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+    }
+
+    h1, h2, h3 { line-height: 1.38; }
+
+    h1 {
+      max-width: 13em;
+      margin: 0;
+      font-family: "Yu Mincho", "Hiragino Mincho ProN", serif;
+      font-size: clamp(2.25rem, 7vw, 4.7rem);
+      letter-spacing: .02em;
+    }
+
+    .lead {
+      max-width: 46rem;
+      margin: 1.3rem 0 0;
+      color: #e6f0f5;
+      font-size: clamp(1rem, 2vw, 1.2rem);
+    }
+
+    .badges, .toc, .tag-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .55rem;
+      padding: 0;
+      list-style: none;
+    }
+
+    .badges { margin: 1.5rem 0 0; }
+
+    .badges li {
+      padding: .28rem .7rem;
+      color: #173a62;
+      background: #eff7fa;
+      border-radius: 999px;
+      font-size: .82rem;
+      font-weight: 700;
+    }
+
+    .page { padding: 2rem 0 4rem; }
+
+    .toc {
+      margin: 0 0 1.6rem;
+      padding: 1rem;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 1rem;
+    }
+
+    .toc a {
+      display: block;
+      padding: .35rem .65rem;
+      border-radius: .45rem;
+    }
+
+    .panel {
+      margin-top: 1.25rem;
+      padding: clamp(1.25rem, 4vw, 2.25rem);
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 1.1rem;
+      box-shadow: var(--shadow);
+    }
+
+    .panel h2 {
+      margin: 0 0 1rem;
+      color: var(--navy);
+      font-size: clamp(1.45rem, 3vw, 2rem);
+    }
+
+    .panel h3 { margin: 0 0 .45rem; font-size: 1.12rem; }
+
+    .answer-box {
+      margin: 1rem 0 0;
+      padding: 1.25rem;
+      background: var(--cream);
+      border-left: .35rem solid var(--accent);
+      border-radius: .25rem .8rem .8rem .25rem;
+    }
+
+    .answer-box p { margin: 0; }
+
+    .answer-box p + p { margin-top: .85rem; }
+
+    .note {
+      margin: 1rem 0 0;
+      padding: .9rem 1rem;
+      color: #30495a;
+      background: var(--pale);
+      border-radius: .7rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1rem;
+    }
+
+    .grid.three { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+
+    .card {
+      padding: 1rem;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: .8rem;
+    }
+
+    .card p, .card ul { margin: .45rem 0 0; }
+
+    .label {
+      display: inline-block;
+      margin-bottom: .55rem;
+      padding: .2rem .55rem;
+      color: #fff;
+      background: var(--blue);
+      border-radius: .35rem;
+      font-size: .76rem;
+      font-weight: 700;
+    }
+
+    .flow {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: .6rem;
+      margin: 1rem 0 0;
+    }
+
+    .flow div {
+      position: relative;
+      padding: .85rem .7rem;
+      text-align: center;
+      background: var(--pale);
+      border-radius: .65rem;
+      font-weight: 700;
+    }
+
+    .flow div:not(:last-child)::after {
+      content: "→";
+      position: absolute;
+      right: -.55rem;
+      top: 50%;
+      z-index: 1;
+      transform: translateY(-50%);
+      color: var(--accent);
+      font-size: 1.25rem;
+    }
+
+    .compact { margin: .55rem 0 0; padding-left: 1.25rem; }
+
+    .compact li + li { margin-top: .35rem; }
+
+    .thesis {
+      border-top: .3rem solid var(--blue);
+    }
+
+    .thesis strong { color: var(--navy); }
+
+    .example-steps {
+      margin: 1rem 0 0;
+      padding: 0;
+      counter-reset: step;
+      list-style: none;
+    }
+
+    .example-steps li {
+      position: relative;
+      margin-top: .75rem;
+      padding: .8rem .9rem .8rem 3.1rem;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: .7rem;
+    }
+
+    .example-steps li::before {
+      counter-increment: step;
+      content: counter(step);
+      position: absolute;
+      left: .8rem;
+      top: .78rem;
+      display: grid;
+      width: 1.55rem;
+      height: 1.55rem;
+      place-items: center;
+      color: #fff;
+      background: var(--navy);
+      border-radius: 50%;
+      font-size: .8rem;
+      font-weight: 700;
+    }
+
+    .sources { margin: 0; padding-left: 1.35rem; }
+    .sources li + li { margin-top: .7rem; }
+    .source-note { display: block; color: var(--muted); font-size: .9rem; }
+
+    .publication {
+      color: #334554;
+      background: #eef2f3;
+      box-shadow: none;
+    }
+
+    .publication p { margin: .5rem 0 0; }
+
+    footer {
+      padding: 1.5rem 1rem;
+      color: #d7e3e9;
+      text-align: center;
+      background: #102b49;
+    }
+
+    @media (max-width: 760px) {
+      .grid, .grid.three { grid-template-columns: 1fr; }
+      .flow { grid-template-columns: 1fr 1fr; }
+      .flow div:nth-child(2)::after { display: none; }
+      .topbar-inner { align-items: flex-start; flex-direction: column; }
+    }
+
+    @media (max-width: 430px) {
+      .topbar-inner, .page, .hero-inner { width: min(100% - 1.2rem, 1060px); }
+      .hero { padding: 3.4rem 0 2.4rem; }
+      .panel { padding: 1.1rem; border-radius: .85rem; }
+      .flow { grid-template-columns: 1fr; }
+      .flow div:not(:last-child)::after {
+        content: "↓";
+        right: 50%;
+        top: auto;
+        bottom: -.88rem;
+        transform: translateX(50%);
+      }
+      .flow div:nth-child(2)::after { display: block; }
+    }
+
+    @media print {
+      body { background: #fff; }
+      .topbar, .toc, footer { display: none; }
+      .hero { padding: 1rem 0; color: #000; background: #fff; }
+      .hero .lead, .eyebrow { color: #333; }
+      .panel { break-inside: avoid; box-shadow: none; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#main">本文へ移動</a>
+
+  <nav class="topbar" aria-label="パンくず">
+    <div class="topbar-inner">
+      <a href="../../">司法試験・予備試験 学習ログ</a>
+      <span>民事訴訟法　弁論主義</span>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="hero-inner">
+      <p class="eyebrow">Civil procedure</p>
+      <h1>弁論主義を、三つのテーゼで整理する</h1>
+      <p class="lead">
+        誰が事実と証拠を訴訟に出し、誰が判断するのか。
+        主要事実、証拠方法、証明責任を答案につながる順序で分けます。
+      </p>
+      <ul class="badges" aria-label="教材の分類">
+        <li>民事訴訟法</li>
+        <li>論文</li>
+        <li>短答</li>
+        <li>入門から標準</li>
+      </ul>
+    </div>
+  </header>
+
+  <main class="page" id="main">
+    <nav aria-label="ページ内目次">
+      <ul class="toc">
+        <li><a href="#answer">答案の定式</a></li>
+        <li><a href="#terms">用語の区別</a></li>
+        <li><a href="#facts">三種類の事実</a></li>
+        <li><a href="#theses">三つのテーゼ</a></li>
+        <li><a href="#example">貸金の例</a></li>
+      </ul>
+    </nav>
+
+    <section class="panel" id="answer">
+      <h2>答案で使う定式</h2>
+      <div class="answer-box">
+        <p>
+          弁論主義とは、判決の基礎となる事実及び証拠の収集、提出を、当事者の権能かつ責任に委ねる原則をいう。
+        </p>
+        <p>
+          その内容は、①裁判所は、当事者のいずれもが主張していない主要事実を判決の基礎とすることができないこと、②裁判上の自白が成立した主要事実については、裁判所はこれに拘束され、そのまま判決の基礎としなければならないこと（民事訴訟法179条参照）、③裁判所は、原則として、当事者の申出のない証拠方法を職権で取り調べることができないことである。
+        </p>
+      </div>
+      <p class="note">
+        具体的な事例問題では、三つを毎回列挙せず、問題となるテーゼだけを示して当てはめます。
+      </p>
+    </section>
+
+    <section class="panel" id="terms">
+      <h2>事実、主張、証拠を分ける</h2>
+      <div class="grid">
+        <article class="card">
+          <span class="label">対象</span>
+          <h3>事実と主張</h3>
+          <p><strong>事実</strong>は、「何が起きたか」という命題です。</p>
+          <p><strong>主張</strong>は、当事者がその事実の存在を裁判所に述べる訴訟行為です。</p>
+        </article>
+        <article class="card">
+          <span class="label">証明</span>
+          <h3>証拠方法と証拠資料</h3>
+          <p><strong>証拠方法</strong>は、証人や契約書など、裁判所が取り調べる人、物です。</p>
+          <p><strong>証拠資料</strong>は、証言内容や契約書の記載内容など、取調べによって得られた判断材料です。</p>
+        </article>
+      </div>
+      <div class="flow" aria-label="事実認定の流れ">
+        <div>証拠方法</div>
+        <div>証拠調べ</div>
+        <div>証拠資料</div>
+        <div>事実認定</div>
+      </div>
+      <div class="grid" style="margin-top: 1rem;">
+        <article class="card">
+          <h3>主張責任</h3>
+          <p>必要な主要事実が口頭弁論終結時までに当事者のいずれからも主張されていない場合に、その法律効果を認めてもらえない不利益です。</p>
+        </article>
+        <article class="card">
+          <h3>証明責任</h3>
+          <p>証拠調べを尽くしても主要事実が真偽不明となった場合に、その法律効果を認めてもらえない不利益です。</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="panel" id="facts">
+      <h2>三種類の事実と「判決の基礎」</h2>
+      <div class="grid three">
+        <article class="card">
+          <h3>主要事実</h3>
+          <p>法律要件に直接該当する具体的事実です。司法研修所の整理では要件事実と同義です。</p>
+        </article>
+        <article class="card">
+          <h3>間接事実</h3>
+          <p>主要事実の存在又は不存在を推認させる事実です。</p>
+        </article>
+        <article class="card">
+          <h3>補助事実</h3>
+          <p>証拠の成立、信用性又は証明力を判断するための事実です。</p>
+        </article>
+      </div>
+      <ul class="compact">
+        <li><strong>狭い意味の判決の基礎</strong>：主要事実を法律要件に当てはめ、法律効果を認める直接の基礎。</li>
+        <li><strong>広い意味の裁判の資料</strong>：主要事実の認定や証拠評価に使う間接事実、補助事実を含む判断材料。</li>
+      </ul>
+      <p class="note">
+        間接事実と補助事実は、原則として主張の有無による制約を受けません。ただし、証拠調べなどを通じて適法に訴訟へ現れている必要があります。
+      </p>
+    </section>
+
+    <section class="panel" id="theses">
+      <h2>三つのテーゼが分担する場面</h2>
+      <div class="grid three">
+        <article class="card thesis">
+          <span class="label">第1テーゼ</span>
+          <h3>主要事実の入口</h3>
+          <p><strong>未主張の主要事実を、法律効果の基礎にできません。</strong></p>
+          <p>どの主要事実を審理対象にするかを当事者に委ね、不意打ちを防ぎます。</p>
+        </article>
+        <article class="card thesis">
+          <span class="label">第2テーゼ</span>
+          <h3>争いのない主要事実</h3>
+          <p><strong>裁判上の自白が成立した主要事実に、裁判所は拘束されます。</strong></p>
+          <p>当事者が争わない範囲では、証拠による認定を行いません。</p>
+        </article>
+        <article class="card thesis">
+          <span class="label">第3テーゼ</span>
+          <h3>証拠調べの入口</h3>
+          <p><strong>証拠方法は、原則として当事者の申出によって取り調べます。</strong></p>
+          <p>第1テーゼによる当事者の支配を証拠段階まで貫き、裁判所の中立性、反論機会、当事者の自己責任を確保します。</p>
+        </article>
+      </div>
+      <p class="note">
+        第3テーゼは、証拠の評価を当事者に委ねる原則ではありません。証拠を申し出るのは当事者、採否、取調べ、評価、事実認定は裁判所という分担です。
+      </p>
+    </section>
+
+    <section class="panel" id="example">
+      <h2>貸金100万円の例</h2>
+      <ol class="example-steps">
+        <li><strong>主要事実</strong>：XとYが返還を合意し、XがYに100万円を交付した。</li>
+        <li><strong>間接事実</strong>：Yが「来月、借りた100万円を返す」とメッセージを送った。</li>
+        <li><strong>補助事実</strong>：証人Aは交付場面から遠く、十分に見えていなかった。</li>
+        <li><strong>証拠方法</strong>：契約書、振込記録、証人A。</li>
+        <li><strong>証拠資料</strong>：契約書の記載内容、振込記録の内容、Aの証言内容。</li>
+      </ol>
+      <p class="note">
+        Xが主要事実を主張し、Yが否認すると証明が必要になります。当事者が証拠方法を申し出て、裁判所が取り調べ、証拠資料を評価します。それでも真偽不明なら、証明責任を負うXが不利益を受けます。
+      </p>
+    </section>
+
+    <section class="panel" id="mistakes">
+      <h2>答案で避ける混同</h2>
+      <ul class="compact">
+        <li>「事実」と「事実を主張する行為」を同じものとして扱わない。</li>
+        <li>「証明しなかった責任」ではなく、真偽不明のリスクを証明責任と捉える。</li>
+        <li>証拠の申出の対象を、厳密には証拠方法と書く。</li>
+        <li>未主張の主要事実を、間接事実と言い換えて法律効果の直接の基礎にしない。</li>
+      </ul>
+    </section>
+
+    <section class="panel" id="sources">
+      <h2>根拠資料</h2>
+      <ol class="sources">
+        <li>
+          <a href="https://laws.e-gov.go.jp/law/408AC0000000109?occasion_date=20260605" target="_blank" rel="noopener noreferrer">e-Gov法令検索「民事訴訟法」</a>
+          <span class="source-note">179条、180条、181条、207条、219条、247条を確認。</span>
+        </li>
+        <li>
+          <a href="https://www.courts.go.jp/saikosai/vc-files/saikosai/shihoukensyujyo/youkenjijitu-R703-honbun.pdf" target="_blank" rel="noopener noreferrer">司法研修所「要件事実　基本編・応用編」</a>
+          <span class="source-note">主要事実、主張責任、証明責任、間接事実、補助事実の関係を確認。</span>
+        </li>
+        <li>
+          <a href="https://www.courts.go.jp/saiban/qa/qa_minzi/index.html" target="_blank" rel="noopener noreferrer">裁判所「裁判手続　民事事件Q&amp;A」</a>
+          <span class="source-note">証拠申出、証拠調べ、職権による当事者本人尋問の例外を確認。</span>
+        </li>
+        <li>
+          <a href="https://www.moj.go.jp/content/001142805.pdf" target="_blank" rel="noopener noreferrer">法務省資料「LAW FOR DEVELOPMENT」</a>
+          <span class="source-note">弁論主義の根拠に関する本質説、手段説、不意打ち防止説、多元説の整理を参照。</span>
+        </li>
+      </ol>
+    </section>
+
+    <section class="panel publication" aria-labelledby="publication-policy">
+      <h2 id="publication-policy">確認日と利用範囲</h2>
+      <p>法令・公的資料は2026年8月2日に確認しました。本教材は学習用です。個別事件への法的助言ではありません。</p>
+      <p><strong>著作権と再利用：</strong>リンクによる共有は可能です。本文、図表、デザインの転載、改変、再配布は許諾していません。</p>
+      <p><a href="../../">教材一覧へ戻る</a></p>
+    </section>
+  </main>
+
+  <footer>司法試験・予備試験 学習ログ</footer>
+</body>
+</html>

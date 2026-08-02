@@ -11,5 +11,18 @@
     "exam": ["論文"],
     "purpose": ["理解", "暗記"],
     "level": ["入門", "標準"]
+  },
+  {
+    "id": "m-0002",
+    "title": "弁論主義を、三つのテーゼで整理する",
+    "slug": "benron-shugi-three-theorems",
+    "url": "materials/benron-shugi-three-theorems/",
+    "subject": ["民事訴訟法"],
+    "tags": ["弁論主義", "主要事実", "証拠資料", "証明責任"],
+    "status": "published",
+    "updated": "2026-08-02",
+    "exam": ["短答", "論文"],
+    "purpose": ["理解", "暗記", "答案"],
+    "level": ["入門", "標準"]
   }
 ]
