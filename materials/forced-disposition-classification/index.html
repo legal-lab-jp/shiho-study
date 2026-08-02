@@ -1,0 +1,517 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="刑事訴訟法の強制処分該当性と既存の強制処分類型への当てはめを分け、任意捜査の限界、自白の任意性、令状審査との関係まで簡潔に整理する司法試験・予備試験向け教材。">
+  <link rel="canonical" href="https://legal-lab-jp.github.io/shiho-study/materials/forced-disposition-classification/">
+  <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="og:site_name" content="司法試験・予備試験 学習ログ">
+  <meta property="og:title" content="強制処分か。既存類型か。二段階で分ける">
+  <meta property="og:description" content="古い捜査方法でも迷わないよう、行為の分解、強制処分性、既存類型への当てはめを順に整理します。">
+  <meta property="og:url" content="https://legal-lab-jp.github.io/shiho-study/materials/forced-disposition-classification/">
+  <meta property="og:image" content="https://legal-lab-jp.github.io/shiho-study/assets/og/forced-disposition-classification.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="強制処分該当性と既存類型への当てはめを二段階で整理した刑事訴訟法の学習カード">
+  <meta property="article:published_time" content="2026-08-02">
+  <meta property="article:modified_time" content="2026-08-02">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="強制処分か。既存類型か。二段階で分ける">
+  <meta name="twitter:description" content="任意捜査との境界、既存類型、令状、自白の任意性を一つの判断順序で整理。">
+  <meta name="twitter:image" content="https://legal-lab-jp.github.io/shiho-study/assets/og/forced-disposition-classification.png">
+  <meta name="twitter:image:alt" content="強制処分該当性と既存類型への当てはめを二段階で整理した刑事訴訟法の学習カード">
+  <title>強制処分と任意捜査の見分け方｜刑事訴訟法</title>
+  <style>
+    :root {
+      --ink: #152232;
+      --muted: #526273;
+      --paper: #f5f3ed;
+      --card: #fffefb;
+      --navy: #143653;
+      --teal: #1f6b70;
+      --teal-soft: #e6f2f1;
+      --amber: #bb7621;
+      --amber-soft: #fff4df;
+      --red: #9a3e43;
+      --red-soft: #fff0ef;
+      --line: #d7d9d6;
+      --focus: #f0b84b;
+      --shadow: 0 16px 44px rgba(20, 54, 83, .09);
+      color-scheme: light;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 94% 0, rgba(31, 107, 112, .12), transparent 29rem),
+        var(--paper);
+      font-family: "Yu Gothic", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+      line-height: 1.8;
+    }
+
+    a { color: #155f78; }
+    a:hover { text-decoration-thickness: 2px; }
+    a:focus-visible, summary:focus-visible {
+      outline: 3px solid var(--focus);
+      outline-offset: 4px;
+    }
+
+    .skip {
+      position: fixed;
+      top: -5rem;
+      left: 1rem;
+      z-index: 10;
+      padding: .65rem 1rem;
+      color: #fff;
+      background: var(--navy);
+      border-radius: .5rem;
+    }
+    .skip:focus { top: 1rem; }
+
+    .topbar { color: #dce9ed; background: var(--navy); }
+    .topbar-inner, .page, .hero-inner {
+      width: min(1060px, calc(100% - 2rem));
+      margin-inline: auto;
+    }
+    .topbar-inner {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: .78rem 0;
+      font-size: .9rem;
+    }
+    .topbar a { color: #fff; }
+
+    .hero {
+      padding: clamp(3.5rem, 8vw, 6.2rem) 0 3.4rem;
+      color: #fff;
+      background: linear-gradient(140deg, #102c48, #1d5962);
+    }
+    .eyebrow {
+      margin: 0 0 .8rem;
+      color: #bee1df;
+      font-size: .82rem;
+      font-weight: 800;
+      letter-spacing: .13em;
+      text-transform: uppercase;
+    }
+    h1, h2, h3 { line-height: 1.38; }
+    h1 {
+      max-width: 14em;
+      margin: 0;
+      font-family: "Yu Mincho", "Hiragino Mincho ProN", serif;
+      font-size: clamp(2.2rem, 7vw, 4.6rem);
+      letter-spacing: .01em;
+    }
+    .lead {
+      max-width: 47rem;
+      margin: 1.25rem 0 0;
+      color: #e5f0f0;
+      font-size: clamp(1rem, 2vw, 1.18rem);
+    }
+    .badges, .toc, .compact, .sources {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .badges { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: 1.5rem; }
+    .badges li {
+      padding: .27rem .7rem;
+      color: #123e4a;
+      background: #e9f6f4;
+      border-radius: 999px;
+      font-size: .8rem;
+      font-weight: 800;
+    }
+
+    .page { padding: 2rem 0 4.5rem; }
+    .toc {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .45rem;
+      padding: 1rem;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 1rem;
+    }
+    .toc a { display: block; padding: .3rem .65rem; border-radius: .4rem; }
+
+    .panel {
+      margin-top: 1.2rem;
+      padding: clamp(1.2rem, 4vw, 2.2rem);
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 1.05rem;
+      box-shadow: var(--shadow);
+    }
+    .panel h2 {
+      margin: 0 0 1rem;
+      color: var(--navy);
+      font-family: "Yu Mincho", "Hiragino Mincho ProN", serif;
+      font-size: clamp(1.45rem, 3.5vw, 2.05rem);
+    }
+    .panel h3 { margin: 0 0 .45rem; font-size: 1.05rem; }
+    .panel p { margin: .6rem 0 0; }
+
+    .answer {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: .8rem;
+      margin-top: 1rem;
+    }
+    .result {
+      padding: 1rem;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-top: .3rem solid var(--teal);
+      border-radius: .75rem;
+    }
+    .result.bad { border-top-color: var(--red); }
+    .result strong { display: block; color: var(--navy); }
+
+    .route {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: .7rem;
+      margin-top: 1rem;
+      counter-reset: route;
+    }
+    .route article {
+      position: relative;
+      padding: 1rem;
+      background: var(--teal-soft);
+      border-radius: .8rem;
+    }
+    .route article::before {
+      counter-increment: route;
+      content: counter(route);
+      display: grid;
+      width: 1.8rem;
+      height: 1.8rem;
+      margin-bottom: .65rem;
+      place-items: center;
+      color: #fff;
+      background: var(--navy);
+      border-radius: 50%;
+      font-size: .82rem;
+      font-weight: 800;
+    }
+
+    .test {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    .test article {
+      padding: 1rem;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: .8rem;
+    }
+    .mark {
+      display: inline-block;
+      margin-bottom: .55rem;
+      padding: .18rem .55rem;
+      color: #fff;
+      background: var(--teal);
+      border-radius: .35rem;
+      font-size: .76rem;
+      font-weight: 800;
+    }
+    .note, .warning {
+      margin-top: 1rem;
+      padding: .9rem 1rem;
+      border-radius: .7rem;
+    }
+    .note { color: #284f55; background: var(--teal-soft); }
+    .warning { color: #67332c; background: var(--amber-soft); border-left: .3rem solid var(--amber); }
+
+    .factors {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: .7rem;
+      margin-top: 1rem;
+    }
+    .factor {
+      padding: .85rem;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: .65rem;
+    }
+    .factor strong { display: block; color: var(--teal); }
+    .factor span { display: block; margin-top: .25rem; color: var(--muted); font-size: .91rem; }
+
+    .table-wrap { overflow-x: auto; margin-top: 1rem; }
+    table { width: 100%; min-width: 690px; border-collapse: collapse; }
+    th, td { padding: .78rem; border: 1px solid var(--line); text-align: left; vertical-align: top; }
+    th { color: #fff; background: var(--navy); }
+    tbody tr:nth-child(even) { background: #f6faf9; }
+
+    .compact li { position: relative; padding-left: 1.35rem; }
+    .compact li + li { margin-top: .6rem; }
+    .compact li::before { content: "›"; position: absolute; left: .2rem; color: var(--teal); font-weight: 900; }
+
+    details {
+      margin-top: .7rem;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: .7rem;
+    }
+    summary { padding: .85rem 1rem; color: var(--navy); cursor: pointer; font-weight: 800; }
+    details div { padding: 0 1rem 1rem; }
+
+    .template {
+      margin-top: 1rem;
+      padding: 1.1rem;
+      background: #f3f7f7;
+      border-left: .35rem solid var(--teal);
+      border-radius: .3rem .7rem .7rem .3rem;
+    }
+    .template p { margin: 0; }
+    .template p + p { margin-top: .75rem; }
+
+    .sources { counter-reset: source; }
+    .sources li { position: relative; padding-left: 2.3rem; }
+    .sources li + li { margin-top: .9rem; }
+    .sources li::before {
+      counter-increment: source;
+      content: counter(source);
+      position: absolute;
+      left: 0;
+      top: .05rem;
+      display: grid;
+      width: 1.6rem;
+      height: 1.6rem;
+      place-items: center;
+      color: #fff;
+      background: var(--navy);
+      border-radius: 50%;
+      font-size: .75rem;
+      font-weight: 800;
+    }
+    .source-note { display: block; margin-top: .2rem; color: var(--muted); font-size: .9rem; }
+
+    .publication { color: #334554; background: #eef2f2; box-shadow: none; }
+    .share {
+      display: inline-flex;
+      margin-top: 1rem;
+      padding: .72rem 1rem;
+      color: #fff;
+      background: #111;
+      border-radius: .65rem;
+      font-weight: 800;
+      text-decoration: none;
+    }
+    footer { padding: 1.5rem 1rem; color: #d8e5e8; text-align: center; background: var(--navy); }
+
+    @media (max-width: 760px) {
+      .route, .factors { grid-template-columns: 1fr 1fr; }
+      .topbar-inner { flex-direction: column; align-items: flex-start; }
+    }
+    @media (max-width: 520px) {
+      .topbar-inner, .page, .hero-inner { width: min(100% - 1.2rem, 1060px); }
+      .answer, .route, .test, .factors { grid-template-columns: 1fr; }
+      .panel { padding: 1.05rem; border-radius: .8rem; }
+    }
+    @media print {
+      body { background: #fff; }
+      .topbar, .toc, .share, footer { display: none; }
+      .hero { padding: 1rem 0; color: #000; background: #fff; }
+      .hero .lead, .eyebrow { color: #333; }
+      .panel { break-inside: avoid; box-shadow: none; }
+    }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#main">本文へ移動</a>
+
+  <nav class="topbar" aria-label="パンくず">
+    <div class="topbar-inner">
+      <a href="../../">司法試験・予備試験 学習ログ</a>
+      <span>刑事訴訟法　強制処分法定主義</span>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="hero-inner">
+      <p class="eyebrow">Criminal procedure</p>
+      <h1>強制処分か。<br>既存類型か。<br>二段階で分ける</h1>
+      <p class="lead">
+        難しいのは、新しい捜査だけではありません。
+        古くからある捜査も、具体的な行為に分解してから、強制処分性と既存類型への該当性を別々に検討します。
+      </p>
+      <ul class="badges" aria-label="教材の分類">
+        <li>刑事訴訟法</li>
+        <li>論文</li>
+        <li>強制処分</li>
+        <li>任意捜査</li>
+      </ul>
+    </div>
+  </header>
+
+  <main class="page" id="main">
+    <nav aria-label="ページ内目次">
+      <ul class="toc">
+        <li><a href="#overview">結論</a></li>
+        <li><a href="#test">判断基準</a></li>
+        <li><a href="#types">既存類型</a></li>
+        <li><a href="#borders">境界問題</a></li>
+        <li><a href="#template">答案手順</a></li>
+      </ul>
+    </nav>
+
+    <section class="panel" id="overview">
+      <h2>結論：一つの問いにしない</h2>
+      <div class="route" aria-label="判断の三段階">
+        <article>
+          <h3>行為を分解する</h3>
+          <p>「一連の捜査」ではなく、同行要求、移動阻止、所持品への接触、撮影などを時系列で切り分けます。</p>
+        </article>
+        <article>
+          <h3>強制処分性を判定する</h3>
+          <p>意思に反するか、重要な権利・利益を実質的に制約する性質かを具体的に見ます。</p>
+        </article>
+        <article>
+          <h3>既存類型へ当てはめる</h3>
+          <p>強制処分なら、逮捕、捜索、差押え、検証などの法定類型と根拠条文を探します。</p>
+        </article>
+      </div>
+
+      <div class="answer" aria-label="四つの結論">
+        <div class="result"><strong>① 適法な任意捜査</strong>強制処分ではなく、必要性・緊急性等を考慮して相当な限度内。</div>
+        <div class="result bad"><strong>② 違法な任意捜査</strong>強制処分には至らないが、任意捜査の相当性を超える。</div>
+        <div class="result"><strong>③ 法定の強制処分</strong>既存類型に該当し、所定の要件・令状等を満たす。</div>
+        <div class="result bad"><strong>④ 根拠のない強制処分</strong>強制処分だが既存類型に入らず、特別の根拠規定もない。</div>
+      </div>
+      <p class="warning"><strong>重要：</strong>任意捜査の限界を超えたからといって、必ず強制処分になるわけではありません。②があるためです。</p>
+    </section>
+
+    <section class="panel" id="test">
+      <h2>強制処分性：二つの中核</h2>
+      <div class="test">
+        <article>
+          <span class="mark">A　意思</span>
+          <h3>明示又は合理的に推認される意思に反するか</h3>
+          <p><strong>「対象者の明示」ではなく、「対象者の明示の意思」</strong>という意味です。拒否の発言、立ち去ろうとする動作、所持品を渡さない態度などが典型です。</p>
+          <p>秘密捜査では現実の拒否がありません。そこで、知れば通常拒否すると合理的に推認できるかを見ます。</p>
+        </article>
+        <article>
+          <span class="mark">B　重要利益</span>
+          <h3>重要な権利・利益を実質的に制約する性質か</h3>
+          <p>意思に反するだけでは足りません。身体の自由、住居・所持品・私的領域、財産・占有、通信の秘密などへの制約が、法定の強制処分による保護を要するほどかを見ます。</p>
+          <p><strong>「実質的」</strong>とは、名称や一瞬の有形力だけでなく、制約の質、強さ、広がり、継続性を総合するということです。</p>
+        </article>
+      </div>
+
+      <p class="note">
+        「現行法上の強制処分と同程度に厳格な要件・手続で保護すべき」という表現は、最高裁判例の独立した定型文ではなく、重要利益性を説明するための答案上の比較軸です。
+        令状発付が実務上どれほど難しいかを比べるのではなく、法律上の根拠、裁判官による事前審査、対象・範囲の特定などを要求すべき侵害かを比べます。
+      </p>
+
+      <div class="factors" aria-label="具体的な考慮要素">
+        <div class="factor"><strong>対象</strong><span>誰の、何に向けた捜査か。身体、住居、車、スマートフォン、通信、第三者データなど。</span></div>
+        <div class="factor"><strong>場所</strong><span>公道か、住居内か、私生活が強く現れる空間か。</span></div>
+        <div class="factor"><strong>方法</strong><span>観察、接触、移動阻止、装着、複写など、制約を生む仕組み。</span></div>
+        <div class="factor"><strong>期間・回数</strong><span>一回・短時間か、反復・長期間か。累積による質的変化も見る。</span></div>
+        <div class="factor"><strong>機器</strong><span>人の能力を補助するだけか、秘密・連続・網羅的な把握を可能にするか。</span></div>
+        <div class="factor"><strong>取得情報</strong><span>断片的か、詳細・広範・網羅的か。第三者の情報まで含むか。</span></div>
+      </div>
+      <p class="warning">この六項目は固定チェックリストではありません。問題文に即して増減して構いませんが、Aの意思とBの重要利益という中核は落とさず、各事情が侵害の質・程度にどう結び付くかを書きます。</p>
+    </section>
+
+    <section class="panel" id="types">
+      <h2>既存類型：侵害の「機能」から探す</h2>
+      <div class="table-wrap" role="region" aria-label="強制処分の既存類型。横にスクロールできます" tabindex="0">
+        <table>
+          <thead>
+            <tr><th>行為の機能</th><th>候補となる類型</th><th>当てはめの中心</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>身体の自由を奪う</td><td>逮捕・勾留</td><td>移動・退去の現実的自由をどの程度、どの時間奪ったか。</td></tr>
+            <tr><td>場所・身体・物から証拠を探す</td><td>捜索</td><td>隠され得る領域を探索したか。対象と範囲は何か。</td></tr>
+            <tr><td>物の占有を取得・継続する</td><td>差押え</td><td>誰の占有を、どの物について取得したか。</td></tr>
+            <tr><td>電磁的記録の提供を命じる</td><td>電磁的記録提供命令</td><td>提供させる記録、相手方、方法が特定されているか。</td></tr>
+            <tr><td>五官で状態・性質を認識する</td><td>検証・身体検査</td><td>観察・測定の対象、方法、身体への制約の程度。</td></tr>
+            <tr><td>通信中の内容を秘密に取得する</td><td>通信傍受</td><td>対象犯罪、通信、期間など特別法の要件に該当するか。</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note">
+        令状の種類は法定されています。裁判官が新しい捜査用の「自由形式の令状」を作れるわけではありません。
+        強制処分に当たっても既存の令状類型に適合しなければ、令状だけを取って適法にすることはできません。
+      </p>
+
+      <details>
+        <summary>GPS捜査が示したこと</summary>
+        <div>
+          <p>最高裁大法廷は、車両に機器を秘密に装着し、行動を継続的・網羅的に把握するGPS捜査を、合理的に推認される意思に反する私的領域への侵入として強制処分としました。</p>
+          <p>さらに、既存の検証許可状では公正な担保が十分でなく、立法措置が望ましいとしました。つまり、<strong>強制処分性の肯定と、既存類型への適合は別問題</strong>です。</p>
+        </div>
+      </details>
+    </section>
+
+    <section class="panel" id="borders">
+      <h2>混同しやすい境界</h2>
+      <ul class="compact">
+        <li><strong>犯罪の重大性・捜査の必要性：</strong>原則として「強制処分に当たるか」を弱めません。性質決定後の、令状要件や任意捜査の相当性で働きます。</li>
+        <li><strong>手首をつかむ・移動を妨げる：</strong>有形力があれば直ちに逮捕ではありません。強さ、時間、退去可能性を具体的に見ます。</li>
+        <li><strong>長時間の任意同行・留め置き：</strong>身体拘束の程度によって逮捕に至る場合も、強制処分未満だが相当性を欠く場合もあります。</li>
+        <li><strong>所持品検査：</strong>承諾、開披の程度、有形力、時間、場所を見て、任意捜査、違法な任意捜査、捜索のいずれかを判断します。</li>
+        <li><strong>撮影・追跡：</strong>一回の公道撮影と、機器による秘密・長期・網羅的把握では、侵害の質が異なります。</li>
+        <li><strong>自白の利益誘導：</strong>通常は、刑訴法319条の自白の任意性・証拠能力の問題です。強制処分該当性とは別の「任意性」です。</li>
+      </ul>
+      <p class="warning"><strong>両立する例：</strong>適法な逮捕という強制処分の後に任意の自白をすることも、任意同行中に不任意な自白が生じることもあります。</p>
+    </section>
+
+    <section class="panel" id="template">
+      <h2>答案はこの順序で書く</h2>
+      <div class="template">
+        <p><strong>① 対象行為：</strong>問題となるのは、捜査機関が「誰の・何に・どの方法で」行った行為かを特定する。</p>
+        <p><strong>② 強制処分性：</strong>明示又は合理的に推認される意思に反し、重要な権利・利益を実質的に制約する性質か。対象、場所、方法、期間、機器、情報範囲を事実に即して評価する。</p>
+        <p><strong>③ 類型と根拠：</strong>強制処分なら刑訴法197条1項ただし書を示し、逮捕・捜索・差押え・検証等のどの類型か、要件・令状・例外を検討する。</p>
+        <p><strong>④ 任意捜査なら：</strong>必要性、緊急性、法益侵害の程度を衡量し、具体的状況の下で相当な限度かを検討する。</p>
+      </div>
+    </section>
+
+    <section class="panel" id="sources">
+      <h2>根拠資料</h2>
+      <ol class="sources">
+        <li>
+          <a href="https://laws.e-gov.go.jp/law/323AC0000000131/20260724_508AC0000000067" target="_blank" rel="noopener noreferrer">e-Gov法令検索「刑事訴訟法」</a>
+          <span class="source-note">197条、198条、218条、219条などを確認。2026年7月24日施行版。</span>
+        </li>
+        <li>
+          <a href="https://www.courts.go.jp/assets/hanrei/hanrei-pdf-51825.pdf" target="_blank" rel="noopener noreferrer">最高裁昭和51年3月16日第三小法廷決定</a>
+          <span class="source-note">強制処分の定義と、任意捜査の相当性判断の基礎。</span>
+        </li>
+        <li>
+          <a href="https://www.courts.go.jp/assets/hanrei/hanrei-pdf-86600.pdf" target="_blank" rel="noopener noreferrer">最高裁平成29年3月15日大法廷判決（GPS捜査）</a>
+          <span class="source-note">合理的に推認される意思、私的領域、継続的・網羅的把握、既存令状との不適合を確認。</span>
+        </li>
+        <li>
+          <a href="https://laws.e-gov.go.jp/law/411AC0000000137" target="_blank" rel="noopener noreferrer">e-Gov法令検索「犯罪捜査のための通信傍受に関する法律」</a>
+          <span class="source-note">通信傍受という強制処分の特別な要件・手続を確認。</span>
+        </li>
+      </ol>
+    </section>
+
+    <section class="panel publication" aria-labelledby="publication-policy">
+      <h2 id="publication-policy">確認日と利用範囲</h2>
+      <p>法令・公的資料は2026年8月2日に確認しました。本教材は司法試験・予備試験の学習用です。個別事件への法的助言ではありません。</p>
+      <p><strong>著作権と再利用：</strong>リンクによる共有は可能です。本文、図表、デザインの転載、改変、再配布は許諾していません。</p>
+      <a class="share" href="https://twitter.com/intent/tweet?text=%E3%80%90%E5%88%91%E4%BA%8B%E8%A8%B4%E8%A8%9F%E6%B3%95%E3%83%BB%E5%AD%A6%E7%BF%92%E7%94%A8%E3%80%91%0A%E5%8F%A4%E3%81%84%E6%8D%9C%E6%9F%BB%E6%96%B9%E6%B3%95%E3%81%A7%E3%82%82%E8%BF%B7%E3%81%86%E3%80%8C%E4%BB%BB%E6%84%8F%E6%8D%9C%E6%9F%BB%E3%81%8B%E5%BC%B7%E5%88%B6%E5%87%A6%E5%88%86%E3%81%8B%E3%80%8D%E3%82%92%E6%95%B4%E7%90%86%E3%81%97%E3%81%BE%E3%81%97%E3%81%9F%E3%80%82%0A%E2%91%A0%E8%A1%8C%E7%82%BA%E3%82%92%E5%88%86%E8%A7%A3%0A%E2%91%A1%E6%84%8F%E6%80%9D%E4%BE%B5%E5%AE%B3%E3%81%A8%E9%87%8D%E8%A6%81%E5%88%A9%E7%9B%8A%0A%E2%91%A2%E6%97%A2%E5%AD%98%E9%A1%9E%E5%9E%8B%E3%81%B8%E3%81%AE%E5%BD%93%E3%81%A6%E3%81%AF%E3%82%81%0A%E5%BF%85%E8%A6%81%E6%80%A7%E3%81%A8%E6%80%A7%E8%B3%AA%E6%B1%BA%E5%AE%9A%E3%80%81%E8%87%AA%E7%99%BD%E3%81%AE%E4%BB%BB%E6%84%8F%E6%80%A7%E3%81%A8%E3%81%AE%E9%81%95%E3%81%84%E3%82%82%E4%B8%80%E6%9E%9A%E3%81%A7%E7%A2%BA%E8%AA%8D%E3%81%A7%E3%81%8D%E3%81%BE%E3%81%99%E3%80%82&amp;url=https%3A%2F%2Flegal-lab-jp.github.io%2Fshiho-study%2Fmaterials%2Fforced-disposition-classification%2F" target="_blank" rel="noopener noreferrer">Xで共有画面を開く</a>
+    </section>
+  </main>
+
+  <footer>司法試験・予備試験 学習ログ｜刑事訴訟法</footer>
+</body>
+</html>

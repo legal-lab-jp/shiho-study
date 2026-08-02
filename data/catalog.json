@@ -24,5 +24,18 @@
     "exam": ["短答", "論文"],
     "purpose": ["理解", "暗記", "答案"],
     "level": ["入門", "標準"]
+  },
+  {
+    "id": "m-0003",
+    "title": "強制処分か。既存類型か。二段階で分ける",
+    "slug": "forced-disposition-classification",
+    "url": "materials/forced-disposition-classification/",
+    "subject": ["刑事訴訟法"],
+    "tags": ["強制処分", "任意捜査", "令状主義", "自白の任意性"],
+    "status": "published",
+    "updated": "2026-08-02",
+    "exam": ["短答", "論文"],
+    "purpose": ["理解", "暗記", "答案"],
+    "level": ["入門", "標準"]
   }
 ]
