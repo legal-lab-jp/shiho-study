@@ -37,5 +37,18 @@
     "exam": ["短答", "論文"],
     "purpose": ["理解", "暗記", "答案"],
     "level": ["入門", "標準"]
+  },
+  {
+    "id": "m-0004",
+    "title": "論証の「住所」が分かる 捜査と証拠の全体マップ",
+    "slug": "criminal-procedure-doctrine-map",
+    "url": "materials/criminal-procedure-doctrine-map/",
+    "subject": ["刑事訴訟法"],
+    "tags": ["捜査", "証拠能力", "伝聞", "自白", "違法収集証拠", "派生証拠"],
+    "status": "published",
+    "updated": "2026-08-09",
+    "exam": ["短答", "論文"],
+    "purpose": ["理解", "暗記", "答案", "演習"],
+    "level": ["入門", "標準", "発展"]
   }
 ]
