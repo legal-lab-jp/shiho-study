@@ -1,0 +1,1818 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="description" content="司法試験・予備試験向けに、令状主義、強制処分、任意捜査の限界、伝聞法則、自白法則、違法収集証拠排除法則、毒樹の果実の判断順序と論証を一枚で整理する学習ページ。">
+  <link rel="canonical" href="https://legal-lab-jp.github.io/shiho-study/materials/criminal-procedure-doctrine-map/">
+  <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="og:site_name" content="司法試験・予備試験 学習ログ">
+  <meta property="og:title" content="刑事訴訟法・捜査と証拠の全体マップ">
+  <meta property="og:description" content="捜査適法性から証拠能力、派生証拠、証明力まで、刑事訴訟法の論証の住所と判断順序を一枚で整理します。">
+  <meta property="og:url" content="https://legal-lab-jp.github.io/shiho-study/materials/criminal-procedure-doctrine-map/">
+  <meta property="og:image" content="https://legal-lab-jp.github.io/shiho-study/assets/og/criminal-procedure-doctrine-map.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="捜査適法性、証拠能力、派生証拠、証明力の四段階を示す刑事訴訟法の学習マップ">
+  <meta property="article:published_time" content="2026-08-09">
+  <meta property="article:modified_time" content="2026-08-09">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="刑事訴訟法・捜査と証拠の全体マップ">
+  <meta name="twitter:description" content="令状主義、伝聞、自白、違法収集証拠を、答案で迷わない判断順序に整理。">
+  <meta name="twitter:image" content="https://legal-lab-jp.github.io/shiho-study/assets/og/criminal-procedure-doctrine-map.png">
+  <meta name="twitter:image:alt" content="捜査適法性、証拠能力、派生証拠、証明力の四段階を示す刑事訴訟法の学習マップ">
+  <title>刑事訴訟法・捜査と証拠の全体マップ｜論証の住所が分かる</title>
+  <style>
+    :root {
+      --paper: #fbfaf6;
+      --paper-2: #f4f1e9;
+      --ink: #192335;
+      --muted: #5f6876;
+      --line: #d9d5cb;
+      --navy: #16283f;
+      --navy-2: #24425f;
+      --teal: #0f766e;
+      --teal-soft: #e2f3ef;
+      --amber: #b86b13;
+      --amber-soft: #fff1d9;
+      --red: #b4413a;
+      --red-soft: #fae7e4;
+      --violet: #6654a6;
+      --violet-soft: #eeeafa;
+      --blue: #2e6496;
+      --blue-soft: #e7f0f8;
+      --green: #477a48;
+      --green-soft: #e9f3e8;
+      --white: #fff;
+      --shadow: 0 16px 44px rgba(24, 35, 52, .10);
+      --radius: 20px;
+      --radius-sm: 12px;
+      --content: 1180px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 76px; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 12% 3%, rgba(15, 118, 110, .08), transparent 30rem),
+        radial-gradient(circle at 92% 7%, rgba(184, 107, 19, .09), transparent 26rem),
+        var(--paper);
+      font-family: "Yu Gothic UI", "Hiragino Kaku Gothic ProN", "Noto Sans JP", system-ui, sans-serif;
+      line-height: 1.82;
+      overflow-wrap: anywhere;
+    }
+    a { color: #0d5b82; text-underline-offset: .18em; }
+    a:hover { color: #073d59; }
+    button, select { font: inherit; }
+    button { touch-action: manipulation; }
+    :focus-visible { outline: 3px solid rgba(46, 100, 150, .42); outline-offset: 3px; }
+
+    .skip-link {
+      position: fixed;
+      left: 12px;
+      top: -80px;
+      z-index: 1000;
+      padding: 10px 14px;
+      border-radius: 8px;
+      color: #fff;
+      background: var(--navy);
+    }
+    .skip-link:focus { top: 12px; }
+
+    .site-nav { color: #dce8ee; background: #0d1c2d; }
+    .site-nav-inner {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      width: min(var(--content), calc(100% - 40px));
+      margin: 0 auto;
+      padding: 10px 0;
+      font-size: .88rem;
+    }
+    .site-nav a { color: #fff; font-weight: 800; }
+
+    .hero {
+      color: #fff;
+      background:
+        linear-gradient(120deg, rgba(22, 40, 63, .98), rgba(24, 70, 79, .95)),
+        var(--navy);
+      border-bottom: 5px solid #d0a04c;
+    }
+    .hero-inner {
+      width: min(var(--content), calc(100% - 40px));
+      margin: 0 auto;
+      padding: 72px 0 58px;
+    }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin: 0 0 15px;
+      padding: 6px 11px;
+      border: 1px solid rgba(255,255,255,.25);
+      border-radius: 999px;
+      color: #d8f2ed;
+      background: rgba(255,255,255,.08);
+      font-size: .82rem;
+      font-weight: 800;
+      letter-spacing: .08em;
+    }
+    h1 {
+      max-width: 900px;
+      margin: 0;
+      font-family: "Yu Mincho", "Hiragino Mincho ProN", serif;
+      font-size: clamp(2rem, 5vw, 4.25rem);
+      line-height: 1.18;
+      letter-spacing: .02em;
+    }
+    .hero-lead {
+      max-width: 840px;
+      margin: 22px 0 0;
+      color: #e8eef2;
+      font-size: clamp(1rem, 2vw, 1.22rem);
+      line-height: 1.9;
+    }
+    .hero-rule {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-top: 30px;
+    }
+    .hero-rule div {
+      padding: 15px 16px;
+      border: 1px solid rgba(255,255,255,.16);
+      border-radius: 14px;
+      background: rgba(255,255,255,.08);
+    }
+    .hero-rule b { display: block; color: #f5cd82; font-size: .82rem; letter-spacing: .06em; }
+    .hero-rule span { display: block; margin-top: 3px; font-weight: 700; }
+    .meta {
+      margin: 22px 0 0;
+      color: #cbd6dd;
+      font-size: .84rem;
+    }
+
+    .topnav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      overflow-x: auto;
+      border-bottom: 1px solid rgba(22,40,63,.18);
+      background: rgba(251,250,246,.94);
+      backdrop-filter: blur(14px);
+      scrollbar-width: thin;
+    }
+    .topnav-inner {
+      display: flex;
+      width: min(var(--content), calc(100% - 28px));
+      margin: 0 auto;
+      padding: 10px 0;
+      gap: 5px;
+      white-space: nowrap;
+    }
+    .topnav a {
+      padding: 7px 10px;
+      border-radius: 8px;
+      color: var(--ink);
+      text-decoration: none;
+      font-size: .84rem;
+      font-weight: 750;
+    }
+    .topnav a:hover { background: var(--teal-soft); }
+
+    main { width: min(var(--content), calc(100% - 40px)); margin: 0 auto; }
+    section { padding: 70px 0 0; }
+    .section-head { max-width: 880px; margin-bottom: 26px; }
+    .section-no {
+      display: inline-block;
+      margin-bottom: 8px;
+      color: var(--teal);
+      font-size: .78rem;
+      font-weight: 900;
+      letter-spacing: .12em;
+    }
+    h2 {
+      margin: 0;
+      font-family: "Yu Mincho", "Hiragino Mincho ProN", serif;
+      font-size: clamp(1.65rem, 3.6vw, 2.65rem);
+      line-height: 1.35;
+      letter-spacing: .02em;
+    }
+    h3 { margin: 0 0 10px; font-size: 1.16rem; line-height: 1.5; }
+    h4 { margin: 0 0 7px; font-size: 1rem; }
+    p { margin: .65em 0; }
+    .section-lead { color: var(--muted); font-size: 1.05rem; }
+
+    .notice {
+      padding: 18px 20px;
+      border: 1px solid #dfcfaa;
+      border-left: 5px solid var(--amber);
+      border-radius: var(--radius-sm);
+      background: #fffaf0;
+    }
+    .notice strong { color: #80500d; }
+    .danger-note {
+      padding: 18px 20px;
+      border: 1px solid #e7c0bc;
+      border-left: 5px solid var(--red);
+      border-radius: var(--radius-sm);
+      background: #fff8f7;
+    }
+    .mini-note { color: var(--muted); font-size: .88rem; }
+
+    .core-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+    }
+    .core-card {
+      position: relative;
+      padding: 22px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(255,255,255,.88);
+      box-shadow: 0 8px 28px rgba(25,35,53,.06);
+    }
+    .core-card .num {
+      display: grid;
+      place-items: center;
+      width: 34px;
+      height: 34px;
+      margin-bottom: 15px;
+      border-radius: 50%;
+      color: #fff;
+      background: var(--navy-2);
+      font-weight: 900;
+    }
+    .core-card p { color: var(--muted); }
+    .core-card .question { color: var(--ink); font-weight: 800; }
+
+    .architecture {
+      display: grid;
+      gap: 13px;
+      padding: 24px;
+      border: 1px solid #cfd7dc;
+      border-radius: var(--radius);
+      background: linear-gradient(135deg, #f7fbfb, #f8f6f0);
+      box-shadow: var(--shadow);
+    }
+    .floor {
+      display: grid;
+      grid-template-columns: 150px 1fr;
+      gap: 16px;
+      align-items: stretch;
+    }
+    .floor-label {
+      display: grid;
+      place-items: center;
+      padding: 18px 12px;
+      border-radius: 14px;
+      color: #fff;
+      background: var(--navy);
+      text-align: center;
+      font-weight: 900;
+    }
+    .floor:nth-child(2) .floor-label { background: var(--teal); }
+    .floor:nth-child(3) .floor-label { background: var(--violet); }
+    .floor:nth-child(4) .floor-label { background: var(--amber); }
+    .floor-body {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 8px;
+      padding: 14px;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: #fff;
+    }
+    .chip {
+      display: inline-flex;
+      align-items: center;
+      min-height: 38px;
+      padding: 7px 11px;
+      border: 1px solid #d4d8db;
+      border-radius: 999px;
+      background: #fbfcfc;
+      font-size: .88rem;
+      font-weight: 750;
+    }
+    .arrow { color: #6a7380; font-weight: 900; }
+    .floor-caption { flex-basis: 100%; margin: 2px 0 0; color: var(--muted); font-size: .84rem; }
+
+    .lab {
+      border: 1px solid #cdd8d8;
+      border-radius: var(--radius);
+      overflow: hidden;
+      background: #fff;
+      box-shadow: var(--shadow);
+    }
+    .lab-controls { padding: 22px; background: #edf6f4; }
+    .button-row { display: flex; flex-wrap: wrap; gap: 9px; }
+    .choice-btn, .filter-btn, .subject-btn, .quiz-btn, .copy-btn {
+      border: 1px solid #9bb9b6;
+      border-radius: 10px;
+      color: #164944;
+      background: #fff;
+      cursor: pointer;
+      font-weight: 800;
+      transition: transform .15s ease, background .15s ease, color .15s ease;
+    }
+    .choice-btn, .filter-btn, .subject-btn { padding: 9px 13px; }
+    .choice-btn:hover, .filter-btn:hover, .subject-btn:hover { transform: translateY(-1px); background: #f0f8f6; }
+    .choice-btn[aria-pressed="true"], .filter-btn[aria-pressed="true"], .subject-btn[aria-pressed="true"] {
+      color: #fff;
+      border-color: var(--teal);
+      background: var(--teal);
+    }
+    .lab-output { display: grid; grid-template-columns: 1.08fr .92fr; }
+    .route-main, .route-side { padding: 24px; }
+    .route-side { border-left: 1px solid var(--line); background: #faf9f5; }
+    .route-tag {
+      display: inline-block;
+      padding: 4px 9px;
+      border-radius: 999px;
+      color: #fff;
+      background: var(--navy-2);
+      font-size: .76rem;
+      font-weight: 900;
+      letter-spacing: .06em;
+    }
+    .route-title { margin-top: 9px; font-size: 1.45rem; }
+    .route-path { display: grid; gap: 8px; margin: 18px 0; }
+    .route-step {
+      display: grid;
+      grid-template-columns: 30px 1fr;
+      gap: 10px;
+      align-items: start;
+    }
+    .route-step b:first-child {
+      display: grid;
+      place-items: center;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      color: #fff;
+      background: var(--teal);
+      font-size: .8rem;
+    }
+    .route-side dl { margin: 0; }
+    .route-side dt { margin-top: 12px; color: var(--muted); font-size: .78rem; font-weight: 900; letter-spacing: .05em; }
+    .route-side dd { margin: 3px 0 0; font-weight: 700; }
+
+    .term-grid, .doctrine-grid, .subject-grid, .pattern-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+    .term-card, .doctrine-card, .subject-card, .pattern-card {
+      padding: 22px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(255,255,255,.92);
+      box-shadow: 0 8px 26px rgba(25,35,53,.06);
+    }
+    .term-card { border-top: 5px solid var(--navy-2); }
+    .term-card:nth-child(2) { border-top-color: var(--teal); }
+    .term-card:nth-child(3) { border-top-color: var(--amber); }
+    .term-card:nth-child(4) { border-top-color: var(--violet); }
+    .definition {
+      padding: 13px 15px;
+      border-radius: 10px;
+      background: var(--paper-2);
+      font-weight: 750;
+    }
+    .not-equal { color: var(--red); font-weight: 900; }
+    .tag {
+      display: inline-block;
+      margin: 0 6px 6px 0;
+      padding: 3px 8px;
+      border-radius: 999px;
+      font-size: .75rem;
+      font-weight: 850;
+    }
+    .tag.teal { color: #12564f; background: var(--teal-soft); }
+    .tag.amber { color: #784707; background: var(--amber-soft); }
+    .tag.red { color: #87312d; background: var(--red-soft); }
+    .tag.violet { color: #514185; background: var(--violet-soft); }
+    .tag.blue { color: #26547e; background: var(--blue-soft); }
+    .tag.green { color: #3a663b; background: var(--green-soft); }
+
+    .doctrine-card { display: flex; flex-direction: column; }
+    .doctrine-card .card-head { padding-bottom: 14px; border-bottom: 1px solid var(--line); }
+    .doctrine-card dl { margin: 14px 0 0; }
+    .doctrine-card dt {
+      margin-top: 12px;
+      color: var(--teal);
+      font-size: .76rem;
+      font-weight: 900;
+      letter-spacing: .10em;
+    }
+    .doctrine-card dd { margin: 3px 0 0; }
+    .doctrine-card .next {
+      margin-top: auto;
+      padding: 12px 14px;
+      border-radius: 10px;
+      background: #f0f5f5;
+      font-weight: 800;
+    }
+    .norm {
+      margin: 12px 0;
+      padding: 15px 16px;
+      border-left: 4px solid var(--teal);
+      background: #f4faf8;
+      font-family: "Yu Mincho", "Hiragino Mincho ProN", serif;
+      font-weight: 700;
+    }
+    .factor-list { padding-left: 1.25em; }
+    .factor-list li { margin: .35em 0; }
+
+    .split-flow {
+      display: grid;
+      grid-template-columns: 1fr 56px 1fr;
+      gap: 12px;
+      align-items: stretch;
+      margin-top: 22px;
+    }
+    .split-box {
+      padding: 20px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-sm);
+      background: #fff;
+    }
+    .split-arrow { display: grid; place-items: center; color: var(--teal); font-size: 1.7rem; font-weight: 900; }
+
+    .subject-panel { margin-top: 16px; border: 1px solid #d5d2c7; border-radius: var(--radius); overflow: hidden; }
+    .subject-buttons { padding: 18px; background: #f1eee6; }
+    .subject-output { display: grid; grid-template-columns: .75fr 1.25fr; }
+    .subject-name { padding: 24px; color: #fff; background: var(--navy); }
+    .subject-detail { padding: 24px; background: #fff; }
+    .subject-detail ul { margin-bottom: 0; }
+
+    .evidence-gates {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+    }
+    .gate {
+      position: relative;
+      padding: 20px 18px;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      background: #fff;
+    }
+    .gate::after {
+      content: "→";
+      position: absolute;
+      top: 50%;
+      right: -19px;
+      z-index: 2;
+      color: var(--teal);
+      font-size: 1.25rem;
+      font-weight: 900;
+    }
+    .gate:last-child::after { content: none; }
+    .gate small { color: var(--muted); font-weight: 800; }
+    .gate h3 { margin-top: 6px; }
+    .gate p { color: var(--muted); font-size: .9rem; }
+
+    .hearsay-test {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin: 20px 0;
+    }
+    .test-step { padding: 18px; border-radius: 14px; color: #fff; background: var(--navy-2); }
+    .test-step:nth-child(2) { background: var(--teal); }
+    .test-step:nth-child(3) { background: var(--violet); }
+    .test-step b { display: block; color: #f5d294; font-size: .8rem; }
+
+    .table-wrap {
+      overflow-x: auto;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-sm);
+      background: #fff;
+      box-shadow: 0 8px 26px rgba(25,35,53,.05);
+    }
+    table { width: 100%; border-collapse: collapse; min-width: 880px; }
+    th, td { padding: 13px 14px; border-bottom: 1px solid #e6e2d9; border-right: 1px solid #ece8df; text-align: left; vertical-align: top; }
+    th { color: #fff; background: var(--navy-2); font-size: .84rem; }
+    tbody tr:nth-child(even) { background: #faf9f5; }
+    tbody tr:last-child td { border-bottom: 0; }
+    .yes { color: #146a61; font-weight: 900; }
+    .no { color: #9d3833; font-weight: 900; }
+    .context { color: #855006; font-weight: 900; }
+    .fixed { color: #55418b; font-weight: 900; }
+    .row-hidden { display: none; }
+
+    .comparison-legend { display: flex; flex-wrap: wrap; gap: 8px; margin: 13px 0; }
+    .legend-item { padding: 5px 9px; border-radius: 999px; background: #fff; border: 1px solid var(--line); font-size: .82rem; }
+
+    details {
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: #fff;
+    }
+    details + details { margin-top: 10px; }
+    summary {
+      padding: 16px 18px;
+      cursor: pointer;
+      font-weight: 850;
+    }
+    details[open] summary { border-bottom: 1px solid var(--line); background: #f6f5f0; }
+    .details-body { padding: 18px; }
+
+    .pattern-card { position: relative; }
+    .pattern-meta { display: flex; flex-wrap: wrap; gap: 7px; margin-bottom: 12px; }
+    .pattern-block { margin-top: 14px; }
+    .pattern-label { color: var(--teal); font-size: .78rem; font-weight: 900; letter-spacing: .08em; }
+    .answer-text {
+      padding: 16px;
+      border: 1px dashed #bdb8ad;
+      border-radius: 10px;
+      background: #fcfbf8;
+      font-family: "Yu Mincho", "Hiragino Mincho ProN", serif;
+      line-height: 1.95;
+    }
+    .point-text { padding: 14px 16px; border-radius: 10px; background: var(--amber-soft); }
+    .copy-btn {
+      margin-top: 12px;
+      padding: 8px 12px;
+      border-color: #7d8da0;
+      color: var(--navy);
+    }
+    .copy-btn.copied { color: #fff; border-color: var(--green); background: var(--green); }
+
+    .quiz-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
+    .quiz-card { padding: 20px; border: 1px solid var(--line); border-radius: 16px; background: #fff; }
+    .quiz-card .q { font-weight: 850; }
+    .quiz-btn { padding: 8px 12px; margin-top: 10px; }
+    .quiz-answer { display: none; margin-top: 12px; padding: 13px 15px; border-radius: 10px; background: var(--teal-soft); }
+    .quiz-answer.show { display: block; }
+
+    .checklist { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
+    .check-item { display: flex; gap: 10px; padding: 13px 15px; border: 1px solid var(--line); border-radius: 12px; background: #fff; }
+    .check-item input { width: 18px; height: 18px; margin-top: 5px; accent-color: var(--teal); }
+
+    .sources { padding: 24px; border-radius: var(--radius); color: #e7eef2; background: var(--navy); }
+    .sources h2 { color: #fff; }
+    .sources a { color: #b7e8e1; }
+    .sources li { margin: .65em 0; }
+    .source-kind { color: #f3c36e; font-size: .78rem; font-weight: 900; letter-spacing: .06em; }
+    .footnote { padding: 22px 0 50px; color: var(--muted); font-size: .84rem; }
+
+    .publication {
+      margin-bottom: 70px;
+      padding: 24px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: #eef3f2;
+    }
+    .publication h2 { margin-top: 0; }
+    .share-link {
+      display: inline-flex;
+      margin-top: 10px;
+      padding: 10px 15px;
+      border-radius: 10px;
+      color: #fff;
+      background: #111;
+      font-weight: 850;
+      text-decoration: none;
+    }
+    .share-link:hover { color: #fff; background: #303030; }
+
+    .back-top {
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      z-index: 20;
+      display: grid;
+      place-items: center;
+      width: 44px;
+      height: 44px;
+      border: 0;
+      border-radius: 50%;
+      color: #fff;
+      background: var(--navy);
+      box-shadow: var(--shadow);
+      text-decoration: none;
+      font-weight: 900;
+    }
+
+    @media (max-width: 900px) {
+      .core-grid, .evidence-gates { grid-template-columns: repeat(2, 1fr); }
+      .lab-output, .subject-output { grid-template-columns: 1fr; }
+      .route-side { border-top: 1px solid var(--line); border-left: 0; }
+      .evidence-gates .gate::after { content: none; }
+      .hearsay-test { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 680px) {
+      main, .hero-inner { width: min(100% - 24px, var(--content)); }
+      .hero-inner { padding: 48px 0 40px; }
+      .hero-rule, .core-grid, .term-grid, .doctrine-grid, .subject-grid, .pattern-grid,
+      .evidence-gates, .quiz-grid, .checklist { grid-template-columns: 1fr; }
+      section { padding-top: 54px; }
+      .architecture { padding: 14px; }
+      .floor { grid-template-columns: 1fr; gap: 7px; }
+      .floor-label { place-items: start; text-align: left; }
+      .split-flow { grid-template-columns: 1fr; }
+      .split-arrow { transform: rotate(90deg); min-height: 34px; }
+      .topnav-inner { width: max-content; padding-inline: 12px; }
+      .back-top { width: 40px; height: 40px; right: 10px; bottom: 10px; }
+    }
+    @media (max-width: 380px) {
+      body { font-size: 15px; }
+      .hero-inner, main { width: min(100% - 18px, var(--content)); }
+      .core-card, .term-card, .doctrine-card, .pattern-card, .quiz-card { padding: 17px; }
+      .lab-controls, .route-main, .route-side, .subject-name, .subject-detail { padding: 17px; }
+      .choice-btn, .filter-btn, .subject-btn { width: 100%; text-align: left; }
+    }
+
+    @media print {
+      :root { --paper: #fff; --shadow: none; }
+      body { background: #fff; color: #000; font-size: 10.5pt; }
+      .hero { color: #000; background: #fff; border-bottom: 2px solid #000; }
+      .hero-lead, .meta { color: #222; }
+      .hero-rule div { border-color: #777; background: #fff; }
+      .hero-rule b { color: #000; }
+      .site-nav, .topnav, .button-row, .copy-btn, .quiz-btn, .back-top, .skip-link, .share-link { display: none !important; }
+      main, .hero-inner { width: 100%; }
+      section { padding-top: 28px; break-inside: auto; }
+      .core-card, .term-card, .doctrine-card, .pattern-card, .quiz-card, details, .table-wrap { box-shadow: none; break-inside: avoid; }
+      .lab-output, .subject-output { grid-template-columns: 1fr 1fr; }
+      .quiz-answer { display: block; }
+      a { color: #000; text-decoration: none; }
+      a[href^="http"]::after { content: " (" attr(href) ")"; font-size: 8pt; word-break: break-all; }
+    }
+  </style>
+</head>
+<body id="top">
+  <a class="skip-link" href="#main">本文へ移動</a>
+
+  <nav class="site-nav" aria-label="サイト内">
+    <div class="site-nav-inner">
+      <a href="../../">司法試験・予備試験 学習ログ</a>
+      <span>刑事訴訟法｜捜査と証拠</span>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="hero-inner">
+      <p class="eyebrow">司法試験・予備試験｜刑事訴訟法</p>
+      <h1>論証の「住所」が分かる<br>捜査と証拠の全体マップ</h1>
+      <p class="hero-lead">令状主義、強制処分、任意捜査の限界、伝聞法則、自白法則、違法収集証拠排除、いわゆる毒樹の果実。似た言葉を暗記する前に、<strong>いつ・何を・何のために判断する規範か</strong>を分離します。</p>
+      <div class="hero-rule" aria-label="このページの三原則">
+        <div><b>第一原則</b><span>捜査の適法性と証拠能力を分ける</span></div>
+        <div><b>第二原則</b><span>規範ではなく判断対象から入る</span></div>
+        <div><b>第三原則</b><span>考慮事情と要件を混同しない</span></div>
+      </div>
+      <p class="meta">基準日：2026年8月8日｜学習用資料（個別事件の法律相談ではありません）</p>
+    </div>
+  </header>
+
+  <nav class="topnav" aria-label="ページ内目次">
+    <div class="topnav-inner">
+      <a href="#first">最初の結論</a>
+      <a href="#map">全体マップ</a>
+      <a href="#router">論点ルート</a>
+      <a href="#terms">用語の階層</a>
+      <a href="#investigation">捜査法</a>
+      <a href="#person">主体</a>
+      <a href="#evidence">証拠法</a>
+      <a href="#hearsay">伝聞</a>
+      <a href="#confession">自白</a>
+      <a href="#fruit">派生証拠</a>
+      <a href="#matrix">要件比較</a>
+      <a href="#patterns">論証</a>
+      <a href="#quiz">演習</a>
+      <a href="#sources">出典</a>
+    </div>
+  </nav>
+
+  <main id="main">
+    <section id="first">
+      <div class="section-head">
+        <span class="section-no">00｜FIRST PRINCIPLES</span>
+        <h2>最初に固定する三つの結論</h2>
+        <p class="section-lead">この三つが崩れなければ、知らない捜査手法が出ても答案の入口を失いません。</p>
+      </div>
+      <div class="core-grid">
+        <article class="core-card">
+          <span class="num">1</span>
+          <h3>「違法な捜査」≠「証拠排除」</h3>
+          <p class="question">判断する問いが違います。</p>
+          <p>捜査が違法でも、証拠能力が当然に否定されるわけではありません。まず捜査の適法性を判断し、その後に違法収集証拠排除の二要件を検討します。</p>
+        </article>
+        <article class="core-card">
+          <span class="num">2</span>
+          <h3>「任意処分」≠「無制限」</h3>
+          <p class="question">強制処分でないことは、適法性のゴールではありません。</p>
+          <p>強制処分でないと分類された後も、法益侵害の程度に応じ、必要性・緊急性などを踏まえて方法の相当性を審査します。</p>
+        </article>
+        <article class="core-card">
+          <span class="num">3</span>
+          <h3>「供述証拠」≠「全部伝聞」</h3>
+          <p class="question">要証事実との関係が決め手です。</p>
+          <p>供述内容の真実を証明するために用いるときに伝聞性が問題になります。発言の存在や聞き手への効果を証明するなら、非伝聞となることがあります。</p>
+        </article>
+      </div>
+      <div class="notice" style="margin-top:18px">
+        <strong>「犯罪の重大性」の先取り結論：</strong>どの論点にも共通する万能要件ではありません。強制処分該当性、伝聞法則、自白法則の要件ではなく、任意捜査の必要性を基礎づける事情として手法ごとの衡量に現れることがあります。写真撮影判例の定式に明示されるのは「現行・直後性、証拠保全の必要性・緊急性、方法の相当性」であり、「重大犯罪であること」ではありません。
+      </div>
+    </section>
+
+    <section id="map">
+      <div class="section-head">
+        <span class="section-no">01｜ARCHITECTURE</span>
+        <h2>一つの階層ではない。四つのフロアがある</h2>
+        <p class="section-lead">令状主義・伝聞法則・自白法則を一直線に並べると混乱します。それぞれは別の判断対象を持ち、必要なときだけ接続します。</p>
+      </div>
+      <div class="architecture" aria-label="捜査と証拠の四段階">
+        <div class="floor">
+          <div class="floor-label">第1フロア<br>捜査方法</div>
+          <div class="floor-body">
+            <span class="chip">捜査活動か</span><span class="arrow">→</span>
+            <span class="chip">強制処分か</span><span class="arrow">→</span>
+            <span class="chip">法定の類型・令状・例外</span><span class="arrow">／</span>
+            <span class="chip">任意捜査の限界</span>
+            <p class="floor-caption">決めること：証拠を得る過程が適法か。中心条文：刑訴法197条1項、218条以下、憲法35条。</p>
+          </div>
+        </div>
+        <div class="floor">
+          <div class="floor-label">第2フロア<br>証拠能力</div>
+          <div class="floor-body">
+            <span class="chip">関連性</span><span class="arrow">→</span>
+            <span class="chip">違法収集証拠排除</span><span class="arrow">／</span>
+            <span class="chip">伝聞法則</span><span class="arrow">／</span>
+            <span class="chip">自白法則</span>
+            <p class="floor-caption">決めること：その証拠を公判の事実認定資料として入口に通すか。排除根拠は証拠の性質ごとに別々です。</p>
+          </div>
+        </div>
+        <div class="floor">
+          <div class="floor-label">第3フロア<br>派生証拠</div>
+          <div class="floor-body">
+            <span class="chip">先行手続の違法</span><span class="arrow">→</span>
+            <span class="chip">後続証拠との密接関連性</span><span class="arrow">→</span>
+            <span class="chip">違法の重大性・排除相当性</span>
+            <p class="floor-caption">決めること：違法の影響が後で得た証拠まで及ぶか。「毒樹の果実」は独立した条文名ではなく、この問題を示す比喩です。</p>
+          </div>
+        </div>
+        <div class="floor">
+          <div class="floor-label">第4フロア<br>証明力</div>
+          <div class="floor-body">
+            <span class="chip">信用性</span><span class="arrow">×</span>
+            <span class="chip">推認力</span><span class="arrow">×</span>
+            <span class="chip">反対証拠</span><span class="arrow">→</span>
+            <span class="chip">合理的疑いを超えるか</span>
+            <p class="floor-caption">決めること：入口を通った証拠を、どの程度信用し、要証事実をどこまで推認できるか。証拠能力とは別問題です。</p>
+          </div>
+        </div>
+      </div>
+      <div class="danger-note" style="margin-top:18px">
+        <strong>答案上の事故：</strong>「捜査が違法である。したがって証拠能力がない」と一文で飛ばさないでください。間に、違法収集証拠排除法則の規範と当てはめが必要です。同様に「伝聞である。信用できない」ではなく、伝聞は入口、信用性は証明力です。
+      </div>
+    </section>
+
+    <section id="router">
+      <div class="section-head">
+        <span class="section-no">02｜ISSUE ROUTER</span>
+        <h2>事実を見たら、まず「何が提出されるか」でルートを選ぶ</h2>
+        <p class="section-lead">ボタンを押すと、典型的な答案の判断順序が切り替わります。複数ルートが同時に必要なこともあります。</p>
+      </div>
+      <div class="lab">
+        <div class="lab-controls">
+          <p><strong>問題文で中心となる対象を選択</strong></p>
+          <div class="button-row" role="group" aria-label="論点ルート選択">
+            <button class="choice-btn" type="button" data-route="gps" aria-pressed="true">秘密のGPS・継続監視</button>
+            <button class="choice-btn" type="button" data-route="escort" aria-pressed="false">任意同行・留め置き</button>
+            <button class="choice-btn" type="button" data-route="search" aria-pressed="false">捜索・差押え</button>
+            <button class="choice-btn" type="button" data-route="statement" aria-pressed="false">供述調書・録音</button>
+            <button class="choice-btn" type="button" data-route="derived" aria-pressed="false">違法後に得た別証拠</button>
+            <button class="choice-btn" type="button" data-route="memo" aria-pressed="false">被害者メモ・第三者発言</button>
+          </div>
+        </div>
+        <div class="lab-output" aria-live="polite">
+          <div class="route-main">
+            <span class="route-tag" id="route-tag">捜査法 → 証拠法</span>
+            <h3 class="route-title" id="route-title">GPS捜査は「必要だったか」から書かない</h3>
+            <p id="route-summary">秘密装着と継続的・網羅的な位置把握が重要なプライバシーを侵害するかを先に判定します。</p>
+            <div class="route-path" id="route-path">
+              <div class="route-step"><b>1</b><span>強制処分該当性：合理的に推認される意思に反する私的領域への侵入、重要な法的利益侵害</span></div>
+              <div class="route-step"><b>2</b><span>強制処分法定主義：この手法を許す特別の根拠規定があるか</span></div>
+              <div class="route-step"><b>3</b><span>令状主義：事前の司法審査を経た適切な令状・実施手続か</span></div>
+              <div class="route-step"><b>4</b><span>証拠提出時：違法収集証拠排除を別途検討</span></div>
+            </div>
+          </div>
+          <aside class="route-side">
+            <dl>
+              <dt>最初の問い</dt><dd id="route-first">その手法は強制処分か。</dd>
+              <dt>中心規範</dt><dd id="route-rule">刑訴法197条1項、憲法35条、GPS大法廷判決</dd>
+              <dt>「犯罪の重大性」</dt><dd id="route-serious">強制処分該当性の要件ではない。</dd>
+              <dt>よくある飛躍</dt><dd id="route-trap">捜査の必要性が高いから任意処分だ、と逆算すること。</dd>
+              <dt>次に進む先</dt><dd id="route-next">法定根拠・令状 → 違法なら証拠排除</dd>
+            </dl>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section id="terms">
+      <div class="section-head">
+        <span class="section-no">03｜TERMINOLOGY</span>
+        <h2>似た用語を、分類・原則・限界・効果に分ける</h2>
+      </div>
+      <div class="term-grid">
+        <article class="term-card">
+          <span class="tag blue">分類</span>
+          <h3>強制処分／任意処分</h3>
+          <p class="definition">個々の捜査手法を、特別の法的根拠を必要とするほど重要な権利利益を制約するかで分類する言葉。</p>
+          <p><strong>強制処分</strong>なら刑訴法197条1項ただし書により特別の定めが必要です。<strong>任意処分</strong>でも、法益侵害があれば相当性審査が残ります。</p>
+          <p class="not-equal">「有形力あり＝必ず強制処分」ではない。</p>
+        </article>
+        <article class="term-card">
+          <span class="tag teal">活動全体</span>
+          <h3>任意捜査</h3>
+          <p class="definition">強制処分を用いない捜査。聞込み、尾行、張込み、任意同行・取調べなどが典型ですが、名称だけで適法にはなりません。</p>
+          <p>任意処分という「手法の分類」と、任意捜査という「捜査活動の態様」は近い言葉です。答案では、<strong>強制処分に当たらない→任意捜査としての限界</strong>の二段階にします。</p>
+        </article>
+        <article class="term-card">
+          <span class="tag amber">統制原理</span>
+          <h3>令状主義</h3>
+          <p class="definition">国家が捜索・押収等をする前に、中立な裁判官が理由と範囲を審査し、対象を特定した令状によって統制する原則。</p>
+          <p>憲法35条、刑訴法218条以下が中心です。<strong>強制処分法定主義</strong>（手法と根拠を法律が定める）と、<strong>令状主義</strong>（裁判官が事前審査する）は重なりますが同義ではありません。</p>
+        </article>
+        <article class="term-card">
+          <span class="tag violet">証拠能力</span>
+          <h3>伝聞・自白・違法収集証拠</h3>
+          <p class="definition">いずれも証拠能力を制限しますが、守る利益と判断対象が違います。</p>
+          <p><strong>伝聞：</strong>反対尋問・供述過程の誤り。<br><strong>自白：</strong>供述の自由・虚偽排除・適正手続。<br><strong>違法収集：</strong>令状主義・適正手続と将来の違法捜査抑止。</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="investigation">
+      <div class="section-head">
+        <span class="section-no">04｜INVESTIGATION LAW</span>
+        <h2>捜査法は「分類 → 根拠・令状／相当性」の二股</h2>
+        <p class="section-lead">必要性を先に書くのではなく、まず権利侵害の質から強制処分かを決めます。</p>
+      </div>
+      <div class="doctrine-grid">
+        <article class="doctrine-card">
+          <div class="card-head">
+            <span class="tag red">第1ゲート</span><span class="tag blue">刑訴法197条1項</span>
+            <h3>強制処分該当性</h3>
+          </div>
+          <dl>
+            <dt>目的</dt><dd>重要な権利利益を国家が制約する捜査を、法律と司法審査の統制へ載せる。</dd>
+            <dt>理由</dt><dd>捜査の必要性だけで新しい強制手段を創設できると、権利保障と令状審査が空洞化するため。</dd>
+            <dt>規範</dt>
+            <dd class="norm">有形力の有無だけでなく、本人の明示又は合理的に推認される意思に反し、身体・住居・財産・私的領域等の重要な法的利益を侵害する性質を有し、特別の根拠規定なしに許容するのが相当でない手段か。</dd>
+            <dt>当てはめ軸</dt><dd>秘密性、継続性・網羅性、情報の質と量、私的領域への到達、物理的侵入、拘束の程度、拒否可能性、対象者の合理的意思。</dd>
+            <dt>入らない事情</dt><dd><strong>犯罪の重大性や捜査の必要性は、権利侵害の質を消しません。</strong>強制処分を任意処分に変える事情ではありません。</dd>
+            <dt>効果</dt><dd>強制処分なら、特別の法的根拠がなければ違法。根拠がある場合も、令状・要件・執行範囲を審査します。</dd>
+          </dl>
+          <p class="next">次：法定の処分類型 → 令状の要否・例外 → 令状の有効性・執行</p>
+        </article>
+
+        <article class="doctrine-card">
+          <div class="card-head">
+            <span class="tag amber">第2Aゲート</span><span class="tag blue">憲法35条・刑訴法218条以下</span>
+            <h3>強制処分法定主義と令状主義</h3>
+          </div>
+          <dl>
+            <dt>目的</dt><dd>強制手段の類型・要件を法定し、裁判官の事前審査と令状の特定によって捜査機関の裁量を外から制御する。</dd>
+            <dt>理由</dt><dd>捜査側だけが必要性と範囲を決めると、探索的・一般的な侵害が拡大しやすいため。</dd>
+            <dt>確認順</dt><dd>①根拠条文 → ②令状を要する類型か → ③発付要件（嫌疑・関連性・必要性等）→ ④対象の特定 → ⑤呈示・執行方法・範囲 → ⑥逮捕に伴う無令状処分等の例外。</dd>
+            <dt>第三者</dt><dd>第三者の住居・物も捜索対象になり得ますが、刑訴法222条1項が準用する102条2項の加重要件に注意します。</dd>
+            <dt>犯罪の重大性</dt><dd>捜索差押えの一般的な発付要件そのものではありません。個別制度の要件に置かれている場合を除き、勝手に足さないでください。</dd>
+            <dt>効果</dt><dd>無令状・令状逸脱なら捜査は違法となり得ます。ただし、証拠排除は別論点です。</dd>
+          </dl>
+          <p class="next">次：捜査違法の結論 → 提出証拠との関係 → 違法収集証拠排除</p>
+        </article>
+
+        <article class="doctrine-card">
+          <div class="card-head">
+            <span class="tag teal">第2Bゲート</span><span class="tag blue">最決昭51・3・16</span>
+            <h3>任意捜査の限界</h3>
+          </div>
+          <dl>
+            <dt>目的</dt><dd>強制処分未満の捜査でも、身体・行動・プライバシー等への侵害を無制限にしない。</dd>
+            <dt>理由</dt><dd>任意処分にも有形力や心理的圧迫、情報収集などによる法益侵害があり得るため。</dd>
+            <dt>規範</dt>
+            <dd class="norm">強制処分に当たらない手段であっても、法益侵害のおそれがあるときは、捜査上の必要性・緊急性その他具体的状況を考慮し、侵害される法益との権衡上、相当と認められる限度で許される。</dd>
+            <dt>当てはめ軸</dt><dd>嫌疑・証拠価値、代替手段、時間・場所、反復・継続、拒否・退去の自由、告知、対象者の年齢・状態、接触・撮影・追跡の態様、第三者への波及。</dd>
+            <dt>犯罪の重大性</dt><dd><strong>固定要件ではありません。</strong>手法によっては必要性を基礎づける事情になりますが、侵害的な方法を当然に正当化しません。</dd>
+            <dt>効果</dt><dd>相当な限度内なら適法。限度超過なら違法となり得ます。</dd>
+          </dl>
+          <p class="next">次：違法なら、得られた証拠について証拠排除を別途検討</p>
+        </article>
+
+        <article class="doctrine-card">
+          <div class="card-head">
+            <span class="tag green">手法別の定式</span><span class="tag blue">最大判昭44・12・24</span>
+            <h3>無承諾の写真撮影</h3>
+          </div>
+          <dl>
+            <dt>目的</dt><dd>証拠保全の必要と、みだりに容貌・姿態を撮影されない自由を調整する。</dd>
+            <dt>判例の定式</dt>
+            <dd class="norm">現に犯罪が行われ、又は行われた後間がないと認められ、証拠保全の必要性・緊急性があり、一般的に許容される限度を超えない相当な方法であるとき。</dd>
+            <dt>要注意</dt><dd>これは無承諾写真撮影に関する具体的な定式です。すべての任意捜査に「現行・直後性」を機械的に要求する一般規範ではありません。</dd>
+            <dt>第三者の写り込み</dt><dd>被疑者以外が写る場合も、その撮影が目的達成に必要で、方法・範囲が相当かを個別に検討します。</dd>
+            <dt>犯罪の重大性</dt><dd>判例の明示要件ではありません。「現に犯罪が行われた」と「重大な犯罪」は別です。</dd>
+            <dt>効果</dt><dd>要件を満たせば無承諾・無令状でも直ちに違法とはならない。長期・網羅的監視はGPS型の重要法益侵害との区別が必要です。</dd>
+          </dl>
+          <p class="next">次：撮影方法の質・量が変われば、強制処分該当性へ戻る</p>
+        </article>
+      </div>
+
+      <div class="split-flow" aria-label="強制処分と任意処分の分岐">
+        <div class="split-box">
+          <span class="tag red">YES</span>
+          <h3>重要な権利利益を意思に反して侵害する</h3>
+          <p><strong>強制処分</strong>として、特別の根拠規定・令状・法定要件・執行範囲を審査します。必要性の高さだけで救済しません。</p>
+        </div>
+        <div class="split-arrow" aria-hidden="true">⇄</div>
+        <div class="split-box">
+          <span class="tag teal">NO</span>
+          <h3>強制処分には当たらない</h3>
+          <p><strong>任意捜査の限界</strong>として、必要性・緊急性その他の事情と、侵害法益・方法の相当性を衡量します。</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="person">
+      <div class="section-head">
+        <span class="section-no">05｜WHOSE RIGHT / WHOSE STATEMENT</span>
+        <h2>「被疑者か、それ以外か」は、論点ごとに意味が変わる</h2>
+        <p class="section-lead">捜査段階の身分と、公判での供述者分類を混ぜないことが重要です。</p>
+      </div>
+      <div class="notice">
+        <strong>用語の時点：</strong>公訴提起前は「被疑者」、公訴提起後は「被告人」です。伝聞例外は公判で証拠にできるかのルールなので、基本軸は「供述者が当該被告人か、被告人以外の者か」です。取調べ時に被疑者だった人の調書も、起訴後は刑訴法322条の「被告人の供述」として検討します。
+      </div>
+      <div class="subject-panel">
+        <div class="subject-buttons">
+          <p><strong>立場を切り替えて確認</strong></p>
+          <div class="button-row" role="group" aria-label="主体の選択">
+            <button class="subject-btn" type="button" data-subject="suspect" aria-pressed="true">捜査対象の被疑者</button>
+            <button class="subject-btn" type="button" data-subject="third" aria-pressed="false">被疑者以外の権利者</button>
+            <button class="subject-btn" type="button" data-subject="defendant" aria-pressed="false">公判の被告人</button>
+            <button class="subject-btn" type="button" data-subject="declarant" aria-pressed="false">被告人以外の供述者</button>
+          </div>
+        </div>
+        <div class="subject-output" aria-live="polite">
+          <div class="subject-name">
+            <span class="tag amber" id="subject-stage">捜査段階</span>
+            <h3 id="subject-title">捜査対象の被疑者</h3>
+            <p id="subject-core">嫌疑を向けられていることと、権利制約が無制限に許されることは別です。</p>
+          </div>
+          <div class="subject-detail">
+            <h3>答案で見る箇所</h3>
+            <ul id="subject-points">
+              <li>任意取調べでは刑訴法198条上の出頭・退去と黙秘告知を確認する。</li>
+              <li>身体・住居・車両・位置情報への侵害は強制処分該当性から検討する。</li>
+              <li>起訴後にその供述調書を提出するなら、被告人供述として319条・322条へ進む。</li>
+            </ul>
+            <p class="mini-note" id="subject-warning"><strong>誤解：</strong>「被疑者だから撮影・追跡が自由」ではありません。</p>
+          </div>
+        </div>
+      </div>
+      <div class="subject-grid" style="margin-top:16px">
+        <article class="subject-card">
+          <h3>捜索対象が第三者の場合</h3>
+          <p>被疑者の知人宅、勤務先、同乗者の所持品など、第三者の権利も令状主義の保護対象です。刑訴法222条1項が準用する102条2項により、被疑者以外の身体・物・住居等については、押収物の存在を認めるに足りる状況が必要です。</p>
+        </article>
+        <article class="subject-card">
+          <h3>第三者の発言が被告人に不利益な場合</h3>
+          <p>それは被告人の「自白」ではありません。まず要証事実との関係で伝聞性を判定し、供述者が被告人以外なので321条・324条等のルートを検討します。共犯者供述は別途慎重な整理を要します。</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="evidence">
+      <div class="section-head">
+        <span class="section-no">06｜ADMISSIBILITY</span>
+        <h2>証拠提出後は、四つのゲートを順に通す</h2>
+        <p class="section-lead">一つの証拠に複数の排除法則が重なることがあります。どれか一つを選ぶ問題ではありません。</p>
+      </div>
+      <div class="evidence-gates">
+        <article class="gate">
+          <small>GATE 1</small>
+          <h3>関連性</h3>
+          <p>要証事実との論理的関係、法が要求する関連性・真正等の基礎を確認。</p>
+        </article>
+        <article class="gate">
+          <small>GATE 2</small>
+          <h3>収集過程</h3>
+          <p>違法収集証拠か。先行違法から派生した証拠なら密接関連性も確認。</p>
+        </article>
+        <article class="gate">
+          <small>GATE 3</small>
+          <h3>証拠の性質</h3>
+          <p>供述証拠なら伝聞法則。自白・不利益承認なら任意性も別途確認。</p>
+        </article>
+        <article class="gate">
+          <small>GATE 4</small>
+          <h3>証明力</h3>
+          <p>証拠能力がある証拠について、信用性と要証事実への推認力を評価。</p>
+        </article>
+      </div>
+
+      <div class="doctrine-grid" style="margin-top:18px">
+        <article class="doctrine-card">
+          <div class="card-head">
+            <span class="tag red">判例法理</span><span class="tag blue">最判昭53・9・7</span>
+            <h3>違法収集証拠排除法則</h3>
+          </div>
+          <dl>
+            <dt>判断対象</dt><dd>違法な手続によって得られた証拠を、公判で事実認定に用いてよいか。</dd>
+            <dt>目的</dt><dd>基本的人権と適正手続・令状主義を実効化し、将来の違法捜査を抑止する。</dd>
+            <dt>理由</dt><dd>違法に得ても常に使えるなら、捜査機関に令状や法定手続を破る誘因が残る。他方、軽微な違法まで一律排除すると真相解明を過度に損なうため、判例は限定的な基準を採ります。</dd>
+            <dt>規範</dt>
+            <dd class="norm">①証拠物の押収等の手続に、令状主義の精神を没却するような重大な違法があり、かつ、②その証拠を許容することが将来の違法捜査抑制の見地から相当でないと認められる場合、証拠能力を否定する。</dd>
+            <dt>重大な違法の事情</dt><dd>侵害規範の重要性、無令状・令状潜脱、違反の程度・態様、故意・計画性、令状取得可能性、権利侵害の内容、手続遵守の有無など。</dd>
+            <dt>排除相当性の事情</dt><dd>同種違法の反復可能性、捜査実務への抑止の必要、違法を利益として残す危険、偶発性・是正状況等。</dd>
+            <dt>犯罪の重大性</dt><dd><strong>二要件の文言上の要件ではありません。</strong>事案の性質が具体的判断で触れられることはあっても、「重大犯罪だから排除しない」という短絡は避けます。</dd>
+            <dt>効果</dt><dd>当該証拠の証拠能力を否定。違法捜査自体の結論とは別に論証します。</dd>
+          </dl>
+          <p class="next">次：後続証拠があるなら密接関連性 → 同じ二要件</p>
+        </article>
+
+        <article class="doctrine-card">
+          <div class="card-head">
+            <span class="tag violet">別問題</span><span class="tag blue">刑訴法317条</span>
+            <h3>証拠能力と証明力</h3>
+          </div>
+          <dl>
+            <dt>証拠能力</dt><dd>裁判所が事実認定の資料として用いる資格。伝聞・違法収集・自白の任意性などが入口を制限します。</dd>
+            <dt>証明力</dt><dd>入口を通った証拠が、実際にどれだけ事実を推認させるか。信用性、観察条件、利害関係、他証拠との整合等を評価します。</dd>
+            <dt>典型例</dt><dd>任意性のある自白調書でも、誘導、変遷、客観証拠との不整合があれば信用性は低くなり得ます。伝聞例外で採用された供述調書も、当然に信用されるわけではありません。</dd>
+            <dt>答案の書き分け</dt><dd>「証拠能力がある」と結論した後、事実認定問題なら「もっとも、その信用性・推認力は…」と階層を変えます。</dd>
+            <dt>効果</dt><dd>証明力が弱くても証拠能力は直ちに失われません。総合評価で合理的疑いが残れば無罪方向です。</dd>
+          </dl>
+          <p class="next">次：採用された全証拠を総合し、要証事実ごとに推認過程を書く</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="hearsay">
+      <div class="section-head">
+        <span class="section-no">07｜HEARSAY</span>
+        <h2>伝聞は「書面か」ではなく、要証事実との関係で決まる</h2>
+        <p class="section-lead">先に例外条文を探すと迷います。まず立証趣旨を実質化し、伝聞性を判定します。</p>
+      </div>
+      <div class="hearsay-test">
+        <div class="test-step"><b>STEP 1｜要証事実</b>その証拠で、どの事実を証明したいのか。</div>
+        <div class="test-step"><b>STEP 2｜真実性依存</b>発言内容が真実でなければ、その要証事実を推認できないか。</div>
+        <div class="test-step"><b>STEP 3｜原供述者</b>誰の知覚・記憶・表現・真摯性を反対尋問で確かめる必要があるか。</div>
+      </div>
+      <div class="doctrine-grid">
+        <article class="doctrine-card">
+          <div class="card-head">
+            <span class="tag violet">刑訴法320条以下</span>
+            <h3>伝聞法則の入口</h3>
+          </div>
+          <dl>
+            <dt>目的</dt><dd>公判廷外供述に内在する知覚・記憶・表現・真摯性の誤りを、宣誓・態度観察・反対尋問によって吟味できない危険から守る。</dd>
+            <dt>定義</dt>
+            <dd class="norm">公判廷外の供述を、その供述内容の真実性を証明するために用いる証拠。</dd>
+            <dt>判断方法</dt><dd>検察官の形式的な「立証趣旨」ではなく、争点との関係で実質的な要証事実を定めます。内容の真実性に依存するなら伝聞、発言の存在・聞き手への効果・発言者の心理状態などを示すなら非伝聞となり得ます。</dd>
+            <dt>犯罪の重大性</dt><dd><strong>伝聞性にも例外要件にも原則として入りません。</strong>重大事件でも反対尋問保障を利益衡量だけで飛ばせません。</dd>
+            <dt>効果</dt><dd>伝聞なら原則排除。321条から328条の例外・同意等を満たすかへ進みます。</dd>
+          </dl>
+          <p class="next">次：原供述者の属性と証拠形態を確定して例外条文を選ぶ</p>
+        </article>
+
+        <article class="doctrine-card">
+          <div class="card-head">
+            <span class="tag green">条文ルート</span>
+            <h3>例外条文の住所</h3>
+          </div>
+          <dl>
+            <dt>被告人以外の供述書・供述録取書</dt><dd>321条1項を中心に、裁判官面前調書、検察官面前調書、その他の書面を区別し、各号の不同意・供述不能・相反性・特信情況等の要件を確認。</dd>
+            <dt>実況見分・鑑定等</dt><dd>321条2項から4項等の作成主体・真正・要件を確認。写真や再現供述が何を立証するかで、書面全体を一括処理しない。</dd>
+            <dt>被告人の供述書・供述録取書</dt><dd>322条。被告人に不利益な事実の承認又は特信情況を確認し、不利益承認について任意性も審査。自白なら319条も重なります。</dd>
+            <dt>再伝聞</dt><dd>公判証言の中で公判外供述を語る場合は324条。外側と内側の各供述過程について伝聞性・例外を検討します。</dd>
+            <dt>同意・弾劾</dt><dd>326条の同意、328条の証明力を争う証拠を区別。328条は実質的に犯罪事実を立証する迂回路ではありません。</dd>
+          </dl>
+          <p class="next">次：例外要件充足 → なお信用性は証明力として別途評価</p>
+        </article>
+      </div>
+
+      <details style="margin-top:16px">
+        <summary>同じ発言が、伝聞にも非伝聞にもなる例</summary>
+        <div class="details-body">
+          <p><strong>発言：</strong>被害者Vが友人Wに「Aにナイフで脅された」と話した。</p>
+          <ul>
+            <li><strong>Aが脅迫した事実</strong>を証明するためにWが発言内容を語る → 内容が真実である必要があるため伝聞。</li>
+            <li><strong>Wが直後に警察へ通報した理由</strong>を説明するために発言の存在を示す → 聞き手Wへの効果が要証事実なら非伝聞となり得る。</li>
+            <li><strong>Vが恐怖状態にあったこと</strong>を言葉の調子や内容から推認する → 立証の仕方により非伝聞となり得るが、実質的にAの行為を証明する迂回でないか吟味する。</li>
+          </ul>
+        </div>
+      </details>
+    </section>
+
+    <section id="confession">
+      <div class="section-head">
+        <span class="section-no">08｜CONFESSION</span>
+        <h2>自白は「任意性・伝聞・補強・信用性」を四分する</h2>
+      </div>
+      <div class="table-wrap">
+        <table aria-label="自白をめぐる四つの判断">
+          <thead>
+            <tr><th>判断</th><th>問い</th><th>根拠・基準</th><th>効果</th><th>犯罪の重大性</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>自白法則</strong></td>
+              <td>自由な意思に基づく自白か</td>
+              <td>憲法38条2項、刑訴法319条1項。強制・拷問・脅迫、不当に長い抑留拘禁後、その他任意性に疑い。</td>
+              <td>疑いがあれば証拠能力なし</td>
+              <td class="no">要件でない</td>
+            </tr>
+            <tr>
+              <td><strong>伝聞例外</strong></td>
+              <td>公判外の被告人供述を書面等で使えるか</td>
+              <td>刑訴法322条等。不利益事実の承認又は特信情況。自白なら319条も重なる。</td>
+              <td>要件を満たせば伝聞障害を通過</td>
+              <td class="no">要件でない</td>
+            </tr>
+            <tr>
+              <td><strong>補強法則</strong></td>
+              <td>自白だけで有罪にしていないか</td>
+              <td>憲法38条3項、刑訴法319条2項。自己に不利益な唯一の証拠なら有罪不可。</td>
+              <td>独立した補強証拠が必要</td>
+              <td class="no">要件でない</td>
+            </tr>
+            <tr>
+              <td><strong>信用性</strong></td>
+              <td>内容が真実として信頼できるか</td>
+              <td>供述経過、具体性・秘密の暴露、変遷、客観証拠との整合、誘導可能性等。</td>
+              <td>証明力の強弱</td>
+              <td class="no">要件でない</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="doctrine-grid" style="margin-top:18px">
+        <article class="doctrine-card">
+          <div class="card-head">
+            <span class="tag red">憲法38条2項・刑訴法319条1項</span>
+            <h3>自白法則</h3>
+          </div>
+          <dl>
+            <dt>目的</dt><dd>虚偽自白の排除、供述の自由・黙秘権の保障、違法・不当な取調べの抑止、手続の公正を確保する。</dd>
+            <dt>規範</dt><dd class="norm">強制、拷問若しくは脅迫による自白、不当に長く抑留・拘禁された後の自白、その他任意にされたものでない疑いのある自白は、証拠とすることができない。</dd>
+            <dt>当てはめ軸</dt><dd>身体・心理的圧迫、利益誘導、約束、偽計、取調べの時間・反復、睡眠・食事、弁護人接見、黙秘意思への対応、供述に至る経過、圧迫と供述の因果関係。</dd>
+            <dt>効果</dt><dd>任意性に疑いがあれば自白自体を排除。信用性が高そうでも任意性欠如を治癒しません。</dd>
+          </dl>
+          <p class="next">次：公判外供述なら322条 → 補強証拠 → 信用性</p>
+        </article>
+        <article class="doctrine-card">
+          <div class="card-head">
+            <span class="tag amber">混同注意</span>
+            <h3>黙秘権と自白法則</h3>
+          </div>
+          <dl>
+            <dt>黙秘権</dt><dd>憲法38条1項。被疑者取調べでは刑訴法198条2項により、自己の意思に反して供述する必要がない旨をあらかじめ告げる。</dd>
+            <dt>自白法則</dt><dd>すでになされた自白を証拠として使えるかを決める証拠法上のルール。</dd>
+            <dt>関係</dt><dd>黙秘権侵害や取調べの圧迫は任意性判断の重要事情になり得ますが、両者は同じ条文要件ではありません。</dd>
+            <dt>第三者供述</dt><dd>共犯者・目撃者が「被告人が犯人だ」と述べても、それは当該被告人の自白ではありません。伝聞法則と信用性を検討します。</dd>
+            <dt>違法収集との重なり</dt><dd>違法な逮捕・勾留下で得た自白は、319条の任意性と違法収集証拠排除の双方が問題になり得ます。片方だけで済ませないことがあります。</dd>
+          </dl>
+          <p class="next">次：問題文が問う違法の性質に応じ、319条と排除法則を併記</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="fruit">
+      <div class="section-head">
+        <span class="section-no">09｜DERIVATIVE EVIDENCE</span>
+        <h2>「毒樹の果実」は、後続証拠への違法の到達距離を測る</h2>
+        <p class="section-lead">日本法では、米国法の名称を唱えるだけで自動排除するのではなく、違法手続との関連性と排除基準を具体的に検討します。</p>
+      </div>
+      <div class="architecture" aria-label="派生証拠の判断順序">
+        <div class="floor">
+          <div class="floor-label">STEP 1<br>毒樹</div>
+          <div class="floor-body"><span class="chip">先行手続は違法か</span><span class="arrow">→</span><span class="chip">違法の内容・目的・程度を特定</span><p class="floor-caption">先行手続の「違法」という結論だけでなく、何の規範にどの程度反したかを書きます。</p></div>
+        </div>
+        <div class="floor">
+          <div class="floor-label">STEP 2<br>果実</div>
+          <div class="floor-body"><span class="chip">後続証拠は何か</span><span class="arrow">→</span><span class="chip">発見・獲得の経路</span><p class="floor-caption">例：違法捜索で得た住所→適法令状→覚醒剤、違法拘束→供述→捨て場所の実況見分。</p></div>
+        </div>
+        <div class="floor">
+          <div class="floor-label">STEP 3<br>関連</div>
+          <div class="floor-body"><span class="chip">時間的・目的的連続</span><span class="arrow">＋</span><span class="chip">先行情報の利用</span><span class="arrow">－</span><span class="chip">独立入手・介在事情</span><p class="floor-caption">密接関連性が弱まる事情：独立した情報源、時間経過、自発的行為、別目的の捜査、適法手続の実質的独立。</p></div>
+        </div>
+        <div class="floor">
+          <div class="floor-label">STEP 4<br>排除</div>
+          <div class="floor-body"><span class="chip">重大な違法</span><span class="arrow">＋</span><span class="chip">将来の違法捜査抑止から排除相当</span><p class="floor-caption">関連性があるだけで直ちに排除とせず、違法収集証拠排除法則の二要件へ接続します。</p></div>
+        </div>
+      </div>
+      <div class="danger-note" style="margin-top:18px">
+        <strong>書き方の注意：</strong>「毒樹の果実だから排除される」は結論の言い換えにすぎません。①先行違法、②後続証拠との密接関連性、③重大な違法、④排除相当性を、事実で橋渡ししてください。
+      </div>
+    </section>
+
+    <section id="matrix">
+      <div class="section-head">
+        <span class="section-no">10｜FACTOR MATRIX</span>
+        <h2>似た考慮要素の「所属先」を比較する</h2>
+        <p class="section-lead">同じ「必要性」「重大性」「信用性」という言葉でも、役割が違います。ボタンで行を絞れます。</p>
+      </div>
+      <div class="button-row" role="group" aria-label="比較表フィルター">
+        <button type="button" class="filter-btn" data-filter="all" aria-pressed="true">すべて</button>
+        <button type="button" class="filter-btn" data-filter="crime" aria-pressed="false">犯罪の重大性周辺</button>
+        <button type="button" class="filter-btn" data-filter="need" aria-pressed="false">必要性・緊急性</button>
+        <button type="button" class="filter-btn" data-filter="rights" aria-pressed="false">権利侵害</button>
+        <button type="button" class="filter-btn" data-filter="evidence" aria-pressed="false">証拠法固有</button>
+      </div>
+      <div class="comparison-legend" aria-label="記号の説明">
+        <span class="legend-item"><span class="yes">●</span> 中核要件・中核判断</span>
+        <span class="legend-item"><span class="context">△</span> 文脈・考慮事情になり得る</span>
+        <span class="legend-item"><span class="no">×</span> その論点の要件ではない</span>
+        <span class="legend-item"><span class="fixed">別</span> 別段階で扱う</span>
+      </div>
+      <div class="table-wrap">
+        <table id="factor-table" aria-label="考慮要素と論点の対応表">
+          <thead>
+            <tr>
+              <th>考慮要素</th>
+              <th>強制処分該当性</th>
+              <th>任意捜査の限界</th>
+              <th>令状主義</th>
+              <th>違法収集証拠排除</th>
+              <th>伝聞法則</th>
+              <th>自白法則</th>
+              <th>派生証拠</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr data-group="crime">
+              <td><strong>犯罪の重大性</strong></td>
+              <td><span class="no">×</span> 権利侵害の質が中心</td>
+              <td><span class="context">△</span> 必要性を支える事情になり得る</td>
+              <td><span class="no">×</span> 一般的発付要件ではない</td>
+              <td><span class="context">△</span> 正式な二要件ではない。短絡禁止</td>
+              <td><span class="no">×</span></td>
+              <td><span class="no">×</span></td>
+              <td><span class="no">×</span> 近接性とは別</td>
+            </tr>
+            <tr data-group="crime">
+              <td><strong>犯罪の現行・直後性</strong></td>
+              <td><span class="no">×</span></td>
+              <td><span class="context">△</span> 写真撮影判例では明示要件</td>
+              <td><span class="no">×</span></td>
+              <td><span class="no">×</span></td>
+              <td><span class="no">×</span></td>
+              <td><span class="no">×</span></td>
+              <td><span class="no">×</span></td>
+            </tr>
+            <tr data-group="need">
+              <td><strong>捜査上の必要性</strong></td>
+              <td><span class="no">×</span> 強制性を消さない</td>
+              <td><span class="yes">●</span> 中核衡量事情</td>
+              <td><span class="yes">●</span> 発付・執行で問題</td>
+              <td><span class="fixed">別</span> 捜査適法性の事情</td>
+              <td><span class="no">×</span></td>
+              <td><span class="no">×</span></td>
+              <td><span class="context">△</span> 経路の独立性判断に影響し得る</td>
+            </tr>
+            <tr data-group="need">
+              <td><strong>緊急性</strong></td>
+              <td><span class="no">×</span></td>
+              <td><span class="context">△</span> 手法に応じて重要</td>
+              <td><span class="context">△</span> 法定の無令状例外なら条文要件</td>
+              <td><span class="context">△</span> 違法の程度に影響し得る</td>
+              <td><span class="no">×</span></td>
+              <td><span class="no">×</span></td>
+              <td><span class="no">×</span></td>
+            </tr>
+            <tr data-group="rights">
+              <td><strong>合理的意思への反対</strong></td>
+              <td><span class="yes">●</span> 明示拒否に限らない</td>
+              <td><span class="yes">●</span> 拒否・退去自由の実質</td>
+              <td><span class="fixed">別</span> 強制性判断を経て接続</td>
+              <td><span class="context">△</span> 侵害態様に反映</td>
+              <td><span class="no">×</span></td>
+              <td><span class="yes">●</span> 任意性の核心</td>
+              <td><span class="context">△</span> 先行違法の性質に反映</td>
+            </tr>
+            <tr data-group="rights">
+              <td><strong>重要な法的利益の侵害</strong></td>
+              <td><span class="yes">●</span> 中核</td>
+              <td><span class="yes">●</span> 衡量の不利益側</td>
+              <td><span class="yes">●</span> 司法審査の理由</td>
+              <td><span class="yes">●</span> 違法の重大性</td>
+              <td><span class="no">×</span></td>
+              <td><span class="context">△</span> 供述自由の侵害</td>
+              <td><span class="context">△</span> 違法の到達度</td>
+            </tr>
+            <tr data-group="rights">
+              <td><strong>方法・程度の相当性</strong></td>
+              <td><span class="fixed">別</span> 強制性分類後に扱う</td>
+              <td><span class="yes">●</span> 結論を決める</td>
+              <td><span class="yes">●</span> 令状執行の範囲</td>
+              <td><span class="context">△</span> 違法の程度</td>
+              <td><span class="no">×</span></td>
+              <td><span class="context">△</span> 取調べ態様</td>
+              <td><span class="context">△</span></td>
+            </tr>
+            <tr data-group="evidence">
+              <td><strong>反対尋問不能の危険</strong></td>
+              <td><span class="no">×</span></td>
+              <td><span class="no">×</span></td>
+              <td><span class="no">×</span></td>
+              <td><span class="no">×</span></td>
+              <td><span class="yes">●</span> 制度趣旨</td>
+              <td><span class="fixed">別</span> 322条との重なり</td>
+              <td><span class="no">×</span></td>
+            </tr>
+            <tr data-group="evidence">
+              <td><strong>供述の任意性</strong></td>
+              <td><span class="context">△</span> 同意の実質では関係</td>
+              <td><span class="context">△</span> 任意同行・取調べ</td>
+              <td><span class="no">×</span></td>
+              <td><span class="context">△</span> 違法取調べなら重なり得る</td>
+              <td><span class="fixed">別</span> 伝聞性とは別</td>
+              <td><span class="yes">●</span> 中核</td>
+              <td><span class="context">△</span> 後続供述の介在事情</td>
+            </tr>
+            <tr data-group="evidence">
+              <td><strong>供述の信用性</strong></td>
+              <td><span class="no">×</span></td>
+              <td><span class="no">×</span></td>
+              <td><span class="no">×</span></td>
+              <td><span class="no">×</span></td>
+              <td><span class="fixed">別</span> 特信情況との混同注意</td>
+              <td><span class="fixed">別</span> 任意性通過後の証明力</td>
+              <td><span class="no">×</span></td>
+            </tr>
+            <tr data-group="evidence">
+              <td><strong>先行違法との密接関連性</strong></td>
+              <td><span class="no">×</span></td>
+              <td><span class="no">×</span></td>
+              <td><span class="no">×</span></td>
+              <td><span class="context">△</span> 排除対象の範囲</td>
+              <td><span class="no">×</span></td>
+              <td><span class="context">△</span> 違法拘束後の自白等</td>
+              <td><span class="yes">●</span> 入口</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="mini-note">※「△」は答案に必ず書く定型要件という意味ではありません。具体的な手法・条文・判例の射程に応じて位置づけます。</p>
+    </section>
+
+    <section id="patterns">
+      <div class="section-head">
+        <span class="section-no">11｜ARGUMENT PATTERNS</span>
+        <h2>論証は、規範の名前ではなく「判断の仕事」ごとに置く</h2>
+        <p class="section-lead">各パターンを、仮想事例 → 答案本文 → 再現の着眼点の順で確認できます。時間は本番での答案配置の目安です。</p>
+      </div>
+      <div class="pattern-grid">
+        <article class="pattern-card">
+          <div class="pattern-meta"><span class="tag red">捜査法</span><span class="tag blue">答案配置 5〜8分</span></div>
+          <h3>1｜強制処分該当性 → 令状主義</h3>
+          <div class="pattern-block">
+            <div class="pattern-label">仮想事例</div>
+            <p>警察官が、窃盗の被疑者Aと交際相手Bが共用する車に、両名に秘密でGPS端末を装着し、2か月間、昼夜を問わず位置情報を検索した。令状はない。</p>
+          </div>
+          <div class="pattern-block">
+            <div class="pattern-label">答案本文</div>
+            <div class="answer-text" id="answer-force">刑訴法197条1項ただし書の強制処分とは、有形力の行使に限られず、個人の意思を制圧し、又は合理的に推認される意思に反して、身体・住居・財産・私的領域等の重要な法的利益を侵害し、特別の根拠規定なしに許容するのが相当でない捜査手段をいう。本件では、車両への秘密装着により、AのみならずBの移動も2か月にわたり継続的・網羅的に把握しており、両名の合理的意思に反して私的領域へ侵入し、重要なプライバシーを侵害する性質を有する。よって強制処分に当たる。しかるに、本件GPS捜査を無令状で実施できる特別の根拠はなく、令状も得ていないから違法である。</div>
+            <button class="copy-btn" type="button" data-copy="answer-force">答案本文をコピー</button>
+          </div>
+          <div class="pattern-block">
+            <div class="pattern-label">再現の着眼点</div>
+            <p class="point-text">窃盗の重大性から始めない。秘密装着、期間・回数、情報の網羅性、私的領域、Bという第三者への波及を拾い、強制処分の結論後に法定根拠・令状へ進む。</p>
+          </div>
+        </article>
+
+        <article class="pattern-card">
+          <div class="pattern-meta"><span class="tag teal">捜査法</span><span class="tag blue">答案配置 4〜6分</span></div>
+          <h3>2｜強制処分でない → 任意捜査の限界</h3>
+          <div class="pattern-block">
+            <div class="pattern-label">仮想事例</div>
+            <p>飲酒運転の疑いがあるAが任意同行後に退出しようとしたため、警察官Pが数秒間Aの手首をつかみ、「検査だけ受けて」と制止した。Aは直ちに振りほどいた。</p>
+          </div>
+          <div class="pattern-block">
+            <div class="pattern-label">答案本文</div>
+            <div class="answer-text" id="answer-voluntary">Pの行為は有形力を伴うが、短時間かつ軽度であり、直ちにAの意思を制圧して身体の自由という重要な利益を強制的に制約する程度とはいえず、強制処分には当たらない。もっとも、任意捜査でも法益侵害のおそれがある手段が当然に許されるわけではなく、捜査の必要性・緊急性等を考慮し、具体的状況の下で相当な限度にとどまる必要がある。飲酒運転の嫌疑があり、Aが突然退出しようとして呼気検査の機会を失うおそれがあった一方、制止は数秒で、つかみ方も軽度で直ちに解放されている。したがって、本件行為は必要性・緊急性に照らし相当な限度内で、任意捜査として適法である。</div>
+            <button class="copy-btn" type="button" data-copy="answer-voluntary">答案本文をコピー</button>
+          </div>
+          <div class="pattern-block">
+            <div class="pattern-label">再現の着眼点</div>
+            <p class="point-text">有形力があるだけで強制処分としない。①侵害の質・程度で分類し、②必要性・緊急性・方法の相当性で適法性を判断する二段階を崩さない。</p>
+          </div>
+        </article>
+
+        <article class="pattern-card">
+          <div class="pattern-meta"><span class="tag red">証拠法</span><span class="tag blue">答案配置 5〜7分</span></div>
+          <h3>3｜捜査違法 → 違法収集証拠排除</h3>
+          <div class="pattern-block">
+            <div class="pattern-label">仮想事例</div>
+            <p>警察官は令状を取れる十分な時間があったのに、A宅へ令状なく立ち入り、机の引出しを開けて覚醒剤を発見・押収した。上司の指示で令状請求を省略していた。</p>
+          </div>
+          <div class="pattern-block">
+            <div class="pattern-label">答案本文</div>
+            <div class="answer-text" id="answer-exclusion">本件立入り・捜索・押収は、憲法35条及び刑訴法218条1項が要求する令状を欠き、例外もないため違法である。しかし、違法に収集された証拠が当然に排除されるわけではない。証拠収集手続に令状主義の精神を没却するような重大な違法があり、かつ、これを証拠として許容することが将来の違法捜査抑制の見地から相当でない場合に、証拠能力を否定すべきである。本件は住居と私物への直接的侵入で、令状取得が可能なのに上司の指示で意図的に司法審査を回避しており、違法は重大である。また、この証拠を許容すれば同様の令状省略に捜査上の利益を残し、将来の違法捜査抑制の見地から相当でない。よって覚醒剤の証拠能力は否定される。</div>
+            <button class="copy-btn" type="button" data-copy="answer-exclusion">答案本文をコピー</button>
+          </div>
+          <div class="pattern-block">
+            <div class="pattern-label">再現の着眼点</div>
+            <p class="point-text">「違法だから排除」で止めない。住居侵入、令状取得可能性、意図的回避を第1要件へ、同種違法に利益を残す危険を第2要件へ配分する。</p>
+          </div>
+        </article>
+
+        <article class="pattern-card">
+          <div class="pattern-meta"><span class="tag violet">証拠法</span><span class="tag blue">答案配置 5〜8分</span></div>
+          <h3>4｜伝聞性 → 例外条文</h3>
+          <div class="pattern-block">
+            <div class="pattern-label">仮想事例</div>
+            <p>強盗被告事件で、死亡した被害者Vが事件直後に作成した「Aに殴られ、財布を奪われた」との署名入りメモを、Aの犯人性立証のため検察官が請求した。犯行状況を直接示す他の証拠は乏しい。</p>
+          </div>
+          <div class="pattern-block">
+            <div class="pattern-label">答案本文</div>
+            <div class="answer-text" id="answer-hearsay">本件メモの実質的要証事実は、AがVを殴って財布を奪ったことである。その推認には「Aに殴られ、財布を奪われた」とのVの公判外供述内容が真実であることを要するから、本件メモは伝聞証拠であり、刑訴法320条1項により原則として証拠能力を欠く。そこで、供述者Vは被告人以外の者であり、V自身が作成した供述書であるから321条1項3号の要件を検討する。Vは死亡して公判供述が不能であり、犯行状況を直接示す他の証拠が乏しいため、同メモは犯罪事実の存否の証明に欠くことができないものといえる。さらに、事件直後に自ら作成し署名した経緯、内容の具体性、作成時の身体・心理状態、虚偽を述べる動機の有無等から、同号所定の特信情況が認められるかを具体的に判断する。</div>
+            <button class="copy-btn" type="button" data-copy="answer-hearsay">答案本文をコピー</button>
+          </div>
+          <div class="pattern-block">
+            <div class="pattern-label">再現の着眼点</div>
+            <p class="point-text">最初に321条を出さない。要証事実→内容の真実性依存→原供述者V→書面形態→321条1項3号の順。特信情況を「信用できる」の一言で済ませない。</p>
+          </div>
+        </article>
+
+        <article class="pattern-card">
+          <div class="pattern-meta"><span class="tag amber">供述証拠</span><span class="tag blue">答案配置 6〜9分</span></div>
+          <h3>5｜被告人供述 → 自白法則・伝聞・補強</h3>
+          <div class="pattern-block">
+            <div class="pattern-label">仮想事例</div>
+            <p>被疑者Aは20時間ほぼ休憩なく取り調べられ、「認めれば今日帰れる」と繰り返し告げられて犯行を認めた。検察官は署名押印のある調書を請求した。犯罪事実を支える他の証拠はない。</p>
+          </div>
+          <div class="pattern-block">
+            <div class="pattern-label">答案本文</div>
+            <div class="answer-text" id="answer-confession">本件供述はAが自己の犯罪事実を認める自白である。刑訴法319条1項は、強制・脅迫等による自白その他任意にされたものでない疑いのある自白の証拠能力を否定する。本件では、長時間ほぼ休憩のない取調べに加え、「認めれば今日帰れる」と身柄解放の利益を示して供述を促している。Aの疲労、反復の程度、告知の具体性及び供述に至る経過を踏まえると、自由な意思決定がゆがめられた疑いがあり、証拠能力は否定される。また、公判外の被告人供述調書であるため322条の問題でもあるが、319条の任意性欠如を同条で治癒することはできない。仮に任意性が認められても、犯罪事実を支える他の証拠がなければ、憲法38条3項・刑訴法319条2項により自白のみで有罪にできない。</div>
+            <button class="copy-btn" type="button" data-copy="answer-confession">答案本文をコピー</button>
+          </div>
+          <div class="pattern-block">
+            <div class="pattern-label">再現の着眼点</div>
+            <p class="point-text">任意性、322条、補強、信用性を分ける。問題文の事情を、圧迫・利益誘導・供述との因果へ割り当てる。「重大犯罪」はどこにも要件として置かない。</p>
+          </div>
+        </article>
+
+        <article class="pattern-card">
+          <div class="pattern-meta"><span class="tag violet">派生証拠</span><span class="tag blue">答案配置 5〜8分</span></div>
+          <h3>6｜先行違法 → 後続証拠の密接関連性</h3>
+          <div class="pattern-block">
+            <div class="pattern-label">仮想事例</div>
+            <p>警察官は違法にA宅を捜索して倉庫の所在地を記したメモを発見し、その情報だけを疎明資料として倉庫の捜索令状を得て、拳銃を押収した。</p>
+          </div>
+          <div class="pattern-block">
+            <div class="pattern-label">答案本文</div>
+            <div class="answer-text" id="answer-fruit">拳銃は後に発付された令状により押収されているが、その証拠能力は先行する違法捜索との関係から検討する必要がある。後続証拠が先行違法と密接な関連性を有するかは、両手続の目的、時間的・場所的近接性、先行違法で得た情報の利用程度、独立した情報源・捜査経路や介在事情の有無等を総合して判断する。本件令状は、違法捜索で得たメモの情報のみを疎明資料とし、時間的にも連続して同一目的で請求されているため、拳銃の発見・押収は先行違法と密接に関連する。そして、先行捜索が令状主義の精神を没却する重大な違法で、拳銃を許容すれば違法捜索で令状資料を獲得する誘因を残すなら、将来の違法捜査抑制上相当でなく、拳銃の証拠能力も否定される。</div>
+            <button class="copy-btn" type="button" data-copy="answer-fruit">答案本文をコピー</button>
+          </div>
+          <div class="pattern-block">
+            <div class="pattern-label">再現の着眼点</div>
+            <p class="point-text">後の令状があるという形式だけで切断しない。令状疎明資料の情報源、独立情報の有無、目的・時間の連続を密接関連性へ、その後に排除の二要件を書く。</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="quiz">
+      <div class="section-head">
+        <span class="section-no">12｜RETRIEVAL PRACTICE</span>
+        <h2>最後に、論点の住所を取り出す</h2>
+        <p class="section-lead">答えを開く前に、「段階・判断対象・規範・次」を声に出してください。</p>
+      </div>
+      <div class="quiz-grid">
+        <article class="quiz-card">
+          <p class="q">Q1　犯罪が極めて重大なら、秘密GPS捜査は任意処分になるか。</p>
+          <button class="quiz-btn" type="button" aria-expanded="false" aria-controls="qa1">答えを表示</button>
+          <div class="quiz-answer" id="qa1"><strong>ならない。</strong>強制処分該当性は、合理的意思に反する重要な法的利益侵害の性質で決まる。重大性・必要性は強制性を消さない。</div>
+        </article>
+        <article class="quiz-card">
+          <p class="q">Q2　任意処分と判断したら、捜査は適法と結論してよいか。</p>
+          <button class="quiz-btn" type="button" aria-expanded="false" aria-controls="qa2">答えを表示</button>
+          <div class="quiz-answer" id="qa2"><strong>よくない。</strong>法益侵害があれば、必要性・緊急性等と侵害法益を踏まえ、具体的状況下で方法が相当な限度かを検討する。</div>
+        </article>
+        <article class="quiz-card">
+          <p class="q">Q3　第三者の住居なら、被疑者宅でないため令状主義は問題にならないか。</p>
+          <button class="quiz-btn" type="button" aria-expanded="false" aria-controls="qa3">答えを表示</button>
+          <div class="quiz-answer" id="qa3"><strong>問題になる。</strong>第三者の権利も保護対象であり、刑訴法222条1項・102条2項の加重要件にも注意する。</div>
+        </article>
+        <article class="quiz-card">
+          <p class="q">Q4　供述内容がかなり信用できそうなら、伝聞でも採用できるか。</p>
+          <button class="quiz-btn" type="button" aria-expanded="false" aria-controls="qa4">答えを表示</button>
+          <div class="quiz-answer" id="qa4"><strong>信用性だけでは採用できない。</strong>まず伝聞性を判定し、該当する例外条文の要件を満たす必要がある。採用後の信用性は証明力。</div>
+        </article>
+        <article class="quiz-card">
+          <p class="q">Q5　違法に得た証拠はすべて排除されるか。</p>
+          <button class="quiz-btn" type="button" aria-expanded="false" aria-controls="qa5">答えを表示</button>
+          <div class="quiz-answer" id="qa5"><strong>すべてではない。</strong>判例上、令状主義の精神を没却する重大な違法と、将来の違法捜査抑制から排除が相当でないことの二要件を検討する。</div>
+        </article>
+        <article class="quiz-card">
+          <p class="q">Q6　共犯者Bが「Aと一緒にやった」と述べた調書は、Aの自白か。</p>
+          <button class="quiz-btn" type="button" aria-expanded="false" aria-controls="qa6">答えを表示</button>
+          <div class="quiz-answer" id="qa6"><strong>Aの自白ではない。</strong>Aとの関係では被告人以外の者の公判外供述であり、伝聞法則のルートを検討する。B自身との関係は別に整理する。</div>
+        </article>
+      </div>
+
+      <h3 style="margin-top:30px">答案提出前の九項目</h3>
+      <div class="checklist">
+        <label class="check-item"><input type="checkbox"><span>今いる段階が「捜査適法性」か「証拠能力」かを書き分けた</span></label>
+        <label class="check-item"><input type="checkbox"><span>誰のどの権利・誰の供述が問題か特定した</span></label>
+        <label class="check-item"><input type="checkbox"><span>強制処分該当性を必要性から逆算していない</span></label>
+        <label class="check-item"><input type="checkbox"><span>任意処分の後に相当性審査を置いた</span></label>
+        <label class="check-item"><input type="checkbox"><span>令状の根拠・要件・特定・執行・例外を分けた</span></label>
+        <label class="check-item"><input type="checkbox"><span>捜査違法から証拠排除へ一文で飛んでいない</span></label>
+        <label class="check-item"><input type="checkbox"><span>伝聞では実質的要証事実を先に置いた</span></label>
+        <label class="check-item"><input type="checkbox"><span>自白の任意性・322条・補強・信用性を分けた</span></label>
+        <label class="check-item"><input type="checkbox"><span>「犯罪の重大性」を存在しない要件へ入れていない</span></label>
+      </div>
+    </section>
+
+    <section id="sources">
+      <div class="sources">
+        <span class="section-no" style="color:#f3c36e">13｜PRIMARY SOURCES</span>
+        <h2>条文・判例・公的資料</h2>
+        <p>条文はe-Gov、判例規範は裁判所の公表資料を中心に確認しています。論証文は学習用に要約・再構成したもので、判決文の逐語引用ではありません。</p>
+        <ul>
+          <li><span class="source-kind">法令</span> <a href="https://laws.e-gov.go.jp/law/321CONSTITUTION" target="_blank" rel="noopener noreferrer">e-Gov法令検索「日本国憲法」</a>：31条、35条、38条。</li>
+          <li><span class="source-kind">法令</span> <a href="https://laws.e-gov.go.jp/law/323AC0000000131" target="_blank" rel="noopener noreferrer">e-Gov法令検索「刑事訴訟法」</a>：102条、197条、198条、218〜223条、317条、319〜328条。</li>
+          <li><span class="source-kind">裁判所</span> <a href="https://www.courts.go.jp/saiban/syurui/syurui_keizi/keizi_01_01/index.html" target="_blank" rel="noopener noreferrer">裁判所「捜査」</a>：任意捜査、強制処分、令状の公式概説。</li>
+          <li><span class="source-kind">最高裁</span> 最決昭和51年3月16日・刑集30巻2号187頁：強制手段の意義、任意捜査における有形力行使の限度。</li>
+          <li><span class="source-kind">最高裁</span> 最大判昭和44年12月24日・昭和40年（あ）1187号・刑集23巻12号1625頁：容貌等の写真撮影、必要性・緊急性・方法の相当性。事件番号は<a href="https://www.courts.go.jp/hanrei/search1/index.html" target="_blank" rel="noopener noreferrer">裁判所「裁判例検索」</a>で検索できます。</li>
+          <li><span class="source-kind">最高裁</span> <a href="https://www.courts.go.jp/english/Judgments/search/1518/index.html" target="_blank" rel="noopener noreferrer">最大判平成29年3月15日・刑集71巻3号13頁（GPS捜査）</a>：私的領域、合理的に推認される意思、秘密装着、継続的・網羅的把握。</li>
+          <li><span class="source-kind">最高裁</span> 最判昭和53年9月7日・刑集32巻6号1672頁：違法収集証拠排除法則の二要件。</li>
+          <li><span class="source-kind">最高裁</span> <a href="https://www.courts.go.jp/assets/hanrei/hanrei-pdf-90502.pdf" target="_blank" rel="noopener noreferrer">最判令和3年7月30日</a>：違法収集証拠の重大な違法・排除判断と前提事実。</li>
+          <li><span class="source-kind">裁判例</span> <a href="https://www.courts.go.jp/app/files/hanrei_jp/383/002383_hanrei.pdf" target="_blank" rel="noopener noreferrer">派生証拠の密接関連性を扱う裁判例</a>：先行違法と後続証拠の関係。</li>
+          <li><span class="source-kind">司法研修所</span> <a href="https://www.courts.go.jp/saikosai/vc-files/saikosai/shihoukensyujyo/shinproceedingskeijisaiban.pdf" target="_blank" rel="noopener noreferrer">「新しい刑事裁判の手続・実務」</a>：証拠能力・証明力、供述証拠、証拠調べの整理。</li>
+          <li><span class="source-kind">法務省</span> <a href="https://www.moj.go.jp/content/001453800.pdf" target="_blank" rel="noopener noreferrer">令和7年司法試験の採点実感（刑事系科目第1問）</a>：刑事系科目の答案上の着眼点（328条等）。</li>
+        </ul>
+      </div>
+      <p class="footnote">本ページは受験学習用の整理です。判例の射程や条文の適用は具体的事実に左右されます。法改正・新判例に備え、起案時には最新の条文と使用教材を確認してください。</p>
+    </section>
+
+    <section class="publication" aria-labelledby="publication-policy">
+      <h2 id="publication-policy">確認日と利用範囲</h2>
+      <p>法令・公的資料は2026年8月8日に確認し、公開用リンクは2026年8月9日に再確認しました。本教材は司法試験・予備試験の学習用です。個別事件への法的助言ではありません。</p>
+      <p><strong>著作権と再利用：</strong>リンクによる共有は可能です。本文、図表、デザインの転載、改変、再配布は許諾していません。</p>
+      <a class="share-link" href="https://twitter.com/intent/tweet?text=%E3%80%90%E5%88%91%E4%BA%8B%E8%A8%B4%E8%A8%9F%E6%B3%95%E3%83%BB%E5%AD%A6%E7%BF%92%E7%94%A8%E3%80%91%0A%E6%8D%9C%E6%9F%BB%E9%81%A9%E6%B3%95%E6%80%A7%E2%86%92%E8%A8%BC%E6%8B%A0%E8%83%BD%E5%8A%9B%E2%86%92%E6%B4%BE%E7%94%9F%E8%A8%BC%E6%8B%A0%E2%86%92%E8%A8%BC%E6%98%8E%E5%8A%9B%E3%81%AE%E9%A0%86%E3%81%AB%E3%80%81%E4%BB%A4%E7%8A%B6%E4%B8%BB%E7%BE%A9%E3%80%81%E4%BC%9D%E8%81%9E%E3%80%81%E8%87%AA%E7%99%BD%E3%80%81%E9%81%95%E6%B3%95%E5%8F%8E%E9%9B%86%E8%A8%BC%E6%8B%A0%E3%82%92%E4%B8%80%E6%9E%9A%E3%81%A7%E6%95%B4%E7%90%86%E3%81%97%E3%81%BE%E3%81%97%E3%81%9F%E3%80%82&amp;url=https%3A%2F%2Flegal-lab-jp.github.io%2Fshiho-study%2Fmaterials%2Fcriminal-procedure-doctrine-map%2F" target="_blank" rel="noopener noreferrer">Xで共有画面を開く</a>
+    </section>
+  </main>
+
+  <a class="back-top" href="#top" aria-label="ページ先頭へ戻る">↑</a>
+
+  <script>
+    (() => {
+      'use strict';
+
+      const routeData = {
+        gps: {
+          tag: '捜査法 → 証拠法',
+          title: 'GPS捜査は「必要だったか」から書かない',
+          summary: '秘密装着と継続的・網羅的な位置把握が重要なプライバシーを侵害するかを先に判定します。',
+          steps: [
+            '強制処分該当性：合理的に推認される意思に反する私的領域への侵入、重要な法的利益侵害',
+            '強制処分法定主義：この手法を許す特別の根拠規定があるか',
+            '令状主義：事前の司法審査を経た適切な令状・実施手続か',
+            '証拠提出時：違法収集証拠排除を別途検討'
+          ],
+          first: 'その手法は強制処分か。',
+          rule: '刑訴法197条1項、憲法35条、GPS大法廷判決',
+          serious: '強制処分該当性の要件ではない。',
+          trap: '捜査の必要性が高いから任意処分だ、と逆算すること。',
+          next: '法定根拠・令状 → 違法なら証拠排除'
+        },
+        escort: {
+          tag: '捜査法',
+          title: '「任意同行」という名称より、帰れる実態を見る',
+          summary: '出頭・滞留・退去が実質的に自由かを、時間、場所、監視、説得、休憩、拒否への対応から判断します。',
+          steps: [
+            '強制処分該当性：身体の自由を意思に反して実質的に拘束したか',
+            '強制処分でなければ：任意捜査としての必要性と方法の相当性',
+            '取調べなら：198条の出頭・退去、黙秘告知、取調べ態様',
+            '供述提出時：任意性・伝聞例外・違法収集の重なりを確認'
+          ],
+          first: '「帰りたい」と言えば現実に帰れたか。',
+          rule: '刑訴法197条1項・198条、最決昭51・3・16',
+          serious: '必要性の事情にはなり得るが、拘束を当然に正当化しない。',
+          trap: '書面に「任意」とあるだけで任意性を肯定すること。',
+          next: '任意捜査の相当性 → 供述なら319条・322条'
+        },
+        search: {
+          tag: '捜査法 → 証拠法',
+          title: '捜索差押えは「令状がある」で終わらない',
+          summary: '根拠・発付要件・対象の特定・呈示・執行範囲・時間場所・無令状例外を分けます。',
+          steps: [
+            '処分の根拠：刑訴法218条等の法定類型か',
+            '令状の発付：嫌疑、証拠との関連性、必要性、対象の特定',
+            '執行：場所・物・データ・身体が令状の範囲内か',
+            '第三者対象なら：222条1項が準用する102条2項の要件',
+            '違法なら：押収物について証拠排除の二要件'
+          ],
+          first: '何を、どこで、誰に対して、どの令状で行ったか。',
+          rule: '憲法35条、刑訴法102条・218条〜222条',
+          serious: '一般的な捜索差押許可状の独立要件ではない。',
+          trap: '有効な令状があることと、執行が令状範囲内であることを混同する。',
+          next: '令状の有効性・執行 → 違法なら証拠排除'
+        },
+        statement: {
+          tag: '証拠法（供述）',
+          title: '供述調書は、誰の供述かで条文が分かれる',
+          summary: '被告人自身か、被告人以外かを確定し、伝聞性・例外・任意性・信用性を別々に処理します。',
+          steps: [
+            '要証事実を確定し、内容の真実性に依存するか（伝聞性）',
+            '供述者が被告人なら322条、被告人以外なら321条等',
+            '自白・不利益承認なら319条の任意性も確認',
+            '採用後：補強法則と信用性・推認力を別途評価'
+          ],
+          first: '誰の、公判外の、何を証明する供述か。',
+          rule: '憲法38条、刑訴法319条〜324条',
+          serious: '伝聞・自白の要件ではない。',
+          trap: '「信用できるから伝聞ではない」「本人が署名したから採用できる」。',
+          next: '伝聞例外・任意性 → 補強 → 証明力'
+        },
+        derived: {
+          tag: '証拠法（派生証拠）',
+          title: '後で令状を取っても、先行違法との線が切れるとは限らない',
+          summary: '先行違法で得た情報を後続手続がどれほど利用したか、独立した捜査経路があるかを検討します。',
+          steps: [
+            '先行手続の違法内容・程度を特定',
+            '後続証拠の発見・取得経路を時系列化',
+            '目的・時間・情報利用・独立情報源・介在事情から密接関連性を判断',
+            '関連が密接なら、重大な違法と排除相当性を検討'
+          ],
+          first: '後続証拠は、違法がなければ得られたか。',
+          rule: '違法収集証拠排除法則、派生証拠の密接関連性',
+          serious: '関連性の要件ではない。証拠の重要性とも区別。',
+          trap: '因果関係が少しでもあれば自動排除、又は後の令状で自動治癒とする。',
+          next: '密接関連性 → 排除の二要件'
+        },
+        memo: {
+          tag: '証拠法（伝聞）',
+          title: 'メモや第三者発言は、まず実質的要証事実を置く',
+          summary: '書面の名称ではなく、内容が真実でなければ要証事実を推認できないかで伝聞性を決めます。',
+          steps: [
+            '立証趣旨を争点に即して実質化',
+            '内容の真実性に依存するなら伝聞',
+            '供述者・作成者・録取者と証拠形態を特定',
+            '321条以下の例外・326条同意・328条弾劾を区別',
+            '採用後の信用性は証明力で評価'
+          ],
+          first: '何を証明するために使うのか。',
+          rule: '刑訴法320条〜328条',
+          serious: '伝聞性にも例外要件にも原則として関係しない。',
+          trap: '書面だから伝聞、録音だから非伝聞、と媒体で決める。',
+          next: '例外条文 → 採用後に信用性'
+        }
+      };
+
+      const subjectData = {
+        suspect: {
+          stage: '捜査段階', title: '捜査対象の被疑者',
+          core: '嫌疑を向けられていることと、権利制約が無制限に許されることは別です。',
+          points: [
+            '任意取調べでは刑訴法198条上の出頭・退去と黙秘告知を確認する。',
+            '身体・住居・車両・位置情報への侵害は強制処分該当性から検討する。',
+            '起訴後にその供述調書を提出するなら、被告人供述として319条・322条へ進む。'
+          ],
+          warning: '<strong>誤解：</strong>「被疑者だから撮影・追跡が自由」ではありません。'
+        },
+        third: {
+          stage: '捜査段階', title: '被疑者以外の権利者',
+          core: '第三者の住居・物・身体・位置情報も、強制処分と令状主義の保護対象です。',
+          points: [
+            '誰が車両・端末・住居を使用し、誰の私的領域へ侵入したかを個別に見る。',
+            '第三者の身体・物・住居等の捜索は、222条1項・102条2項の要件を確認する。',
+            '被疑者の承諾だけで第三者自身のプライバシー侵害がすべて治癒するとは限らない。'
+          ],
+          warning: '<strong>誤解：</strong>嫌疑のない人の権利ほど軽いのではありません。対象との関連性の説明がむしろ重要です。'
+        },
+        defendant: {
+          stage: '公判・証拠法', title: '公判の被告人',
+          core: '捜査時の「被疑者」が起訴されると、供述証拠の条文上は「被告人」です。',
+          points: [
+            '被告人の公判外供述書・供述録取書は322条を検討する。',
+            '自己の犯罪事実を認める自白なら319条1項の任意性と同条2項の補強法則が重なる。',
+            '公判での被告人供述は、公判外供述の伝聞問題とは別に信用性・推認力を評価する。'
+          ],
+          warning: '<strong>誤解：</strong>「被疑者調書だから321条」ではなく、当該被告人自身の供述なら322条が基本です。'
+        },
+        declarant: {
+          stage: '公判・証拠法', title: '被告人以外の供述者',
+          core: '被害者、目撃者、参考人、場合によっては共犯者等。被告人との関係で伝聞ルートを選びます。',
+          points: [
+            '供述書・供述録取書なら321条1項等、供述を内容とする公判証言なら324条を検討する。',
+            '供述不能、相反性、特信情況など、書面の類型ごとの要件を事実で満たす。',
+            'その者の発言は当該被告人の自白ではない。採用後も利害関係・責任転嫁等から信用性を吟味する。'
+          ],
+          warning: '<strong>誤解：</strong>第三者が被告人の犯罪を認めても、それは被告人本人の自白法則の問題ではありません。'
+        }
+      };
+
+      function setRoute(key) {
+        const data = routeData[key];
+        if (!data) return;
+        document.getElementById('route-tag').textContent = data.tag;
+        document.getElementById('route-title').textContent = data.title;
+        document.getElementById('route-summary').textContent = data.summary;
+        document.getElementById('route-path').innerHTML = data.steps.map((step, index) =>
+          `<div class="route-step"><b>${index + 1}</b><span>${step}</span></div>`
+        ).join('');
+        document.getElementById('route-first').textContent = data.first;
+        document.getElementById('route-rule').textContent = data.rule;
+        document.getElementById('route-serious').textContent = data.serious;
+        document.getElementById('route-trap').textContent = data.trap;
+        document.getElementById('route-next').textContent = data.next;
+        document.querySelectorAll('[data-route]').forEach(btn => {
+          btn.setAttribute('aria-pressed', String(btn.dataset.route === key));
+        });
+      }
+
+      function setSubject(key) {
+        const data = subjectData[key];
+        if (!data) return;
+        document.getElementById('subject-stage').textContent = data.stage;
+        document.getElementById('subject-title').textContent = data.title;
+        document.getElementById('subject-core').textContent = data.core;
+        document.getElementById('subject-points').innerHTML = data.points.map(point => `<li>${point}</li>`).join('');
+        document.getElementById('subject-warning').innerHTML = data.warning;
+        document.querySelectorAll('[data-subject]').forEach(btn => {
+          btn.setAttribute('aria-pressed', String(btn.dataset.subject === key));
+        });
+      }
+
+      document.querySelectorAll('[data-route]').forEach(btn => {
+        btn.addEventListener('click', () => setRoute(btn.dataset.route));
+      });
+      document.querySelectorAll('[data-subject]').forEach(btn => {
+        btn.addEventListener('click', () => setSubject(btn.dataset.subject));
+      });
+
+      document.querySelectorAll('[data-filter]').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const filter = btn.dataset.filter;
+          document.querySelectorAll('[data-filter]').forEach(other => {
+            other.setAttribute('aria-pressed', String(other === btn));
+          });
+          document.querySelectorAll('#factor-table tbody tr').forEach(row => {
+            row.classList.toggle('row-hidden', filter !== 'all' && row.dataset.group !== filter);
+          });
+        });
+      });
+
+      document.querySelectorAll('.quiz-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const answer = document.getElementById(btn.getAttribute('aria-controls'));
+          const willShow = !answer.classList.contains('show');
+          answer.classList.toggle('show', willShow);
+          btn.setAttribute('aria-expanded', String(willShow));
+          btn.textContent = willShow ? '答えを隠す' : '答えを表示';
+        });
+      });
+
+      async function copyText(text) {
+        if (navigator.clipboard && window.isSecureContext) {
+          await navigator.clipboard.writeText(text);
+          return;
+        }
+        const area = document.createElement('textarea');
+        area.value = text;
+        area.setAttribute('readonly', '');
+        area.style.position = 'fixed';
+        area.style.opacity = '0';
+        document.body.appendChild(area);
+        area.select();
+        document.execCommand('copy');
+        area.remove();
+      }
+
+      document.querySelectorAll('.copy-btn').forEach(btn => {
+        btn.addEventListener('click', async () => {
+          const target = document.getElementById(btn.dataset.copy);
+          if (!target) return;
+          const original = btn.textContent;
+          try {
+            await copyText(target.textContent.trim());
+            btn.textContent = 'コピーしました';
+            btn.classList.add('copied');
+          } catch (error) {
+            btn.textContent = 'コピーできませんでした';
+          }
+          window.setTimeout(() => {
+            btn.textContent = original;
+            btn.classList.remove('copied');
+          }, 1600);
+        });
+      });
+    })();
+  </script>
+</body>
+</html>
