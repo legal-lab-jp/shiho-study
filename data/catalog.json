@@ -50,5 +50,18 @@
     "exam": ["短答", "論文"],
     "purpose": ["理解", "暗記", "答案", "演習"],
     "level": ["入門", "標準", "発展"]
+  },
+  {
+    "id": "m-0005",
+    "title": "職務質問の手段・態様と論証ルート",
+    "slug": "shokumu-shitsumon-hierarchy",
+    "url": "materials/shokumu-shitsumon-hierarchy/",
+    "subject": ["刑事訴訟法"],
+    "tags": ["職務質問", "任意捜査", "所持品検査", "同行", "違法収集証拠"],
+    "status": "published",
+    "updated": "2026-08-12",
+    "exam": ["短答", "論文"],
+    "purpose": ["理解", "暗記", "答案", "演習"],
+    "level": ["入門", "標準", "発展"]
   }
 ]

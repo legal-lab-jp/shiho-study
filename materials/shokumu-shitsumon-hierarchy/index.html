@@ -1,0 +1,705 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="description" content="職務質問の開始、停止、有形力、同行、留め置き、所持品検査、車両・空間への介入と、逮捕・捜索・証拠能力への接続を行為ごとに整理する司法試験・予備試験向け学習ページ。">
+  <link rel="canonical" href="https://legal-lab-jp.github.io/shiho-study/materials/shokumu-shitsumon-hierarchy/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="職務質問の手段・態様と論証ルート｜刑事訴訟法">
+  <meta property="og:description" content="職務質問を行為・時点ごとに分け、停止、有形力、同行、留め置き、所持品検査から証拠能力までを7段階で整理します。">
+  <meta property="og:url" content="https://legal-lab-jp.github.io/shiho-study/materials/shokumu-shitsumon-hierarchy/">
+  <meta property="og:image" content="https://legal-lab-jp.github.io/shiho-study/assets/og/criminal-procedure-doctrine-map.png">
+  <meta property="og:image:alt" content="職務質問の開始から証拠能力までを段階的に整理する刑事訴訟法の学習ページ">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="職務質問の手段・態様と論証ルート｜刑事訴訟法">
+  <meta name="twitter:description" content="職務質問を行為・時点ごとに分け、論証の順序と判例の射程を整理します。">
+  <meta name="twitter:image" content="https://legal-lab-jp.github.io/shiho-study/assets/og/criminal-procedure-doctrine-map.png">
+  <title>職務質問の手段・態様と論証ルート｜刑事訴訟法</title>
+  <script>document.documentElement.classList.add('js');</script>
+  <style>
+    :root {
+      --ink:#182432; --muted:#526273; --paper:#f5f7fb; --surface:#fff; --line:#d7e0eb;
+      --navy:#173b61; --blue:#216da8; --blue-soft:#e8f4fc; --teal:#0f766e; --teal-soft:#e8f7f4;
+      --amber:#9a5a09; --amber-soft:#fff4df; --rose:#a6314a; --rose-soft:#fff0f3; --violet:#6654a8;
+      --shadow:0 12px 32px rgba(23,59,97,.09); --radius:18px; --max:1180px;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root { --ink:#eaf0f8; --muted:#b7c4d3; --paper:#101722; --surface:#182230; --line:#334457;
+        --navy:#a8d7ff; --blue:#7bc6ff; --blue-soft:#14334c; --teal:#7dd6c7; --teal-soft:#123c3a;
+        --amber:#ffd088; --amber-soft:#463310; --rose:#ffb1bf; --rose-soft:#48212b; --violet:#c7baff;
+        --shadow:0 12px 32px rgba(0,0,0,.24); }
+    }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; color:var(--ink); background:var(--paper); font-family:"Yu Gothic UI","Yu Gothic","Hiragino Sans",Meiryo,sans-serif; font-size:16px; line-height:1.82; }
+    a { color:var(--blue); text-underline-offset:.18em; }
+    a:hover { color:var(--navy); }
+    button { font:inherit; }
+    :focus-visible { outline:3px solid var(--amber); outline-offset:3px; }
+    .skip-link { position:absolute; left:12px; top:-60px; z-index:20; background:var(--ink); color:var(--surface); padding:.45rem .8rem; border-radius:8px; }
+    .skip-link:focus { top:12px; }
+    .site-header { position:sticky; top:0; z-index:10; background:color-mix(in srgb,var(--surface) 93%,transparent); backdrop-filter:blur(12px); border-bottom:1px solid var(--line); }
+    .header-inner { max-width:var(--max); margin:auto; min-height:60px; display:flex; align-items:center; justify-content:space-between; gap:1rem; padding:0 24px; }
+    .brand { color:var(--ink); font-size:.89rem; font-weight:800; letter-spacing:.04em; text-decoration:none; white-space:nowrap; }
+    .nav-toggle { display:none; border:1px solid var(--line); border-radius:9px; color:var(--ink); background:var(--surface); padding:.42rem .72rem; }
+    nav ul { display:flex; flex-wrap:wrap; gap:.2rem .8rem; margin:0; padding:0; list-style:none; }
+    nav a { color:var(--muted); font-size:.82rem; font-weight:700; text-decoration:none; white-space:nowrap; }
+    nav a:hover { color:var(--blue); }
+    main { max-width:var(--max); margin:auto; padding:28px 24px 72px; }
+    section { margin-top:62px; scroll-margin-top:76px; }
+    .eyebrow { margin:0 0 .5rem; color:var(--teal); font-size:.78rem; font-weight:800; letter-spacing:.12em; }
+    h1,h2,h3,h4 { line-height:1.35; letter-spacing:.01em; }
+    h1 { max-width:22em; margin:.1rem 0 .75rem; font-size:clamp(2rem,5vw,4rem); text-wrap:balance; }
+    h2 { margin:0 0 1rem; font-size:clamp(1.45rem,3vw,2.2rem); }
+    h3 { margin:0 0 .6rem; font-size:1.13rem; }
+    h4 { margin:.9rem 0 .35rem; font-size:.98rem; }
+    p { margin:.55rem 0; }
+    .lead { max-width:70ch; color:var(--muted); font-size:1.08rem; }
+    .hero { min-height:410px; display:grid; align-items:center; padding:42px clamp(24px,6vw,76px); border:1px solid var(--line); border-radius:26px; overflow:hidden; background:linear-gradient(135deg,var(--surface),var(--blue-soft)); position:relative; }
+    .hero::after { content:""; position:absolute; width:360px; height:360px; border:58px solid color-mix(in srgb,var(--blue) 15%,transparent); border-radius:50%; right:-115px; bottom:-155px; }
+    .hero-inner { position:relative; z-index:1; }
+    .hero-actions { display:flex; flex-wrap:wrap; gap:.7rem; margin-top:1.5rem; }
+    .button, .tab, .choice { border:1px solid var(--line); border-radius:10px; background:var(--surface); color:var(--ink); cursor:pointer; padding:.6rem .85rem; font-weight:750; text-align:left; }
+    .button.primary { border-color:var(--blue); background:var(--blue); color:#fff; text-decoration:none; }
+    .button:hover,.tab:hover,.choice:hover { border-color:var(--blue); }
+    .source-note { margin-top:1.25rem; color:var(--muted); font-size:.8rem; }
+    .grid { display:grid; gap:16px; }
+    .grid.two { grid-template-columns:repeat(2,minmax(0,1fr)); }
+    .grid.three { grid-template-columns:repeat(3,minmax(0,1fr)); }
+    .card { background:var(--surface); border:1px solid var(--line); border-radius:var(--radius); padding:22px; box-shadow:var(--shadow); }
+    .card.tight { padding:17px; box-shadow:none; }
+    .callout { border-left:5px solid var(--blue); padding:14px 18px; background:var(--blue-soft); border-radius:0 12px 12px 0; }
+    .callout.warn { border-color:var(--amber); background:var(--amber-soft); }
+    .callout.danger { border-color:var(--rose); background:var(--rose-soft); }
+    .callout strong { color:var(--navy); }
+    .pill { display:inline-block; margin:0 .3rem .35rem 0; padding:.14rem .52rem; color:var(--navy); background:var(--blue-soft); border:1px solid color-mix(in srgb,var(--blue) 27%,var(--line)); border-radius:999px; font-size:.76rem; font-weight:800; }
+    .law-grid article { min-height:100%; }
+    .law-grid h3 { color:var(--navy); }
+    .law-grid a { font-size:.85rem; font-weight:700; }
+    .stepper { display:grid; grid-template-columns:220px minmax(0,1fr); gap:18px; }
+    .step-tabs { display:grid; gap:7px; align-content:start; }
+    .step-tab { width:100%; display:flex; align-items:center; gap:.65rem; }
+    .step-no { display:inline-grid; place-items:center; flex:none; width:1.7rem; height:1.7rem; border-radius:50%; background:var(--blue-soft); color:var(--navy); font-size:.8rem; }
+    .step-tab[aria-pressed="true"], .issue-tab[aria-pressed="true"] { background:var(--navy); border-color:var(--navy); color:#fff; }
+    .step-tab[aria-pressed="true"] .step-no { background:#fff; }
+    .step-panel { min-height:244px; display:none; }
+    .step-panel.active { display:block; }
+    .step-panel blockquote { margin:1rem 0; padding:.2rem 0 .2rem 1rem; border-left:3px solid var(--teal); color:var(--muted); }
+    .method-map { display:grid; gap:8px; }
+    .level { display:grid; grid-template-columns:70px minmax(0,1fr) auto; gap:12px; align-items:center; padding:14px 16px; border:1px solid var(--line); border-radius:13px; background:var(--surface); }
+    .level-code { color:var(--violet); font-size:.86rem; font-weight:900; }
+    .level strong { color:var(--navy); }
+    .level small { color:var(--muted); }
+    .arrow { color:var(--muted); font-size:1.3rem; }
+    .section-intro { max-width:75ch; color:var(--muted); }
+    .issue-layout { display:grid; grid-template-columns:250px minmax(0,1fr); gap:18px; }
+    .issue-tabs { display:grid; gap:7px; align-content:start; }
+    .issue-tab { width:100%; }
+    .issue-panel { display:none; }
+    .issue-panel.active { display:block; }
+    .issue-panel .route { margin:.9rem 0; padding:.65rem .8rem; background:var(--teal-soft); color:var(--teal); border-radius:9px; font-weight:800; font-size:.9rem; }
+    .factor-list { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:8px; padding:0; list-style:none; }
+    .factor-list li { padding:.55rem .7rem; background:var(--paper); border-radius:8px; font-size:.9rem; }
+    details { border:1px solid var(--line); border-radius:12px; background:var(--surface); }
+    details + details { margin-top:8px; }
+    details summary { cursor:pointer; padding:.8rem 1rem; font-weight:800; }
+    details > div { padding:0 1rem 1rem; }
+    .ladder { display:grid; grid-template-columns:repeat(6,minmax(116px,1fr)); align-items:stretch; overflow-x:auto; padding-bottom:8px; }
+    .rung { min-width:116px; padding:14px; border:1px solid var(--line); background:var(--surface); }
+    .rung:nth-child(1) { border-radius:12px 0 0 12px; } .rung:last-child { border-radius:0 12px 12px 0; }
+    .rung strong { display:block; color:var(--navy); }
+    .rung.low { border-top:5px solid var(--teal); } .rung.mid { border-top:5px solid var(--amber); } .rung.high { border-top:5px solid var(--rose); }
+    .case-controls { display:flex; flex-wrap:wrap; gap:8px; margin-bottom:15px; }
+    .filter[aria-pressed="true"] { border-color:var(--teal); background:var(--teal); color:#fff; }
+    .case-card[hidden] { display:none; }
+    .case-meta { color:var(--muted); font-size:.84rem; }
+    .case-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:11px; }
+    .case-grid dt { color:var(--muted); font-size:.78rem; font-weight:800; }
+    .case-grid dd { margin:.1rem 0 .8rem; }
+    .router { border:1px solid var(--line); border-radius:var(--radius); padding:22px; background:linear-gradient(135deg,var(--surface),var(--teal-soft)); }
+    fieldset { margin:0; padding:0; border:0; }
+    legend { font-weight:900; margin-bottom:.7rem; }
+    .router-options { display:flex; flex-wrap:wrap; gap:8px; }
+    .router-options input { position:absolute; opacity:0; pointer-events:none; }
+    .router-options label { cursor:pointer; padding:.45rem .68rem; border:1px solid var(--line); border-radius:999px; background:var(--surface); font-size:.85rem; }
+    .router-options input:checked + label { border-color:var(--navy); background:var(--navy); color:#fff; }
+    .check-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:7px; margin-top:.75rem; }
+    .check-grid label { display:flex; gap:.5rem; align-items:flex-start; padding:.55rem; border-radius:8px; background:color-mix(in srgb,var(--surface) 75%,transparent); font-size:.88rem; }
+    .router-result { margin-top:1rem; padding:1rem; border-left:5px solid var(--teal); background:var(--surface); border-radius:0 12px 12px 0; }
+    .scenario { counter-increment:scenario; }
+    .scenario summary::before { content:"事例" counter(scenario) "　"; color:var(--teal); }
+    .scenario-wrap { counter-reset:scenario; }
+    .scenario .answer { background:var(--paper); padding:13px; border-radius:9px; }
+    .flow { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:9px; }
+    .flow > div { position:relative; padding:13px; border:1px solid var(--line); border-radius:10px; background:var(--surface); }
+    .flow > div:not(:last-child)::after { content:"→"; position:absolute; right:-14px; top:calc(50% - .8rem); z-index:2; color:var(--blue); font-size:1.3rem; }
+    .misconception { display:grid; grid-template-columns:150px 1fr; gap:12px; align-items:start; }
+    .mistake { color:var(--rose); font-weight:900; }
+    .template { position:relative; }
+    .copy-button { margin-top:.7rem; }
+    .copy-status { min-height:1.4em; margin:.35rem 0 0; color:var(--teal); font-size:.85rem; }
+    .quiz-list { display:grid; gap:13px; }
+    .quiz { padding:18px; }
+    .choices { display:grid; gap:7px; margin-top:.75rem; }
+    .choice { width:100%; }
+    .choice.correct { border-color:var(--teal); background:var(--teal-soft); }
+    .choice.wrong { border-color:var(--rose); background:var(--rose-soft); }
+    .quiz-feedback { min-height:1.4em; margin-top:.65rem; font-size:.9rem; }
+    .quiz-feedback.show { padding:.65rem .8rem; background:var(--paper); border-radius:8px; }
+    .score { margin-top:14px; color:var(--navy); font-weight:900; }
+    .sources li { margin:.55rem 0; }
+    .disclaimer { color:var(--muted); font-size:.84rem; }
+    footer { max-width:var(--max); margin:auto; padding:24px; border-top:1px solid var(--line); color:var(--muted); font-size:.82rem; }
+    .js details.enhance > summary::after { content:"開く"; float:right; color:var(--blue); font-size:.78rem; }
+    .js details.enhance[open] > summary::after { content:"閉じる"; }
+    @media (max-width:820px) {
+      .header-inner { padding:0 16px; } .nav-toggle { display:block; } nav { display:none; position:absolute; top:60px; right:12px; left:12px; padding:13px; border:1px solid var(--line); border-radius:12px; background:var(--surface); box-shadow:var(--shadow); } nav.open { display:block; } nav ul { display:grid; }
+      main { padding:20px 16px 48px; } .hero { min-height:auto; padding:32px 24px; } .grid.two,.grid.three,.case-grid,.flow { grid-template-columns:1fr; } .flow > div:not(:last-child)::after { content:"↓"; left:calc(50% - .4rem); right:auto; top:auto; bottom:-20px; }
+      .stepper,.issue-layout { grid-template-columns:1fr; } .step-tabs,.issue-tabs { grid-template-columns:repeat(2,minmax(0,1fr)); } .step-tab,.issue-tab { font-size:.83rem; } .factor-list,.check-grid { grid-template-columns:1fr; }
+    }
+    @media (max-width:470px) { .step-tabs,.issue-tabs { grid-template-columns:1fr; } h1 { font-size:2.18rem; } .level { grid-template-columns:48px minmax(0,1fr); } .level .arrow { display:none; } .misconception { grid-template-columns:1fr; } }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior:auto; } *,*::before,*::after { transition:none !important; animation:none !important; } }
+    @media print { .site-header,.skip-link,.hero-actions,.case-controls,.router,.copy-button,.quiz-actions,.nav-toggle { display:none !important; } body { background:#fff; color:#000; font-size:10.5pt; } main { max-width:none; padding:0; } section { margin-top:24px; } .card,details { box-shadow:none; break-inside:avoid; } details { border:none; } details > div { display:block !important; } a { color:#000; } .step-panel,.issue-panel { display:block !important; margin-bottom:10px; } .ladder { overflow:visible; } }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#core">本文へ移動</a>
+  <header class="site-header" id="top">
+    <div class="header-inner">
+      <a class="brand" href="#top">刑事訴訟法・判断構造ノート</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-nav">目次を開く</button>
+      <nav id="main-nav" aria-label="ページ内目次"><ul>
+        <li><a href="#decision-map">全体地図</a></li><li><a href="#issue-lab">手段別</a></li><li><a href="#case-law">判例</a></li><li><a href="#argument-router">論証ルーター</a></li><li><a href="#scenarios">仮想事例</a></li><li><a href="#sources">出典</a></li>
+      </ul></nav>
+    </div>
+  </header>
+  <main>
+    <section class="hero" aria-labelledby="page-title">
+      <div class="hero-inner">
+        <p class="eyebrow">職務質問を一括で処理しない</p>
+        <h1 id="page-title">手段・態様を切り分け、次の判断へ進む</h1>
+        <p class="lead">職務質問は、開始できるかだけでは終わらない。停止、有形力、同行、留め置き、所持品検査、車両・空間への介入を、行為と時点ごとに評価し、逮捕・捜索・証拠能力へ接続する。</p>
+        <div class="hero-actions"><a class="button primary" href="#decision-map">7段階の判断地図へ</a><a class="button" href="#argument-router">論証ルーターを使う</a></div>
+        <p class="source-note">対象: 司法試験・予備試験の刑事訴訟法学習。一般的な学習用解説であり、個別の事件への法律相談ではない。</p>
+      </div>
+    </section>
+
+    <section id="core" aria-labelledby="core-title">
+      <p class="eyebrow">最初に覚える結論</p><h2 id="core-title">「任意処分だから適法」ではない</h2>
+      <div class="grid three">
+        <article class="card"><span class="pill">分解</span><h3>行為を切る</h3><p>声かけ、進路遮断、腕への接触、鞄の開披、同行、物の不返還、退去阻止を一つの「職務質問」にまとめない。</p></article>
+        <article class="card"><span class="pill">二段階</span><h3>強制性の後にも審査</h3><p>強制処分に当たらない有形力や留め置きでも、必要性・緊急性等から具体的状況の下で相当な限度かを問う。</p></article>
+        <article class="card"><span class="pill">分離</span><h3>違法と証拠排除は別</h3><p>先行行為の違法、逮捕・採尿等の後続手続、証拠能力、証明力を別々の判断対象として扱う。</p></article>
+      </div>
+      <div class="callout warn" style="margin-top:18px"><strong>答案の起点:</strong> 「いつの、誰の、どの行為か」を切り、最も近い根拠を置く。後に逮捕要件や令状が整っても、それ以前の行為は遡って適法にならない。</div>
+    </section>
+
+    <section id="statutes" aria-labelledby="statutes-title">
+      <p class="eyebrow">目的 → 理由 → 根拠 → 効果</p><h2 id="statutes-title">法令の骨格</h2>
+      <div class="grid three law-grid">
+        <article class="card"><h3>警職法1条</h3><p>警察の職責遂行のため必要な手段を定める。手段は目的のため必要な最小限度で用い、濫用してはならない。</p><a href="https://laws.e-gov.go.jp/law/323AC0000000136" target="_blank" rel="noopener noreferrer">e-Govで確認</a></article>
+        <article class="card"><h3>警職法2条1項</h3><p>異常な挙動その他周囲の事情から合理的に判断し、犯罪関与を疑うに足りる相当な理由がある者、又は犯罪情報を知る者を停止させ質問できる。</p><a href="https://laws.e-gov.go.jp/law/323AC0000000136" target="_blank" rel="noopener noreferrer">e-Govで確認</a></article>
+        <article class="card"><h3>警職法2条2項・3項</h3><p>現場質問が本人に不利又は交通妨害なら附近の警察施設への同行を求め得る。ただし、身柄拘束、意に反する連行、答弁強要は認めない。</p><a href="https://laws.e-gov.go.jp/law/323AC0000000136" target="_blank" rel="noopener noreferrer">e-Govで確認</a></article>
+        <article class="card"><h3>刑訴法197条・198条</h3><p>強制処分には特別の根拠が必要。非拘束の被疑者は出頭を拒み、出頭後いつでも退去できる。</p><a href="https://laws.e-gov.go.jp/law/323AC0000000131" target="_blank" rel="noopener noreferrer">e-Govで確認</a></article>
+        <article class="card"><h3>捜索・差押えとの接続</h3><p>令状による捜索・差押え（刑訴法218条）が原則。適法逮捕後の現場処分（220条）、任意提出物の領置（221条）も別根拠として検討する。</p><a href="https://laws.e-gov.go.jp/law/323AC0000000131" target="_blank" rel="noopener noreferrer">e-Govで確認</a></article>
+        <article class="card"><h3>道路交通法67条</h3><p>酒気帯び運転等のおそれがある場合の危険防止の必要な応急措置は、現行法では67条4項。昭和53年判例当時の3項と混同しない。</p><a href="https://laws.e-gov.go.jp/law/335AC0000000105" target="_blank" rel="noopener noreferrer">e-Govで確認</a></article>
+      </div>
+    </section>
+
+    <section id="decision-map" aria-labelledby="map-title">
+      <p class="eyebrow">主図解</p><h2 id="map-title">7段階の判断地図</h2>
+      <p class="section-intro">上から順に通る。第4段階で強制処分性が否定されても、第5段階を飛ばさない。</p>
+      <div class="stepper">
+        <div class="step-tabs" role="group" aria-label="判断段階">
+          <button class="tab step-tab" type="button" data-step="split" aria-pressed="true"><span class="step-no">1</span>行為を切る</button>
+          <button class="tab step-tab" type="button" data-step="target" aria-pressed="false"><span class="step-no">2</span>対象要件</button>
+          <button class="tab step-tab" type="button" data-step="basis" aria-pressed="false"><span class="step-no">3</span>根拠特定</button>
+          <button class="tab step-tab" type="button" data-step="coercion" aria-pressed="false"><span class="step-no">4</span>強制・禁止線</button>
+          <button class="tab step-tab" type="button" data-step="proportion" aria-pressed="false"><span class="step-no">5</span>任意手段の相当性</button>
+          <button class="tab step-tab" type="button" data-step="downstream" aria-pressed="false"><span class="step-no">6</span>後続手続</button>
+          <button class="tab step-tab" type="button" data-step="evidence" aria-pressed="false"><span class="step-no">7</span>証拠の問題</button>
+        </div>
+        <div class="card step-panel active" data-step-panel="split"><span class="pill">1 行為を切る</span><h3>「10分間の職務質問」として処理しない</h3><blockquote>声かけ、進路遮断、腕への接触、鞄の開披、同行、物の留置、退去阻止を、時刻と行為者ごとに分ける。</blockquote><p>各行為で侵害法益と根拠が異なる。まずタイムラインを作り、後に分かった事実を開始時点へ混入させない。</p></div>
+        <div class="card step-panel" data-step-panel="target"><span class="pill">2 対象要件</span><h3>犯罪関与疑い型か、犯罪情報保有型か</h3><blockquote>警職法2条1項の要件を、質問開始時点までの異常な挙動と周囲の事情から具体化する。</blockquote><p>単なる直感、深夜通行、服装だけで終わらない。手配との一致、時間・場所の近接、警察官認識後の隠匿的挙動などを意味付ける。</p></div>
+        <div class="card step-panel" data-step-panel="basis"><span class="pill">3 根拠特定</span><h3>行為に最も近い根拠を置く</h3><blockquote>質問・停止は警職法2条1項、同行の求めは同条2項、被疑者取調べは刑訴法198条、捜索・差押えは刑訴法上の根拠、交通危険防止は道路交通法等。</blockquote><p>職務質問が捜査目的と重なっても、強制処分の根拠が新たに生まれるわけではない。</p></div>
+        <div class="card step-panel" data-step-panel="coercion"><span class="pill">4 強制・禁止線</span><h3>意思制圧と明文禁止を確認する</h3><blockquote>意思を制圧し、身体、住居、財産等に実質的制約を加え、特別の根拠がなければ許容するのが相当でない程度か。身柄拘束、意に反する連行、答弁強要にも注意する。</blockquote><p>有形力の存在だけで直ちに強制処分にはならないが、時間、人数、退路、物の保持との累積で強制性は高まる。</p></div>
+        <div class="card step-panel" data-step-panel="proportion"><span class="pill">5 任意手段の相当性</span><h3>強制でないことは必要条件にすぎない</h3><blockquote>必要性、緊急性、嫌疑の程度、危険・証拠散逸のおそれ、侵害の内容・程度、継続時間、拒否、代替手段から、具体的状況の下で相当な限度かを判断する。</blockquote><p>所持品検査はこの段階で専用規範を用いる。承諾が原則であり、拒否は必ず侵害側の事情に置く。</p></div>
+        <div class="card step-panel" data-step-panel="downstream"><span class="pill">6 後続手続</span><h3>発見後の行為も独立に評価する</h3><blockquote>現行犯逮捕、令状請求、任意提出、採尿、供述取得のそれぞれについて、固有要件と先行違法の影響を確認する。</blockquote><p>後の逮捕によって逮捕前の検査が遡って適法になることはない。</p></div>
+        <div class="card step-panel" data-step-panel="evidence"><span class="pill">7 証拠の問題</span><h3>違法と排除を直結させない</h3><blockquote>物的証拠は違法収集証拠排除法則、派生証拠は関連性・介在事情、供述は任意性・自白法則を別に検討する。</blockquote><p>最後に証明力を扱う。証拠能力と証明力も別の判断である。</p></div>
+      </div>
+    </section>
+
+    <section id="method-hierarchy" aria-labelledby="hierarchy-title">
+      <p class="eyebrow">機能別階層</p><h2 id="hierarchy-title">手段が強くなるほど、次の根拠へ近づく</h2>
+      <div class="method-map" role="list">
+        <div class="level" role="listitem"><span class="level-code">A</span><span><strong>対象者・開始</strong><br><small>声かけ、質問、停止</small></span><span class="arrow">↓</span></div>
+        <div class="level" role="listitem"><span class="level-code">B</span><span><strong>停止を実効化する手段</strong><br><small>追尾、回り込み、進路遮断、身体接触</small></span><span class="arrow">↓</span></div>
+        <div class="level" role="listitem"><span class="level-code">C</span><span><strong>場所・時間を変える手段</strong><br><small>同行、交番・署内での質問、留め置き</small></span><span class="arrow">↓</span></div>
+        <div class="level" role="listitem"><span class="level-code">D</span><span><strong>身体・物・空間への働きかけ</strong><br><small>所持品、車内、ポケット、ドア、室内</small></span><span class="arrow">↓</span></div>
+        <div class="level" role="listitem"><span class="level-code">E</span><span><strong>占有・身柄の継続管理</strong><br><small>出口阻止、携帯電話・鍵の不返還、長時間制圧</small></span><span class="arrow">↓</span></div>
+        <div class="level" role="listitem"><span class="level-code">F</span><span><strong>刑事手続への移行</strong><br><small>現行犯逮捕、令状による捜索・差押え、被疑者取調べ</small></span><span class="arrow">↓</span></div>
+        <div class="level" role="listitem"><span class="level-code">G</span><span><strong>証拠法上の処理</strong><br><small>物的証拠、派生証拠、供述、証明力</small></span><span class="arrow">•</span></div>
+      </div>
+    </section>
+
+    <section id="issue-lab" aria-labelledby="issue-title">
+      <p class="eyebrow">手段別論証ラボ</p><h2 id="issue-title">一つの場面でも、判断を分けて書く</h2>
+      <p class="section-intro">左から行為を選ぶ。各パネルは、判断対象、規範、当てはめ、効果の順に固定している。答案では、必要なパネルだけを時系列に並べる。</p>
+      <div class="issue-layout">
+        <div class="issue-tabs" role="group" aria-label="手段別論点">
+          <button class="tab issue-tab" type="button" data-issue="start" aria-pressed="true">開始・呼び止め</button>
+          <button class="tab issue-tab" type="button" data-issue="force" aria-pressed="false">接触・進路遮断</button>
+          <button class="tab issue-tab" type="button" data-issue="vehicle" aria-pressed="false">車両停止・エンジン</button>
+          <button class="tab issue-tab" type="button" data-issue="escort" aria-pressed="false">同行の求め</button>
+          <button class="tab issue-tab" type="button" data-issue="detention" aria-pressed="false">留め置き</button>
+          <button class="tab issue-tab" type="button" data-issue="belongings" aria-pressed="false">所持品検査</button>
+          <button class="tab issue-tab" type="button" data-issue="body" aria-pressed="false">ポケット・身体</button>
+          <button class="tab issue-tab" type="button" data-issue="vehicle-search" aria-pressed="false">車内・収納部</button>
+          <button class="tab issue-tab" type="button" data-issue="space" aria-pressed="false">ドア・客室・住居</button>
+          <button class="tab issue-tab" type="button" data-issue="retention" aria-pressed="false">物の不返還</button>
+          <button class="tab issue-tab" type="button" data-issue="statement" aria-pressed="false">供述・記録</button>
+        </div>
+        <div>
+          <article class="card issue-panel active" data-issue-panel="start">
+            <span class="pill">警職法2条1項</span><h3>職務質問の開始</h3>
+            <p class="route">対象要件 → 開始時点の事実だけで評価 → 後続手段を別に評価</p>
+            <p><strong>判断対象:</strong> 停止させ質問を開始した時点で、Xが犯罪関与疑い型又は犯罪情報保有型に当たるか。</p>
+            <p><strong>規範:</strong> 異常な挙動その他周囲の事情から合理的に判断して、犯罪を犯し又は犯そうとしていると疑うに足りる相当な理由がある者等を停止させ質問できる。</p>
+            <ul class="factor-list"><li>手配内容との具体的一致</li><li>発生からの時間・場所の近接</li><li>警察官認識後の隠匿・急な方向転換</li><li>開始後に判明した事実を混ぜない</li></ul>
+            <p><strong>効果:</strong> 開始が適法でも、所持品検査や同行まで当然に正当化されない。次に実際に取った手段を切り出す。</p>
+          </article>
+          <article class="card issue-panel" data-issue-panel="force">
+            <span class="pill">二段階審査</span><h3>呼び止め・立ちはだかり・身体への接触</h3>
+            <p class="route">停止方法 → 強制手段か → 強制でなくても必要・緊急・相当か</p>
+            <p><strong>規範:</strong> 強制手段は、有形力一般ではなく、意思を制圧し、身体・住居・財産等に制約を加えて強制的に目的を実現するなど、特別の根拠がなければ許容するのが相当でない手段をいう。そこに至らない有形力も、必要性・緊急性等を考慮し、具体的状況の下で相当な限度に限られる。</p>
+            <ul class="factor-list"><li>触れた部位、強さ、反復、継続時間</li><li>退路・車両・人数による物理的圧迫</li><li>嫌疑の具体性と危険・逃走の切迫性</li><li>明示の拒否、より穏当な代替手段</li></ul>
+            <p><strong>答案の小結:</strong> 「有形力があるから強制」とせず、まず意思制圧の程度を判断し、否定しても第2段階の相当性を必ず書く。</p>
+          </article>
+          <article class="card issue-panel" data-issue-panel="vehicle">
+            <span class="pill">警職法2条1項 + 道交法67条4項</span><h3>車両の停止・エンジン停止・鍵への介入</h3>
+            <p class="route">個別的職務質問の停止 + 交通危険防止 → 介入態様の相当性</p>
+            <p>車を停止できることと、車内を自由に調べられることは別である。酒気帯び運転等の具体的危険があり、発進が目前なら、窓越しにエンジンを切る行為が質問の停止方法・危険防止措置として相当となり得る。</p>
+            <ul class="factor-list"><li>蛇行、酒臭、応答不明瞭などの具体的危険</li><li>再発進の切迫性</li><li>エンジン停止にとどまるか、鍵を抜き保管するか</li><li>停止と車内探索を別行為にする</li></ul>
+            <div class="callout warn"><strong>条番号:</strong> 最決昭和53年9月22日は判例当時の道路交通法67条3項を根拠に含む。危険防止の応急措置は現行法では67条4項である。</div>
+          </article>
+          <article class="card issue-panel" data-issue-panel="escort">
+            <span class="pill">警職法2条2項・3項</span><h3>同行の求め</h3>
+            <p class="route">現場質問の不利益・交通妨害 → 同行の求め → 到着後の自由は別に判断</p>
+            <p>その場で質問することが本人に不利であるか、交通の妨害になる場合、附近の警察署・派出所・駐在所への同行を<strong>求める</strong>ことができる。「同行の要求」と表示しない。</p>
+            <ul class="factor-list"><li>公開場所での質問が本人に不利か</li><li>現場が現実に交通妨害か</li><li>本人が徒歩・自車等で自発的に移動したか</li><li>同行後の退去・返還要求があるか</li></ul>
+            <p><strong>効果:</strong> 警察側の便宜だけで場所を移す根拠にはならない。同行への応諾は、到着後の留め置きへの包括的同意ではない。</p>
+          </article>
+          <article class="card issue-panel" data-issue-panel="detention">
+            <span class="pill">警職法2条3項・刑訴法198条</span><h3>現場・警察署での留め置き</h3>
+            <p class="route">時点分割 → 退去意思 → 実質的身柄拘束か / 任意手段の相当限度か</p>
+            <p>留め置きは時間の長さだけでは決まらない。出口、移動手段、警察官の人数・交代、身体への力、物の不返還、退去意思、手続の迅速さを総合する。令状請求の検討・着手だけで一般的拘束権限は生じない。</p>
+            <div class="flow"><div><strong>開始</strong><br><small>同行・質問の根拠</small></div><div><strong>転機</strong><br><small>退去意思・返還要求</small></div><div><strong>累積</strong><br><small>出口・人数・時間・物</small></div><div><strong>評価</strong><br><small>拘束 / 相当限度超過</small></div></div>
+          </article>
+          <article class="card issue-panel" data-issue-panel="belongings">
+            <span class="pill">所持品検査の専用規範</span><h3>提示要求・外観観察・承諾のない開披</h3>
+            <p class="route">質問との密接関連 → 承諾の有無 → 捜索性・強制性 → 必要性・緊急性・利益衡量</p>
+            <p>所持品検査は警職法に明文がないが、口頭質問と密接に関連し、職務質問の効果を上げる上で必要性・有効性が認められるため、付随して許される場合がある。承諾を得てその限度で行うのが原則である。</p>
+            <p>承諾がない場合も、捜索に至らず、強制にわたらない行為が、必要性・緊急性、個人法益と公共利益の権衡等から具体的状況の下で相当な限度なら許され得る。</p>
+            <ul class="factor-list"><li>犯罪・対象物・所持品の具体的結び付き</li><li>生命身体の危険、逃走・散逸の切迫性</li><li>明確な拒否、施錠、破壊、探索範囲</li><li>身体密着性、代替手段の有無</li></ul>
+          </article>
+          <article class="card issue-panel" data-issue-panel="body">
+            <span class="pill">身体密着領域</span><h3>着衣外側・内ポケット・身体の確認</h3>
+            <p class="route">所持品検査専用規範 → 身体密着性・捜索類似性 → 後続逮捕・証拠能力</p>
+            <p>着衣外側の限定的な確認と、内ポケットへ手を差し入れて内容物を取り出し開く行為は同じでない。内ポケットはプライバシー侵害が高く、態様も捜索に近づく。嫌疑が高くても、拒否、緊急性、代替手段を具体的に対置する。</p>
+            <p><strong>判例の位置:</strong> 最判昭和53年9月7日は、承諾なく上衣内ポケットへ手を入れて内容物を取り出す検査を許容限度超過とした。ただし、その後の証拠能力は別に肯定した。</p>
+          </article>
+          <article class="card issue-panel" data-issue-panel="vehicle-search">
+            <span class="pill">車は停止と別</span><h3>車内・トランク・閉鎖収納部</h3>
+            <p class="route">車両停止と分離 → 所持品検査の限界 / 捜索該当性 → 逮捕・採尿等への波及</p>
+            <p>窓越しに自然に見える物の観察、ドアを開ける、座席下をのぞく、コンソール・トランクを開ける行為では侵害が違う。承諾がなければ、所持品検査の許容限度又は捜索該当性を検討する。</p>
+            <p><strong>判例の位置:</strong> 最決平成7年5月30日は、承諾なく車内を調べた行為とそれに基づく逮捕を違法としつつ、後の尿鑑定書は事情の下で証拠能力を肯定した。違法と排除を混同しない。</p>
+          </article>
+          <article class="card issue-panel" data-issue-panel="space">
+            <span class="pill">空間の確保と立入りを分ける</span><h3>ドアの閉鎖阻止・ホテル客室・住居への接近</h3>
+            <p class="route">質問開始 → ドア閉鎖阻止 → 敷居越え・室内進入 → 室内探索をそれぞれ別に評価</p>
+            <p>入口の確保、敷居に足を置く、室内へ進入する、滞在して探索する行為は別の侵害である。ホテル客室でも、具体的事情を離れて一般的な無令状立入りが許されるわけではない。</p>
+            <ul class="factor-list"><li>管理者からの具体的情報と質問開始の根拠</li><li>自ら開けたドアを急に閉じようとした事情</li><li>入口確保に限られるか、室内探索に至るか</li><li>財布等の既開口・見えていた範囲・明示拒否</li></ul>
+          </article>
+          <article class="card issue-panel" data-issue-panel="retention">
+            <span class="pill">物と身柄を二重に評価</span><h3>提示物・鍵・携帯電話を返さない行為</h3>
+            <p class="route">一時提示の承諾範囲 → 占有継続の根拠 → 実質的差押え / 身柄への効果</p>
+            <p>一時的に見せるため手渡した物を、返還要求後も当然に領置できるとはいえない。占有継続それ自体が差押えに近づくほか、携帯電話や鍵の不返還は対象者の退去自由を実質的に奪い得る。</p>
+            <p><strong>答案:</strong> 物の検査・保管の適法性と、物を失った本人をその場にとどめる効果を、二本立てで書く。</p>
+          </article>
+          <article class="card issue-panel" data-issue-panel="statement">
+            <span class="pill">答弁強要は禁止</span><h3>身分確認・写真等の記録・供述の獲得</h3>
+            <p class="route">質問の範囲 → 答弁強要の禁止 → 被疑者取調べへの移行 → 任意性</p>
+            <p>警職法2条3項は答弁強要を禁じる。被疑者取調べへ移行するなら刑訴法198条の枠組みを用い、供述は任意性を別に検討する。写真・動画・音声の記録も、目的、撮影態様、公開・利用の範囲、プライバシー侵害を行為単位で評価する。</p>
+            <p><strong>注意:</strong> 身分証提示の求め、任意の提示、物の保管、情報の写し取りは同じ行為ではない。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="boundary-lab" aria-labelledby="boundary-title">
+      <p class="eyebrow">比較する図解</p><h2 id="boundary-title">所持品・空間への介入は、深さで見る</h2>
+      <p class="section-intro">左ほど侵害が小さいとは限らないが、右へ行くほど探索性・身体密着性・占有侵害が強くなり、承諾や令状の問題が前景化する。</p>
+      <div class="ladder" aria-label="所持品検査の侵害態様ラダー">
+        <div class="rung low"><strong>1 外観</strong><small>自然に見える物を観察</small></div>
+        <div class="rung low"><strong>2 提示</strong><small>本人が自ら見せる</small></div>
+        <div class="rung mid"><strong>3 既開口</strong><small>開いたバッグを限定的一べつ</small></div>
+        <div class="rung mid"><strong>4 開披</strong><small>ファスナーを開く・収納部を開く</small></div>
+        <div class="rung high"><strong>5 身体密着</strong><small>内ポケットへ手を入れる</small></div>
+        <div class="rung high"><strong>6 施錠・内部</strong><small>鍵付き容器・端末データを開く</small></div>
+      </div>
+      <div class="grid two" style="margin-top:16px">
+        <div class="callout"><strong>許容限度側に働く事情:</strong> 具体的で高い嫌疑、生命身体の切迫した危険、証拠散逸の現実的おそれ、既開口、最小限の一べつ、即時終了。</div>
+        <div class="callout danger"><strong>限度超過側に働く事情:</strong> 明確な拒否、身体密着、閉鎖・施錠、破壊、反復・全面探索、長時間の保有、代替手段の存在。</div>
+      </div>
+    </section>
+
+    <section id="case-law" aria-labelledby="case-title">
+      <p class="eyebrow">最高裁の位置付けを比べる</p><h2 id="case-title">判例カード――結論だけを覚えない</h2>
+      <p class="section-intro">各カードは「事案」「判断対象」「このページでの役割」「射程外」を分ける。緑か赤かではなく、どの行為が評価されたかを読む。</p>
+      <div class="case-controls" role="group" aria-label="判例の絞り込み">
+        <button class="button filter" type="button" data-case-filter="all" aria-pressed="true">すべて</button>
+        <button class="button filter" type="button" data-case-filter="force" aria-pressed="false">有形力</button>
+        <button class="button filter" type="button" data-case-filter="belongings" aria-pressed="false">所持品</button>
+        <button class="button filter" type="button" data-case-filter="vehicle" aria-pressed="false">車両</button>
+        <button class="button filter" type="button" data-case-filter="checkpoint" aria-pressed="false">検問</button>
+        <button class="button filter" type="button" data-case-filter="evidence" aria-pressed="false">証拠能力</button>
+        <button class="button filter" type="button" data-case-filter="space" aria-pressed="false">空間</button>
+      </div>
+      <p id="case-count" class="source-note" aria-live="polite">7件を表示中</p>
+      <div class="grid two">
+        <article class="card case-card" data-case-categories="force">
+          <span class="pill">有形力の一般枠組み</span><h3>最決昭和51年3月16日</h3><p class="case-meta">最高裁第三小法廷／刑集30巻2号187頁／昭和50年（あ）第146号</p>
+          <details class="enhance" open><summary>事案・役割・射程外</summary><div><dl class="case-grid"><div><dt>事案</dt><dd>呼気検査への説得中、退出しようとした者の左斜め前に立ち、両手で左手首をつかんだ行為。</dd></div><div><dt>判断対象</dt><dd>有形力を伴う任意捜査が強制手段に当たるか。</dd></div><div><dt>役割</dt><dd>有形力一般ではなく、意思制圧・実質的制約・特別根拠の必要性を見る。強制に至らなくても必要性・緊急性等から相当限度を問う。</dd></div><div><dt>射程外</dt><dd>手首をつかめば常に適法、という判例ではない。</dd></div></dl><a href="https://www.courts.go.jp/assets/hanrei/hanrei-pdf-51825.pdf" target="_blank" rel="noopener noreferrer">裁判所PDFを開く</a></div></details>
+        </article>
+        <article class="card case-card" data-case-categories="belongings evidence">
+          <span class="pill">所持品検査の専用規範</span><h3>最判昭和53年6月20日</h3><p class="case-meta">最高裁第三小法廷／刑集32巻4号670頁／昭和52年（あ）第1435号</p>
+          <details class="enhance" open><summary>事案・役割・射程外</summary><div><dl class="case-grid"><div><dt>事案</dt><dd>銀行強盗直後、手配人相に似た者らの無施錠ボーリングバッグのファスナーを開けて紙幣を確認し、さらに鍵付きアタッシェケースをドライバーでこじ開けた。</dd></div><div><dt>判断対象</dt><dd>職務質問に付随する無承諾の所持品検査の限界。</dd></div><div><dt>役割</dt><dd>無施錠バッグの限定的一べつは必要性・緊急性が高く侵害が比較的小さいとして許容。鍵付きケースをこじ開ける行為は許容されない。</dd></div><div><dt>射程外</dt><dd>拒否後のバッグ開披を一般に認めたものではなく、同行・留め置き等の全行為を一括適法としたものでもない。</dd></div></dl><a href="https://www.courts.go.jp/assets/hanrei/hanrei-pdf-50201.pdf" target="_blank" rel="noopener noreferrer">裁判所PDFを開く</a></div></details>
+        </article>
+        <article class="card case-card" data-case-categories="belongings evidence">
+          <span class="pill">内ポケットと証拠能力</span><h3>最判昭和53年9月7日</h3><p class="case-meta">最高裁第一小法廷／刑集32巻6号1672頁／昭和51年（あ）第865号</p>
+          <details class="enhance" open><summary>事案・役割・射程外</summary><div><dl class="case-grid"><div><dt>事案</dt><dd>覚醒剤所持等の嫌疑が高まった状況で、承諾なく上衣内ポケットへ手を差し入れ、内容物を取り出して検査した。</dd></div><div><dt>判断対象</dt><dd>身体に密着する内ポケット検査と、発見物の証拠能力。</dd></div><div><dt>役割</dt><dd>必要性・緊急性があっても、内ポケットへの差入れはプライバシー侵害が高く捜索に類するため許容限度超過。続く逮捕・差押えの違法と、証拠能力の判断を分ける。</dd></div><div><dt>射程外</dt><dd>嫌疑が重大ならポケット検査が許される、とはしない。</dd></div></dl><a href="https://www.courts.go.jp/assets/hanrei/hanrei-pdf-51125.pdf" target="_blank" rel="noopener noreferrer">裁判所PDFを開く</a></div></details>
+        </article>
+        <article class="card case-card" data-case-categories="vehicle force">
+          <span class="pill">二つの根拠</span><h3>最決昭和53年9月22日</h3><p class="case-meta">最高裁第一小法廷／刑集32巻6号1774頁</p>
+          <details class="enhance" open><summary>事案・役割・射程外</summary><div><dl class="case-grid"><div><dt>事案</dt><dd>酒気帯び運転の疑いがある者が車を発進させようとしたため、警察官が窓から手を入れ、エンジンキーを回してスイッチを切った。</dd></div><div><dt>判断対象</dt><dd>車両を停止させる方法と交通危険防止。</dd></div><div><dt>役割</dt><dd>職務質問のため停止させる必要・相当な方法であり、交通危険防止の必要な応急措置にも当たるとされた。</dd></div><div><dt>射程外</dt><dd>一般の職務質問で常にエンジンを切り、鍵を保管できるという判例ではない。</dd></div></dl><p class="source-note">判例当時の道路交通法67条3項。現行法の危険防止措置は67条4項。</p><a href="https://www.courts.go.jp/assets/hanrei/hanrei-pdf-51134.pdf" target="_blank" rel="noopener noreferrer">裁判所PDFを開く</a></div></details>
+        </article>
+        <article class="card case-card" data-case-categories="checkpoint vehicle">
+          <span class="pill">隣接制度</span><h3>最決昭和55年9月22日</h3><p class="case-meta">最高裁第三小法廷／刑集34巻5号272頁</p>
+          <details class="enhance" open><summary>事案・役割・射程外</summary><div><dl class="case-grid"><div><dt>判断対象</dt><dd>交通違反予防・検挙のための自動車一斉検問。</dd></div><div><dt>役割</dt><dd>交通違反多発地域等で、任意の協力を求め、利用者の自由を不当に制約しない方法・態様で短時間停止・質問する検問は適法となり得る。</dd></div><div><dt>区別</dt><dd>個別の警職法2条1項の嫌疑型停止とは、制度目的と根拠が異なる隣接制度として扱う。</dd></div><div><dt>射程外</dt><dd>歩行者への無差別な停止や、強制的・長時間の検問を一般に許すものではない。</dd></div></dl><a href="https://www.courts.go.jp/assets/hanrei/hanrei-pdf-51155.pdf" target="_blank" rel="noopener noreferrer">裁判所PDFを開く</a></div></details>
+        </article>
+        <article class="card case-card" data-case-categories="vehicle belongings evidence">
+          <span class="pill">違法の波及</span><h3>最決平成7年5月30日</h3><p class="case-meta">最高裁第三小法廷／刑集49巻5号703頁／平成6年（あ）第894号</p>
+          <details class="enhance" open><summary>事案・役割・射程外</summary><div><dl class="case-grid"><div><dt>事案</dt><dd>停止命令を無視して走り去るなどの挙動から覚醒剤を疑い、承諾なく車内を調べて発見後、現行犯逮捕し、後に尿を採取した。</dd></div><div><dt>判断対象</dt><dd>無承諾の車内検査、逮捕、採尿、尿鑑定書の関係。</dd></div><div><dt>役割</dt><dd>車内検査とこれを基礎にした逮捕は違法。もっとも、検査の必要性・緊急性、対象場所、採尿が自由意思に基づくこと等から、尿鑑定書の証拠能力は肯定された。</dd></div><div><dt>射程外</dt><dd>違法な車内検査が軽微なら常に証拠採用される、とはしない。</dd></div></dl><a href="https://www.courts.go.jp/assets/hanrei/hanrei-pdf-50163.pdf" target="_blank" rel="noopener noreferrer">裁判所PDFを開く</a></div></details>
+        </article>
+        <article class="card case-card" data-case-categories="space belongings evidence force">
+          <span class="pill">部分違法を分ける</span><h3>最決平成15年5月26日</h3><p class="case-meta">最高裁第一小法廷／刑集57巻5号620頁</p>
+          <details class="enhance" open><summary>事案・役割・射程外</summary><div><dl class="case-grid"><div><dt>事案</dt><dd>ホテル管理者の情報を受け、内ドアを閉めようとした宿泊客について閉鎖を防ぎ、テーブル上の財布と既に開いた小銭入れを確認した。全裸の被告人を約30分押さえ続けた。</dd></div><div><dt>判断対象</dt><dd>ドア閉鎖阻止、財布検査、長時間制圧を一つずつ評価する。</dd></div><div><dt>役割</dt><dd>具体的事情の下でドア閉鎖阻止と財布検査は適法。約30分の制圧は職務質問付随行為の限度を超えるが、証拠排除には結び付かなかった。</dd></div><div><dt>射程外</dt><dd>ホテル客室・住居への一般的な無令状立入りを許すものではない。</dd></div></dl><a href="https://www.courts.go.jp/assets/hanrei/hanrei-pdf-50010.pdf" target="_blank" rel="noopener noreferrer">裁判所PDFを開く</a></div></details>
+        </article>
+      </div>
+      <div class="callout warn" style="margin-top:16px"><strong>下級審の時間例:</strong> 留め置きを「4時間なら適法」「9時間なら違法」という数値ルールにしない。退去意思、出口、物理力、物の管理、警察側の迅速さ等を総合する。</div>
+    </section>
+
+    <section id="argument-router" aria-labelledby="router-title">
+      <p class="eyebrow">固定ルートで迷わない</p><h2 id="router-title">論証ルーター</h2>
+      <p class="section-intro">行為と事実を選ぶと、書く順序と強調すべき事情を表示する。適法・違法の自動判定や確率は出さない。</p>
+      <div class="router">
+        <fieldset><legend>1. 最初に問題にする行為</legend><div class="router-options" id="router-acts">
+          <input id="act-start" type="radio" name="act" value="start" checked><label for="act-start">開始・呼び止め</label>
+          <input id="act-force" type="radio" name="act" value="force"><label for="act-force">接触・進路遮断</label>
+          <input id="act-vehicle" type="radio" name="act" value="vehicle"><label for="act-vehicle">車両停止・エンジン</label>
+          <input id="act-escort" type="radio" name="act" value="escort"><label for="act-escort">同行</label>
+          <input id="act-detention" type="radio" name="act" value="detention"><label for="act-detention">留め置き</label>
+          <input id="act-belongings" type="radio" name="act" value="belongings"><label for="act-belongings">所持品検査</label>
+          <input id="act-body" type="radio" name="act" value="body"><label for="act-body">ポケット・身体</label>
+          <input id="act-vehicle-search" type="radio" name="act" value="vehicle-search"><label for="act-vehicle-search">車内・収納部</label>
+          <input id="act-space" type="radio" name="act" value="space"><label for="act-space">ドア・空間</label>
+          <input id="act-retention" type="radio" name="act" value="retention"><label for="act-retention">物の不返還</label>
+          <input id="act-evidence" type="radio" name="act" value="evidence"><label for="act-evidence">証拠能力</label>
+        </div></fieldset>
+        <fieldset style="margin-top:1rem"><legend>2. 事実としてあるもの</legend><div class="check-grid" id="router-facts">
+          <label><input type="checkbox" value="refusal"> 明確な拒否</label><label><input type="checkbox" value="leave"> 退去・返還要求</label>
+          <label><input type="checkbox" value="force"> 身体への力</label><label><input type="checkbox" value="inside"> 内部へ手を入れた</label>
+          <label><input type="checkbox" value="keep"> 物を返さない</label><label><input type="checkbox" value="risk"> 生命身体の危険</label>
+          <label><input type="checkbox" value="dissipation"> 証拠散逸のおそれ</label><label><input type="checkbox" value="sealed"> 施錠・閉鎖収納部</label>
+          <label><input type="checkbox" value="exit"> 出口・退路の遮断</label><label><input type="checkbox" value="after"> 逮捕・令状・採尿・供述が後続</label>
+        </div></fieldset>
+        <div id="router-result" class="router-result" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section id="scenarios" aria-labelledby="scenario-title">
+      <p class="eyebrow">オリジナル仮想事例</p><h2 id="scenario-title">事実から論証へつなぐ</h2>
+      <p class="section-intro">すべて本ページ作成用のオリジナル事例であり、実在事件・公式問題ではない。事例だけを先に読み、必要なときに論証ルート、答案本文、再現の着眼点を開く。</p>
+      <div class="scenario-wrap">
+        <details class="scenario enhance" open><summary>開始要件を切り出す <small>記載目安 3〜4分</small></summary><div>
+          <h4>仮想事例</h4><p>午後10時、コンビニ強盗が発生した。犯人は「20歳代くらい、青い上着、赤いショルダーバッグ」と手配された。10分後、現場から約300メートルの路上で、警察官Pは青い上着を着て赤いバッグを持つXを発見した。XはPを見るとバッグを体の後ろに回し、来た道へ急に引き返した。PはXを呼び止め、氏名と直前の行動を質問した。</p>
+          <h4>論証ルート</h4><p class="route">警職法2条1項の対象要件 → 開始時点の事実だけで評価 → その後の手段は未評価</p>
+          <h4>答案本文</h4><p class="answer">警職法2条1項は、異常な挙動その他周囲の事情から合理的に判断して犯罪を犯し又は犯そうとしていると疑うに足りる相当な理由のある者を停止させ質問できるとする。本件では、強盗発生から約10分、現場から約300メートルであり、Xの上着とバッグは具体的手配に一致する。さらに、Xは制服警察官Pを認識するとバッグを後ろへ回し急に引き返した。これは単なる深夜通行を超え、強盗関与を疑わせる具体的事情である。よって、Pの呼び止めと質問開始は対象要件を満たす。</p>
+          <h4>再現の着眼点</h4><p>手配一致、時間・場所の近接、警察官認識後の挙動を結ぶ。呼び止め後に判明した事実は開始要件へ混ぜない。</p>
+        </div></details>
+        <details class="scenario enhance" open><summary>短い有形力の行使 <small>記載目安 5〜6分</small></summary><div>
+          <h4>仮想事例</h4><p>前事例で、Xは質問に答えず歩き去ろうとした。PはXの左斜め前に回り、左手首を両手で約2秒つかんで「少し話を聞かせてください」と述べた。Xが立ち止まるとすぐ手を離した。PはXを押し倒さず、警察車両で退路を塞いでもいない。</p>
+          <h4>論証ルート</h4><p class="route">停止方法 → 強制手段か → 強制でなくても必要・緊急・相当か</p>
+          <h4>答案本文</h4><p class="answer">強制手段とは、有形力一般ではなく、意思を制圧し身体等に制約を加えて強制的に目的を実現するなど、特別の根拠規定がなければ許容するのが相当でない手段をいう。本件の接触は手首を両手でつかむものであるが約2秒に限られ、立ち止まると直ちに解除され、押倒しや退路の全面遮断もないから、いまだ強制手段には達しない。もっとも、強盗直後で具体的手配に一致するXが立ち去ろうとしたので、短時間停止の必要性・緊急性は高い。接触態様も限定的であり、相当な限度にとどまる。</p>
+          <h4>再現の着眼点</h4><p>「2秒」「直ちに解除」「全面遮断なし」を侵害側に、「強盗直後・手配一致」を必要性側に置く。</p>
+        </div></details>
+        <details class="scenario enhance" open><summary>車両のエンジン停止 <small>記載目安 5〜6分</small></summary><div>
+          <h4>仮想事例</h4><p>深夜、蛇行運転する車両をPが停止させた。運転者Xは酒臭く、受け答えも不明瞭であった。Pが質問を始めると、Xはシフトレバーへ手を伸ばし発進させようとした。Pは半開きの窓から手を入れ、キーを回してエンジンを切ったが、キーを抜いて保管はしなかった。</p>
+          <h4>論証ルート</h4><p class="route">個別的職務質問の停止 + 道路交通法上の危険防止 → 介入態様の相当性</p>
+          <h4>答案本文</h4><p class="answer">Xは現に蛇行運転し、酒臭く受け答えも不明瞭であるから、酒気帯び運転等の嫌疑と再発進の具体的危険が高い。しかもシフトレバーへ手を伸ばしており、発進は目前であった。Pは窓から手を入れてエンジンを切るにとどまり、キーを抜き長時間管理していない。したがって、職務質問のため停止させる必要・相当な方法であり、現行道路交通法67条4項の危険防止の必要な応急措置としても許される。</p>
+          <h4>再現の着眼点</h4><p>職務質問と道路交通法の二根拠を示し、判例当時の67条3項と現行4項を混同しない。</p>
+        </div></details>
+        <details class="scenario enhance" open><summary>無施錠バッグの限定的開披 <small>記載目安 7〜8分</small></summary><div>
+          <h4>仮想事例</h4><p>刃物を用いた強盗の15分後、手配内容と一致するXが、口の開いたスポーツバッグを抱えて現場付近を歩いていた。Pが質問すると、Xは提示を明確に拒否して右手をバッグ内部へ差し入れた。PはXの右手首を外側から押さえ、既に開いていたファスナー部分を約5センチ広げて内部を一べつし、刃物の柄を見た。それ以上の収納部は調べなかった。</p>
+          <h4>論証ルート</h4><p class="route">手首への有形力 と バッグ検査を分ける → 所持品検査専用規範</p>
+          <h4>答案本文</h4><p class="answer">手首を押さえる行為は、刃物使用強盗直後で具体的手配に一致するXがバッグ内部へ手を入れたため、生命身体の危険を避ける必要性・緊急性が極めて高い。部位・時間が必要最小限なら相当な有形力である。次に所持品検査は承諾が原則であり、Xの明確な拒否は侵害を重くする。他方、凶器の具体的危険が切迫し、バッグは既に開口し、Pは上部を約5センチ広げて一べつしただけで追加探索をしていない。よって限定的開披は、具体的状況の下で相当な限度にとどまる。</p>
+          <h4>再現の着眼点</h4><p>拒否を必ず書き、危険、既開口、5センチ、一べつ、追加探索なしと対置する。</p>
+        </div></details>
+        <details class="scenario enhance" open><summary>内ポケットへの手の差入れ <small>記載目安 6〜7分</small></summary><div>
+          <h4>仮想事例</h4><p>Pは、落ち着きのないXの腕に注射痕らしいものを見つけ、覚醒剤所持を疑った。Xは上衣左内ポケットを何度も気にしたが、所持品提示を明確に拒否した。Xは逃走や証拠投棄を試みず、周囲に第三者の妨害もなかった。Pは令状を請求せず、Xの左内ポケットに手を差し入れ、ティッシュ包みを取り出して開いた。</p>
+          <h4>論証ルート</h4><p class="route">所持品検査専用規範 → 身体密着領域・捜索類似性 → 逮捕・証拠能力を別に検討</p>
+          <h4>答案本文</h4><p class="answer">注射痕らしいものやポケットを気にする挙動から一定の嫌疑はある。しかしXは明確に拒否し、逃走・投棄を試みず、妨害もないため、直ちに内部へ手を入れる緊急性は高くない。内ポケットは身体に密着したプライバシーの高い領域で、Pが自ら手を差し入れて内容物を取り出し開く態様は捜索に類する。令状請求等の代替手段も考えられる。したがって、検査は相当な限度を超え違法であり、これにより初めて薬物を発見したなら、逮捕・差押えへの波及と証拠能力を別途検討する。</p>
+          <h4>再現の着眼点</h4><p>嫌疑の存在と検査方法の許容性を分ける。拒否、緊急性の低さ、身体密着、取出し・開披、代替手段を拾う。</p>
+        </div></details>
+        <details class="scenario enhance" open><summary>同行後の退去阻止と携帯電話の不返還 <small>記載目安 8〜10分</small></summary><div>
+          <h4>仮想事例</h4><p>交通量の多い交差点でPがXに職務質問を始めた。通行の妨げとなるため、Pが30メートル先の交番への同行を求め、Xは徒歩で同行した。15分後、Xは「もう帰る。携帯電話を返してほしい」と明言した。Pは検査のため受け取っていたXの携帯電話を返さず、交番出口前に立ち、応援警察官2名と交代しながら、令状請求の検討を理由にさらに2時間質問を続けた。令状は未請求だった。</p>
+          <h4>論証ルート</h4><p class="route">同行の開始 → 退去意思時点で区切る → 留め置き + 物の占有継続 → 供述・後続証拠</p>
+          <h4>答案本文</h4><p class="answer">交差点での質問が交通妨害となり、Xが徒歩30メートルを了承して移動したので、当初の同行は警職法2条2項・3項の範囲内といえる。しかしXは15分後に退去と返還を求めた。Pは生活上重要な携帯電話を返さず、出口前に立ち、3名で交代しながら2時間質問を継続した。令状は単なる検討段階である。遅くとも退去・返還要求後は実質的身柄拘束又は任意手段の相当限度超過として違法であり、携帯電話の占有継続も実質的差押えとして問題となる。その間の供述は任意性、端末由来の証拠は違法収集・派生証拠を別に検討する。</p>
+          <h4>再現の着眼点</h4><p>「2時間」だけでなく、出口、人数、不返還、令状未請求を積み上げる。</p>
+        </div></details>
+        <details class="scenario enhance" open><summary>無承諾の車内収納部検査と後続採尿 <small>記載目安 10〜12分</small></summary><div>
+          <h4>仮想事例</h4><p>Pの停止要求を一度無視したXは、約500メートル先で自ら車を止めた。Xは降車し、車内検査を明確に拒否した。Xは車から離れてPと話しており、同乗者はいなかった。Pは応援警察官にXを見守らせ、施錠されていない運転席ドアを開け、閉じたセンターコンソールを開いて白色結晶を発見した。これを根拠に現行犯逮捕し、翌日Xは警察署で尿を任意提出した。</p>
+          <h4>論証ルート</h4><p class="route">車両停止 と 車内検査を分ける → 逮捕への波及 → 採尿手続 → 尿鑑定の証拠能力</p>
+          <h4>答案本文</h4><p class="answer">停止要求無視は職務質問の必要性を高めるが、車内を捜索する権限を生じさせない。Xは明確に拒否し、車外で監視下にあり同乗者もいないため、センターコンソール内の物を直ちに散逸させる危険は低い。Pは外から見えない閉鎖収納部を開いて探索しており、プライバシー侵害が大きく捜索に類する。よって検査は違法であり、これに依存する現行犯逮捕・採尿への波及を検討する。尿鑑定書は、閉鎖収納部を明示拒否に反して探索し、令状を求めず違法検査結果で現行犯逮捕を作出した点、採尿との時間的・手続的関連を踏まえ、重大違法・抑制必要性を肯定する方向が強い。</p>
+          <h4>再現の着眼点</h4><p>平成7年決定と異なり得る事実として、拒否、閉鎖収納部、散逸可能性の低さ、関連性を具体化する。</p>
+        </div></details>
+        <details class="scenario enhance" open><summary>ホテル内ドアと財布 <small>記載目安 10〜12分</small></summary><div>
+          <h4>仮想事例</h4><p>ホテル支配人は、2日分の宿泊料金を払わず、注射器を持っているとの清掃員情報がある客Xへの対応をPに求めた。Pが客室外ドアをノックし来意を告げると、Xは内ドアを約30センチ開けたが、制服姿のPを見ると急に閉めようとした。Pはドアを押し返し、敷居付近に片足を置いて閉鎖を防いだ。テーブル上には、二つ折り部分と小銭入れのファスナーが開いた財布があり、Pは見えていた白色結晶の袋を抜き出した。</p>
+          <h4>論証ルート</h4><p class="route">質問開始 → ドア閉鎖阻止 → 室内立入りの範囲 → 財布検査を全部分ける</p>
+          <h4>答案本文</h4><p class="answer">料金不払と注射器に関するホテル側の具体的情報から、質問開始の対象要件は認められる。Xが自ら内ドアを開けた後、制服警察官を見て急に閉めようとしたため、Pがドアを押し返し敷居付近に片足を置く行為は、質問継続を確保する必要性に対応した限度なら相当な措置といえる。ただし、これは客室内部への自由な進入・探索を許すものではない。財布は既に開き、見えていた袋を抜き出すにとどまり、明確な検査拒否もない。嫌疑・散逸のおそれと限定された侵害を衡量すれば、具体的状況の下で相当な限度にとどまる。</p>
+          <h4>再現の着眼点</h4><p>開始、ドア、立入り、財布を一括しない。ドア阻止から室内探索権限を導かない。</p>
+        </div></details>
+      </div>
+    </section>
+
+    <section id="downstream" aria-labelledby="downstream-title">
+      <p class="eyebrow">後続手続と証拠能力</p><h2 id="downstream-title">違法のあとに、四つのゲートを通す</h2>
+      <div class="flow"><div><strong>1 先行行為</strong><br><small>開始・検査・留め置きが適法か</small></div><div><strong>2 後続手続</strong><br><small>逮捕・令状・採尿・供述の固有要件</small></div><div><strong>3 証拠能力</strong><br><small>重大違法・抑制、関連性・介在事情、任意性</small></div><div><strong>4 証明力</strong><br><small>信用性・他証拠との整合</small></div></div>
+      <div class="grid three" style="margin-top:16px">
+        <article class="card tight"><h3>物的証拠</h3><p>当該証拠収集手続の違法が令状主義の精神を没却するほど重大で、証拠許容が将来の違法捜査抑制の見地から相当でないかを検討する。</p></article>
+        <article class="card tight"><h3>派生証拠</h3><p>単なる事実的因果関係だけで自動排除しない。先行違法の重大性、時間・場所・手続的関連、令状審査、独立情報、自由意思の介在を検討する。</p></article>
+        <article class="card tight"><h3>供述</h3><p>違法な留め置き等があれば、供述への影響と任意性を独自に検討する。物的証拠の排除法則をそのまま流用しない。</p></article>
+      </div>
+      <div class="callout danger" style="margin-top:16px"><strong>誤ったショートカット:</strong> 「先行行為が違法 → すべて排除」。正しくは、先行行為 → 後続手続 → 証拠種別ごとの証拠能力 → 証明力である。</div>
+    </section>
+
+    <section id="misconceptions" aria-labelledby="mis-title">
+      <p class="eyebrow">典型的な混同を潰す</p><h2 id="mis-title">答案の一文を直す</h2>
+      <div class="grid two">
+        <article class="card misconception"><div class="mistake">任意なら適法</div><div><strong>なぜ違うか</strong><p>強制でない有形力・留め置きも相当限度に限られる。</p><strong>直し方</strong><p>強制処分性を否定した後、必要性・緊急性・侵害・代替手段を検討する。</p></div></article>
+        <article class="card misconception"><div class="mistake">有形力なら強制</div><div><strong>なぜ違うか</strong><p>有形力一般でなく、意思制圧と実質的制約を見る。</p><strong>直し方</strong><p>接触部位、強さ、時間、退路、人数、目的を具体化する。</p></div></article>
+        <article class="card misconception"><div class="mistake">開始できれば検査可</div><div><strong>なぜ違うか</strong><p>対象要件と所持品検査の必要性・緊急性・侵害態様は別の判断である。</p><strong>直し方</strong><p>開始の小結後、所持品検査専用規範を新たに立てる。</p></div></article>
+        <article class="card misconception"><div class="mistake">拒否なら直ちに結論</div><div><strong>なぜ違うか</strong><p>拒否は重要な侵害側事情だが、例外的な緊急性・態様との衡量を要する。</p><strong>直し方</strong><p>拒否を明示したうえで、危険・散逸と検査態様を対置する。</p></div></article>
+        <article class="card misconception"><div class="mistake">同行後は帰れない</div><div><strong>なぜ違うか</strong><p>同行と到着後の留め置きは別で、警職法2条3項の限界が残る。</p><strong>直し方</strong><p>到着時、最初の退去意思、警察側の阻止時点で時間を切る。</p></div></article>
+        <article class="card misconception"><div class="mistake">令状予定なら留置可</div><div><strong>なぜ違うか</strong><p>令状請求の検討・着手だけで逮捕前の一般的拘束権限は生じない。</p><strong>直し方</strong><p>退去意思、物理力、物の不返還、所要時間を総合する。</p></div></article>
+        <article class="card misconception"><div class="mistake">重大犯罪なら強い手段可</div><div><strong>なぜ違うか</strong><p>重大性は必要性・公共利益・緊急性等の評価要素であり、根拠や令状要件を代替しない。</p><strong>直し方</strong><p>どの論点の、どの評価要素として使うかを明記する。</p></div></article>
+        <article class="card misconception"><div class="mistake">違法なら必ず排除</div><div><strong>なぜ違うか</strong><p>手続違法と証拠能力は別の段階である。</p><strong>直し方</strong><p>違法の小結 → 後続手続 → 証拠能力、と見出しを分ける。</p></div></article>
+      </div>
+    </section>
+
+    <section id="quiz" aria-labelledby="quiz-title">
+      <p class="eyebrow">確認問題</p><h2 id="quiz-title">判断順序を再現できるか</h2>
+      <p class="section-intro">一つ選ぶ。回答後にすべての選択肢を選び直せるが、画面上のスコアは最初の回答で固定する。</p>
+      <div class="quiz-list" id="quiz-list">
+        <article class="card quiz" data-correct="b"><h3>問1　最初にすること</h3><p>職務質問中に、手首把持、鞄開披、警察署への同行が連続した。最初の処理として最も適切なのはどれか。</p><div class="choices"><button class="choice" type="button" data-choice="a">A　一連の職務質問全体が任意だったかを判断する</button><button class="choice" type="button" data-choice="b">B　手首把持、鞄開披、同行を別の行為として切り分ける</button><button class="choice" type="button" data-choice="c">C　後に証拠が見つかったかを確認する</button></div><p class="quiz-feedback" aria-live="polite" data-explanation="行為ごとに根拠・侵害法益・規範が異なる。結果から遡って正当化せず、まず時点と行為を分ける。"></p></article>
+        <article class="card quiz" data-correct="c"><h3>問2　有形力と強制処分</h3><p>警察官が対象者の袖に触れた。直ちにいえることはどれか。</p><div class="choices"><button class="choice" type="button" data-choice="a">A　有形力があるため必ず強制処分である</button><button class="choice" type="button" data-choice="b">B　身体接触が軽ければ必ず適法である</button><button class="choice" type="button" data-choice="c">C　強制処分性を判断し、否定しても任意手段としての相当性を検討する</button></div><p class="quiz-feedback" aria-live="polite" data-explanation="有形力の有無だけで結論は出ない。意思制圧・制約の程度を判断し、その後も必要性・緊急性・相当性を問う。"></p></article>
+        <article class="card quiz" data-correct="b"><h3>問3　所持品検査</h3><p>承諾のない所持品検査について正しいものはどれか。</p><div class="choices"><button class="choice" type="button" data-choice="a">A　承諾がなければ例外なく違法である</button><button class="choice" type="button" data-choice="b">B　捜索に至らず強制にわたらない行為が、必要性・緊急性・利益衡量等から相当な限度で許される場合がある</button><button class="choice" type="button" data-choice="c">C　職務質問開始が適法なら、どの収納部分でも検査できる</button></div><p class="quiz-feedback" aria-live="polite" data-explanation="承諾が原則だが、判例は具体的状況に即した限定的例外を認める。類型だけで結論を出さない。"></p></article>
+        <article class="card quiz" data-correct="b"><h3>問4　同行と退去</h3><p>対象者が任意に交番へ同行した後、「帰る」と述べた。最も適切な処理はどれか。</p><div class="choices"><button class="choice" type="button" data-choice="a">A　最初の同行承諾があるため、以後の留め置きも適法である</button><button class="choice" type="button" data-choice="b">B　退去意思後の警察官の行為を新しい判断対象として検討する</button><button class="choice" type="button" data-choice="c">C　警察官が質問を終えるまで退去意思は無効である</button></div><p class="quiz-feedback" aria-live="polite" data-explanation="同行と留め置きは別である。退去意思、出口、物の不返還、時間等により、途中から実質的拘束となり得る。"></p></article>
+        <article class="card quiz" data-correct="b"><h3>問5　車両のエンジン停止</h3><p>最決昭和53年9月22日の理解として正しいものはどれか。</p><div class="choices"><button class="choice" type="button" data-choice="a">A　どの職務質問でも警察官は車の鍵を抜いて保管できるとした</button><button class="choice" type="button" data-choice="b">B　酒気帯び運転の具体的危険下で、停止方法と交通危険防止の双方からエンジン停止を適法とした</button><button class="choice" type="button" data-choice="c">C　現行道路交通法67条3項が危険防止措置を定めるとした</button></div><p class="quiz-feedback" aria-live="polite" data-explanation="判例は具体的危険と限定された措置を評価した。判例当時の67条3項に対応する危険防止措置は、現行法では67条4項である。"></p></article>
+        <article class="card quiz" data-correct="b"><h3>問6　物の不返還</h3><p>所持品検査のため渡した携帯電話を、返還要求後も警察が保持した。検討すべきことはどれか。</p><div class="choices"><button class="choice" type="button" data-choice="a">A　最初に手渡した以上、常に任意提出物の領置となる</button><button class="choice" type="button" data-choice="b">B　物の占有継続と、本人をその場にとどめる効果を別々に検討する</button><button class="choice" type="button" data-choice="c">C　携帯電話の内容を見なければ問題はない</button></div><p class="quiz-feedback" aria-live="polite" data-explanation="一時提示の承諾範囲、返還要求後の実質的差押え、生活上重要な物の不返還が身柄へ及ぼす効果を検討する。"></p></article>
+        <article class="card quiz" data-correct="b"><h3>問7　違法と証拠能力</h3><p>所持品検査が違法と判断された。次に最も適切な処理はどれか。</p><div class="choices"><button class="choice" type="button" data-choice="a">A　発見物は直ちに証拠能力を失う</button><button class="choice" type="button" data-choice="b">B　後続手続を確認し、重大違法・違法捜査抑制等から証拠能力を別に判断する</button><button class="choice" type="button" data-choice="c">C　証拠が本物なら手続違法は問題にならない</button></div><p class="quiz-feedback" aria-live="polite" data-explanation="手続違法、後続手続、証拠能力、証明力を分ける。派生証拠・供述なら固有の判断も加える。"></p></article>
+        <article class="card quiz" data-correct="c"><h3>問8　犯罪の重大性</h3><p>「犯罪の重大性」の使い方として適切なのはどれか。</p><div class="choices"><button class="choice" type="button" data-choice="a">A　重大犯罪なら令状なしの強制処分が許される</button><button class="choice" type="button" data-choice="b">B　全ての職務質問に共通する独立要件である</button><button class="choice" type="button" data-choice="c">C　必要性・公共利益・緊急性等の具体的評価に関係し得るが、法的根拠や令状要件を代替しない</button></div><p class="quiz-feedback" aria-live="polite" data-explanation="重大性を使う法体系上の置き場所を示す。抽象的に唱えて、対象要件・強制処分法定主義・令状主義を飛ばさない。"></p></article>
+      </div>
+      <div class="quiz-actions"><p class="score" id="quiz-score" aria-live="polite">8問中 0問正解（最初の回答を採点）</p><button class="button" type="button" id="quiz-reset">クイズをリセット</button></div>
+    </section>
+
+    <section id="templates" aria-labelledby="template-title">
+      <p class="eyebrow">コピー用答案テンプレート</p><h2 id="template-title">角括弧だけを事実で置き換える</h2>
+      <div class="grid two">
+        <article class="card template"><h3>職務質問開始</h3><p data-copy-text>警職法2条1項は、異常な挙動その他周囲の事情から合理的に判断して、何らかの犯罪を犯し又は犯そうとしていると疑うに足りる相当な理由のある者等を、停止させて質問できるとする。警察官が質問を開始した時点で、〔開始前に認識していた事実〕があり、これは〔想定犯罪〕との関係で〔意味付け〕できる。したがって、〔対象要件を満たす／満たさない〕。</p><button class="button copy-button" type="button">論証をコピー</button><p class="copy-status" aria-live="polite"></p></article>
+        <article class="card template"><h3>有形力・留め置き</h3><p data-copy-text>強制手段とは、有形力を伴う手段一般ではなく、個人の意思を制圧し、身体、住居、財産等に制約を加えて強制的に目的を実現するなど、特別の根拠規定がなければ許容するのが相当でない手段をいう。本件の〔行為〕は、〔強度・時間・退路・人数・物の管理〕から、〔強制手段に当たる／なお当たらない〕。もっとも、強制手段に至らない場合も、必要性・緊急性等を考慮し、具体的状況の下で相当な限度に限られる。〔嫌疑・危険・逃走又は散逸のおそれ〕に対し、〔拒否・侵害態様・継続時間・代替手段〕であったから、〔相当な限度内／限度超過〕である。</p><button class="button copy-button" type="button">論証をコピー</button><p class="copy-status" aria-live="polite"></p></article>
+        <article class="card template"><h3>所持品検査</h3><p data-copy-text>所持品検査は警職法に明文がないが、口頭による質問と密接に関連し、職務質問の効果を上げる上で必要性・有効性が認められるため、同法2条1項の職務質問に付随して許される場合がある。もっとも、承諾を得てその限度で行うのが原則である。承諾がない場合も、捜索に至らない程度の行為は、強制にわたらない限り、検査の必要性・緊急性、侵害される個人の法益と保護される公共の利益との権衡等から、具体的状況の下で相当な限度において許され得る。本件では、〔嫌疑と対象物の結び付き〕及び〔危険・散逸のおそれ〕がある一方、〔明示の拒否・身体密着性・施錠・破壊・探索範囲〕があり、〔代替手段〕も考えられる。したがって、〔許容限度内／捜索に類し許容限度超過〕である。</p><button class="button copy-button" type="button">論証をコピー</button><p class="copy-status" aria-live="polite"></p></article>
+        <article class="card template"><h3>違法収集・派生証拠</h3><p data-copy-text>以上より〔先行行為〕は違法である。もっとも、違法であることから直ちに〔証拠〕の証拠能力が否定されるわけではない。まず〔逮捕・差押え・採尿・令状執行〕の固有要件と先行違法の波及を検討する。その上で、当該証拠収集手続の違法が令状主義の精神を没却するほど重大であり、証拠を許容することが将来の違法捜査抑制の見地から相当でないかを、〔侵害法益・態様・令状潜脱の意図・介在事情・関連性〕から判断する。派生証拠では、時間的・場所的・手続的関連性、令状審査、独立した適法情報、本人の自由意思等も検討する。</p><button class="button copy-button" type="button">論証をコピー</button><p class="copy-status" aria-live="polite"></p></article>
+      </div>
+    </section>
+
+    <section id="sources" aria-labelledby="sources-title">
+      <p class="eyebrow">公的出典</p><h2 id="sources-title">法令と判例を追えるようにする</h2>
+      <div class="grid two">
+        <article class="card"><h3>法令</h3><ol class="sources">
+          <li><a href="https://laws.e-gov.go.jp/law/323AC0000000136" target="_blank" rel="noopener noreferrer">警察官職務執行法</a>（1条・2条）</li>
+          <li><a href="https://laws.e-gov.go.jp/law/323AC0000000131" target="_blank" rel="noopener noreferrer">刑事訴訟法</a>（197条、198条、218条、220条、221条、319条）</li>
+          <li><a href="https://laws.e-gov.go.jp/law/321CONSTITUTION" target="_blank" rel="noopener noreferrer">日本国憲法</a>（31条、35条、38条）</li>
+          <li><a href="https://laws.e-gov.go.jp/law/335AC0000000105" target="_blank" rel="noopener noreferrer">道路交通法</a>（67条）</li>
+          <li><a href="https://laws.e-gov.go.jp/law/329AC0000000162" target="_blank" rel="noopener noreferrer">警察法</a>（一斉検問の隣接根拠）</li>
+        </ol></article>
+        <article class="card"><h3>最高裁判例</h3><ol class="sources">
+          <li><a href="https://www.courts.go.jp/assets/hanrei/hanrei-pdf-51825.pdf" target="_blank" rel="noopener noreferrer">最決昭和51年3月16日</a>（有形力）</li>
+          <li><a href="https://www.courts.go.jp/assets/hanrei/hanrei-pdf-50201.pdf" target="_blank" rel="noopener noreferrer">最判昭和53年6月20日</a>（所持品検査）</li>
+          <li><a href="https://www.courts.go.jp/assets/hanrei/hanrei-pdf-51125.pdf" target="_blank" rel="noopener noreferrer">最判昭和53年9月7日</a>（内ポケット・証拠能力）</li>
+          <li><a href="https://www.courts.go.jp/assets/hanrei/hanrei-pdf-51134.pdf" target="_blank" rel="noopener noreferrer">最決昭和53年9月22日</a>（エンジン停止）</li>
+          <li><a href="https://www.courts.go.jp/assets/hanrei/hanrei-pdf-51155.pdf" target="_blank" rel="noopener noreferrer">最決昭和55年9月22日</a>（一斉検問）</li>
+          <li><a href="https://www.courts.go.jp/assets/hanrei/hanrei-pdf-50163.pdf" target="_blank" rel="noopener noreferrer">最決平成7年5月30日</a>（車内検査・採尿）</li>
+          <li><a href="https://www.courts.go.jp/assets/hanrei/hanrei-pdf-50010.pdf" target="_blank" rel="noopener noreferrer">最決平成15年5月26日</a>（ホテル・財布）</li>
+        </ol></article>
+      </div>
+      <p class="disclaimer">条文・判例の確認日: 2026年8月9日。表示している判例要約は学習用の簡潔な整理であり、判決全文に代わるものではない。判例の適法部分・違法部分はカード内で分け、個別事案への断定はしない。</p>
+      <div class="callout warn" style="margin-top:16px"><strong>著作権・再利用について:</strong> 法令・公的資料は2026年8月9日に確認しました。本ページは司法試験・予備試験の学習用資料であり、個別事件への法的助言ではありません。リンクによる共有は可能ですが、本文・図表・デザインの転載、改変、再配布は許諾していません。</div>
+    </section>
+  </main>
+  <footer>確認日: 2026年8月9日。法令・判例は各カードの公式リンクから再確認できる。学習用の一般的整理であり、個別事案の結論を示すものではない。</footer>
+  <script>
+  (() => {
+    'use strict';
+    const $ = (selector, root = document) => root.querySelector(selector);
+    const $$ = (selector, root = document) => [...root.querySelectorAll(selector)];
+
+    const navToggle = $('.nav-toggle');
+    const nav = $('#main-nav');
+    const setNav = (open) => {
+      nav.classList.toggle('open', open);
+      navToggle.setAttribute('aria-expanded', String(open));
+      navToggle.textContent = open ? '目次を閉じる' : '目次を開く';
+      if (open) $('a', nav).focus(); else navToggle.focus();
+    };
+    navToggle.addEventListener('click', () => setNav(!nav.classList.contains('open')));
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && nav.classList.contains('open')) setNav(false);
+    });
+    $$('nav a').forEach((link) => link.addEventListener('click', () => {
+      if (window.matchMedia('(max-width: 820px)').matches) setNav(false);
+    }));
+
+    const bindPanelTabs = (buttonSelector, panelSelector, attribute) => {
+      const buttons = $$(buttonSelector);
+      const panels = $$(panelSelector);
+      buttons.forEach((button) => button.addEventListener('click', () => {
+        const target = button.dataset[attribute];
+        buttons.forEach((item) => item.setAttribute('aria-pressed', String(item === button)));
+        panels.forEach((panel) => panel.classList.toggle('active', panel.dataset[`${attribute}Panel`] === target));
+      }));
+    };
+    bindPanelTabs('[data-step]', '[data-step-panel]', 'step');
+    bindPanelTabs('[data-issue]', '[data-issue-panel]', 'issue');
+
+    const enableArrowNavigation = (containerSelector, itemSelector) => {
+      $$(containerSelector).forEach((container) => {
+        const items = $$(itemSelector, container);
+        items.forEach((item, index) => item.addEventListener('keydown', (event) => {
+          if (!['ArrowRight', 'ArrowDown', 'ArrowLeft', 'ArrowUp'].includes(event.key)) return;
+          event.preventDefault();
+          const direction = ['ArrowRight', 'ArrowDown'].includes(event.key) ? 1 : -1;
+          items[(index + direction + items.length) % items.length].focus();
+        }));
+      });
+    };
+    enableArrowNavigation('.step-tabs', 'button');
+    enableArrowNavigation('.issue-tabs', 'button');
+    enableArrowNavigation('.case-controls', 'button');
+
+    const filters = $$('.filter');
+    const cases = $$('.case-card');
+    const caseCount = $('#case-count');
+    filters.forEach((filter) => filter.addEventListener('click', () => {
+      const selected = filter.dataset.caseFilter;
+      filters.forEach((item) => item.setAttribute('aria-pressed', String(item === filter)));
+      let count = 0;
+      cases.forEach((card) => {
+        const visible = selected === 'all' || card.dataset.caseCategories.split(' ').includes(selected);
+        card.hidden = !visible;
+        if (visible) count += 1;
+      });
+      caseCount.textContent = `${count}件を表示中`;
+    }));
+
+    const routes = {
+      start: { title:'開始・呼び止め', route:'対象要件 → 開始時点の具体的事実 → 後続手段は別評価', points:['犯罪関与疑い型か犯罪情報保有型かを選ぶ。','手配・時間・場所・不審挙動を開始前の事実として意味付ける。'] },
+      force: { title:'接触・進路遮断', route:'停止方法 → 強制手段か → 任意手段として相当か', points:['強さ・時間・退路・人数から意思制圧を判断する。','強制性が否定されても必要性・緊急性・代替手段を書く。'] },
+      vehicle: { title:'車両停止・エンジン', route:'停止方法 + 交通危険防止 → 介入態様の相当性', points:['発進の切迫性と具体的危険を示す。','エンジン停止、鍵の保管、車内探索を別の行為に分ける。'] },
+      escort: { title:'同行', route:'2条2項の要件 → 自発的移動 → 到着後は別判断', points:['本人に不利か交通妨害かを具体化する。','同行への応諾を留め置きへの包括同意にしない。'] },
+      detention: { title:'留め置き', route:'時点分割 → 退去意思 → 実質的拘束 / 相当限度', points:['出口、人数、時間、物の不返還、令状の段階を積み上げる。','時間だけを固定基準にしない。'] },
+      belongings: { title:'所持品検査', route:'質問との密接関連 → 承諾 → 捜索性・強制性 → 必要性・緊急性・利益衡量', points:['承諾が原則であることを書く。','対象物との結び付き、危険・散逸、侵害態様、代替手段を対置する。'] },
+      body: { title:'ポケット・身体', route:'所持品検査の専用規範 → 身体密着・捜索類似性 → 後続手続', points:['内ポケットへの差入れと着衣外側の接触を区別する。','拒否と緊急性の弱さを侵害側に置く。'] },
+      'vehicle-search': { title:'車内・収納部', route:'停止と検査を分離 → 所持品検査の限界 / 捜索該当性 → 波及', points:['自然に見える物、ドア、閉鎖収納部、トランクを区別する。','逮捕・採尿・鑑定を別のゲートで検討する。'] },
+      space: { title:'ドア・空間', route:'質問開始 → 閉鎖阻止 → 敷居越え・進入 → 室内探索', points:['入口確保と室内探索を混同しない。','ホテル客室・住居への一般的許可にしない。'] },
+      retention: { title:'物の不返還', route:'一時提示の範囲 → 占有継続の根拠 → 物と身柄への二重評価', points:['返還要求後の保持は実質的差押えになり得る。','物の不返還が退去自由へ与える効果も書く。'] },
+      evidence: { title:'証拠能力', route:'先行行為 → 後続手続 → 証拠種別ごとの基準 → 証明力', points:['物的証拠、派生証拠、供述を一つの基準で処理しない。','違法の重大性・関連性・介在事情・任意性をそれぞれ確認する。'] }
+    };
+    const factNotes = {
+      refusal:'明確な拒否: 侵害側の事情として必ず明示する。', leave:'退去・返還要求: その時点で行為を切り、留め置き・占有継続を検討する。', force:'身体への力: 強制処分性と、否定後の任意手段としての相当性を両方扱う。', inside:'内部へ手を入れた: 所持品検査の限界又は捜索該当性を強く意識する。', keep:'物を返さない: 占有と、本人の退去自由への実質的影響を二本立てで書く。', risk:'生命身体の危険: 必要性・緊急性を強めるが、単独で適法結論を出さない。', dissipation:'証拠散逸のおそれ: 具体的で切迫した事情を示し、代替手段と対置する。', sealed:'施錠・閉鎖収納部: 探索性・侵害を強め、令状の問題を前景化する。', exit:'出口・退路の遮断: 意思制圧、実質的身柄拘束の方向に働く。', after:'後続手続: 逮捕・令状・採尿・供述の各要件と証拠能力を独立に扱う。'
+    };
+    const routerResult = $('#router-result');
+    const renderRouter = () => {
+      const selected = $('input[name="act"]:checked').value;
+      const data = routes[selected];
+      const selectedFacts = $$('#router-facts input:checked').map((input) => input.value);
+      const heading = document.createElement('strong'); heading.textContent = `論証ルート：${data.title}`;
+      const route = document.createElement('p'); route.textContent = data.route;
+      const list = document.createElement('ul');
+      [...data.points, ...selectedFacts.map((fact) => factNotes[fact])].forEach((point) => { const li = document.createElement('li'); li.textContent = point; list.append(li); });
+      const note = document.createElement('p'); note.className = 'source-note'; note.textContent = 'これは書く順序と事実の置き場所を示す補助であり、適法・違法の自動結論は出さない。';
+      routerResult.replaceChildren(heading, route, list, note);
+    };
+    $$('input[name="act"], #router-facts input').forEach((input) => input.addEventListener('change', renderRouter));
+    renderRouter();
+
+    const copyText = async (text) => {
+      if (navigator.clipboard && window.isSecureContext) { await navigator.clipboard.writeText(text); return; }
+      const textarea = document.createElement('textarea');
+      textarea.value = text; textarea.setAttribute('readonly',''); textarea.style.position = 'fixed'; textarea.style.opacity = '0';
+      document.body.append(textarea); textarea.select();
+      const copied = document.execCommand('copy'); textarea.remove();
+      if (!copied) throw new Error('copy failed');
+    };
+    $$('.template').forEach((template) => {
+      const button = $('.copy-button', template); const status = $('.copy-status', template); const source = $('[data-copy-text]', template);
+      button.addEventListener('click', async () => {
+        try { await copyText(source.textContent.trim()); status.textContent = 'コピーしました'; }
+        catch { status.textContent = 'コピーできませんでした。本文を選択してください'; }
+      });
+    });
+
+    const firstAnswers = new Map();
+    const score = $('#quiz-score');
+    const updateScore = () => {
+      const correct = [...firstAnswers.entries()].filter(([quiz, answer]) => quiz.dataset.correct === answer).length;
+      score.textContent = `8問中 ${correct}問正解（最初の回答を採点）${correct === 8 ? '　判断順序を再現できています' : ''}`;
+    };
+    $$('.quiz').forEach((quiz) => {
+      const feedback = $('.quiz-feedback', quiz);
+      $$('.choice', quiz).forEach((choice) => choice.addEventListener('click', () => {
+        const answer = choice.dataset.choice;
+        if (!firstAnswers.has(quiz)) firstAnswers.set(quiz, answer);
+        $$('.choice', quiz).forEach((item) => {
+          item.classList.remove('correct','wrong');
+          if (item.dataset.choice === quiz.dataset.correct) item.classList.add('correct');
+        });
+        if (answer !== quiz.dataset.correct) choice.classList.add('wrong');
+        feedback.classList.add('show');
+        feedback.textContent = `${answer === quiz.dataset.correct ? '正解。' : '確認。'} ${feedback.dataset.explanation}`;
+        updateScore();
+      }));
+    });
+    $('#quiz-reset').addEventListener('click', () => {
+      firstAnswers.clear();
+      $$('.quiz').forEach((quiz) => { $$('.choice', quiz).forEach((choice) => choice.classList.remove('correct','wrong')); const feedback = $('.quiz-feedback', quiz); feedback.textContent = ''; feedback.classList.remove('show'); });
+      updateScore();
+    });
+
+    $$('.enhance').forEach((details) => { details.open = false; });
+  })();
+  </script>
+</body>
+</html>
